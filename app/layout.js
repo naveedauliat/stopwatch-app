@@ -1,12 +1,13 @@
 import './globals.css'
 import { Inter } from 'next/font/google'
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'Professional Stopwatch - High Precision Timer',
-  description: 'Professional stopwatch application with analog and digital displays, lap timing, and precision controls.',
-  keywords: 'stopwatch, timer, precision timer, lap timer, analog clock, digital clock',
+  //title: 'Professional Stopwatch - High Precision Timer',
+  //description: 'Professional stopwatch application with analog and digital displays, lap timing, and precision controls.',
+  //keywords: 'stopwatch, timer, precision timer, lap timer, analog clock, digital clock',
   author: 'Your Name',
   viewport: 'width=device-width, initial-scale=1',
   icons: {
@@ -25,12 +26,54 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
+        <title>Online Stopwatch – Free & Simple Timer | Stopwatch.lol</title>
+        <meta name="description" content="A free, simple, and accurate online stopwatch and timer. Start, stop, and reset your stopwatch instantly – no downloads required. Perfect for studying, workouts, cooking, and productivity." />
+        <meta name="keywords" content="online stopwatch, free stopwatch, stopwatch timer, timer online, stopwatch for study, stopwatch for workout" />
+        <link rel="canonical" href="https://stopwatch.lol/" />
+        <link rel="icon" href="/favicon.ico" />
+        
         <meta name="theme-color" content="#1e293b" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
+
+                <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebApplication",
+              name: "Stopwatch.lol",
+              url: "https://stopwatch.lol",
+              applicationCategory: "Utility",
+              operatingSystem: "Any",
+              description: "A free, simple, and accurate online stopwatch and timer. Start, stop, and reset instantly.",
+              offers: { "@type": "Offer", price: "0", priceCurrency: "USD" }
+            }),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              mainEntity: [
+                {
+                  "@type": "Question",
+                  name: "Is this stopwatch accurate?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Yes, Stopwatch.lol uses precise browser timing functions to keep time as accurately as your device allows."
+                  }
+                }
+              ]
+            }),
+          }}
+        />
       </head>
       <body className={inter.className}>
         {children}
+        <SpeedInsights />
       </body>
     </html>
   )
