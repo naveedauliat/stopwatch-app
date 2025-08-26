@@ -3,6 +3,82 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Play, Pause, Square, RotateCcw, Flag } from 'lucide-react';
 
+// Professional Stopwatch Logo Component
+const StopwatchLogo = ({ size = 64 }) => (
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 64 64"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    className="drop-shadow-lg"
+  >
+    {/* Outer ring */}
+    <circle
+      cx="32"
+      cy="32"
+      r="30"
+      fill="url(#gradient1)"
+      stroke="url(#gradient2)"
+      strokeWidth="2"
+    />
+    {/* Inner clock face */}
+    <circle
+      cx="32"
+      cy="32"
+      r="24"
+      fill="white"
+      stroke="#e5e7eb"
+      strokeWidth="1"
+    />
+    {/* Hour markers */}
+    {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11].map((hour) => {
+      const angle = (hour * 30 - 90) * (Math.PI / 180);
+      const x1 = 32 + Math.cos(angle) * 20;
+      const y1 = 32 + Math.sin(angle) * 20;
+      const x2 = 32 + Math.cos(angle) * 17;
+      const y2 = 32 + Math.sin(angle) * 17;
+      return (
+        <line
+          key={hour}
+          x1={x1}
+          y1={y1}
+          x2={x2}
+          y2={y2}
+          stroke="#374151"
+          strokeWidth={hour % 3 === 0 ? "2" : "1"}
+        />
+      );
+    })}
+    {/* Clock hands */}
+    <line x1="32" y1="32" x2="32" y2="18" stroke="#3b82f6" strokeWidth="2" strokeLinecap="round" />
+    <line x1="32" y1="32" x2="40" y2="32" stroke="#ef4444" strokeWidth="1.5" strokeLinecap="round" />
+    {/* Center dot */}
+    <circle cx="32" cy="32" r="2" fill="#1f2937" />
+    {/* Play button overlay */}
+    <polygon
+      points="26,24 26,40 38,32"
+      fill="url(#gradient3)"
+      opacity="0.8"
+    />
+    {/* Gradients */}
+    <defs>
+      <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stopColor="#3b82f6" />
+        <stop offset="100%" stopColor="#1e40af" />
+      </linearGradient>
+      <linearGradient id="gradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stopColor="#60a5fa" />
+        <stop offset="100%" stopColor="#2563eb" />
+      </linearGradient>
+      <linearGradient id="gradient3" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stopColor="#10b981" />
+        <stop offset="100%" stopColor="#059669" />
+      </linearGradient>
+    </defs>
+  </svg>
+);
+
 const Stopwatch = () => {
   const [time, setTime] = useState(0);
   const [isRunning, setIsRunning] = useState(false);
@@ -15,11 +91,25 @@ const Stopwatch = () => {
         setTime(prevTime => prevTime + 10);
       }, 10);
     } else {
-      clearInterval(intervalRef.current);
+      if (intervalRef.current) {
+        clearInterval(intervalRef.current);
+      }
     }
-
-    return () => clearInterval(intervalRef.current);
+    return () => {
+      if (intervalRef.current) {
+        clearInterval(intervalRef.current);
+      }
+    };
   }, [isRunning]);
+
+  // Clean up interval on component unmount
+  useEffect(() => {
+    return () => {
+      if (intervalRef.current) {
+        clearInterval(intervalRef.current);
+      }
+    };
+  }, []);
 
   const formatTime = (ms) => {
     const minutes = Math.floor(ms / 60000);
@@ -45,49 +135,112 @@ const Stopwatch = () => {
     }
   };
 
+  // Handle keyboard shortcuts for accessibility
+  useEffect(() => {
+    const handleKeyPress = (event) => {
+      // Prevent shortcuts when typing in input fields
+      if (event.target.tagName === 'INPUT' || event.target.tagName === 'TEXTAREA') {
+        return;
+      }
+      switch (event.key.toLowerCase()) {
+        case ' ': // Spacebar - Start/Pause
+          event.preventDefault();
+          isRunning ? handlePause() : handleStart();
+          break;
+        case 'r': // R key - Reset
+          event.preventDefault();
+          handleReset();
+          break;
+        case 's': // S key - Stop
+          event.preventDefault();
+          handleStop();
+          break;
+        case 'l': // L key - Lap
+          event.preventDefault();
+          handleLap();
+          break;
+        default:
+          break;
+      }
+    };
+    window.addEventListener('keydown', handleKeyPress);
+    return () => window.removeEventListener('keydown', handleKeyPress);
+  }, [isRunning, time]);
+
   // Analog clock calculations
   const totalSeconds = time / 1000;
   const secondAngle = (totalSeconds % 60) * 6; // 360° / 60 seconds = 6° per second
   const minuteAngle = (totalSeconds / 60) * 6; // 360° / 60 minutes = 6° per minute
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
-      <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-8 shadow-2xl border border-white/20 max-w-4xl w-full">
-        {/* Header */}
+    <div className="min-h-screen gradient-fallback flex-fallback items-center-fallback justify-center-fallback p-4"
+      style={{
+        background: 'linear-gradient(135deg, #0f172a 0%, #7c3aed 50%, #0f172a 100%)',
+        minHeight: '100vh'
+      }}>
+      <div className="bg-white/10 backdrop-blur-lg rounded-fallback p-8 shadow-fallback border border-white/20 max-w-4xl w-full"
+        style={{
+          backgroundColor: 'rgba(255, 255, 255, 0.1)',
+          borderRadius: '1.5rem',
+          boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.25)'
+        }}>
+        {/* Header with Logo */}
         <div className="text-center mb-8">
-          <h1 className="text-4xl font-bold text-white mb-2">Professional Stopwatch</h1>
-          <p className="text-white/70">High-precision timing with analog and digital displays</p>
+          <div className="flex-fallback items-center-fallback justify-center-fallback gap-4 mb-4"
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              gap: '1rem'
+            }}>
+            <StopwatchLogo size={72} />
+            <div>
+              <h1 className="text-4xl font-bold text-white mb-2">Professional Stopwatch</h1>
+              <p className="text-white/70">High-precision timing with analog and digital displays</p>
+            </div>
+          </div>
         </div>
-
-        <div className="grid lg:grid-cols-2 gap-8">
+        <div className="grid lg:grid-cols-2 gap-8 grid-fallback">
           {/* Analog Clock */}
-          <div className="flex flex-col items-center">
+          <div className="flex-fallback flex-col items-center-fallback"
+            style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
             <h2 className="text-xl font-semibold text-white mb-6">Analog Display</h2>
             <div className="relative">
               {/* Clock Face */}
-              <div className="w-64 h-64 rounded-full bg-gradient-to-br from-white to-gray-200 shadow-2xl relative border-8 border-gray-300">
+              <div className="w-64 h-64 rounded-full shadow-fallback relative border-8 border-gray-300"
+                style={{
+                  width: '16rem',
+                  height: '16rem',
+                  borderRadius: '50%',
+                  background: 'linear-gradient(135deg, #ffffff 0%, #e5e7eb 100%)',
+                  boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.25)',
+                  border: '8px solid #d1d5db'
+                }}>
                 {/* Hour markers */}
                 {[...Array(60)].map((_, i) => (
                   <div
                     key={i}
-                    className={`absolute w-0.5 bg-gray-600 origin-bottom ${
-                      i % 5 === 0 ? 'h-6' : 'h-3'
-                    }`}
+                    className={`absolute origin-bottom ${i % 5 === 0 ? 'h-6' : 'h-3'}`}
                     style={{
+                      width: '2px',
+                      backgroundColor: '#374151',
                       left: '50%',
                       bottom: '50%',
+                      height: i % 5 === 0 ? '1.5rem' : '0.75rem',
                       transform: `translateX(-50%) rotate(${i * 6}deg)`,
                       transformOrigin: '50% 100%'
                     }}
                   />
                 ))}
-                
                 {/* Numbers */}
                 {[0, 15, 30, 45].map((num) => (
                   <div
                     key={num}
-                    className="absolute text-lg font-bold text-gray-700 w-6 h-6 flex items-center justify-center"
+                    className="absolute text-lg font-bold text-gray-700 w-6 h-6"
                     style={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
                       left: '50%',
                       top: '50%',
                       transform: `translate(-50%, -50%) translate(${Math.cos((num - 15) * Math.PI / 30) * 90}px, ${Math.sin((num - 15) * Math.PI / 30) * 90}px)`
@@ -96,116 +249,226 @@ const Stopwatch = () => {
                     {num}
                   </div>
                 ))}
-
                 {/* Minute hand */}
                 <div
-                  className="absolute w-1 bg-blue-600 origin-bottom rounded-full shadow-lg"
+                  className="absolute origin-bottom rounded-full shadow-lg"
                   style={{
+                    width: '4px',
+                    backgroundColor: '#3b82f6',
                     left: '50%',
                     bottom: '50%',
                     height: '80px',
+                    borderRadius: '2px',
                     transform: `translateX(-50%) rotate(${minuteAngle}deg)`,
                     transformOrigin: '50% 100%'
                   }}
                 />
-
                 {/* Second hand */}
                 <div
-                  className="absolute w-0.5 bg-red-500 origin-bottom rounded-full shadow-lg"
+                  className="absolute origin-bottom rounded-full shadow-lg"
                   style={{
+                    width: '2px',
+                    backgroundColor: '#ef4444',
                     left: '50%',
                     bottom: '50%',
                     height: '90px',
+                    borderRadius: '1px',
                     transform: `translateX(-50%) rotate(${secondAngle}deg)`,
                     transformOrigin: '50% 100%'
                   }}
                 />
-
                 {/* Center dot */}
-                <div className="absolute w-4 h-4 bg-gray-800 rounded-full left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10"></div>
+                <div
+                  className="absolute rounded-full left-1/2 top-1/2 z-10"
+                  style={{
+                    width: '16px',
+                    height: '16px',
+                    backgroundColor: '#1f2937',
+                    borderRadius: '50%',
+                    transform: 'translate(-50%, -50%)',
+                    zIndex: 10
+                  }}
+                ></div>
               </div>
             </div>
           </div>
-
           {/* Digital Display and Controls */}
-          <div className="flex flex-col">
+          <div className="flex-fallback flex-col"
+            style={{ display: 'flex', flexDirection: 'column' }}>
             <h2 className="text-xl font-semibold text-white mb-6 text-center">Digital Display</h2>
-            
             {/* Digital Time Display */}
-            <div className="bg-black/50 rounded-2xl p-8 mb-8 border border-white/10">
-              <div className="text-6xl font-mono font-bold text-green-400 text-center tracking-wider">
+            <div className="rounded-fallback p-8 mb-8 border border-white/10"
+              style={{
+                backgroundColor: 'rgba(0, 0, 0, 0.5)',
+                borderRadius: '1rem',
+                padding: '2rem',
+                marginBottom: '2rem'
+              }}>
+              <div className="text-6xl font-mono font-bold text-center tracking-wider"
+                style={{
+                  fontSize: '3.75rem',
+                  fontFamily: 'ui-monospace, SFMono-Regular, Monaco, Consolas, "Liberation Mono", "Menlo", monospace',
+                  color: '#10b981',
+                  letterSpacing: '0.1em'
+                }}>
                 {formatTime(time)}
               </div>
-              <div className="text-center text-white/60 mt-2">MM:SS.CS</div>
+              <div className="text-center mt-2" style={{ color: 'rgba(255, 255, 255, 0.6)' }}>
+                MM:SS.CS
+              </div>
             </div>
-
             {/* Control Buttons */}
-            <div className="grid grid-cols-2 gap-4 mb-6">
+            <div className="grid grid-cols-2 gap-4 mb-6 grid-fallback">
               <button
                 onClick={isRunning ? handlePause : handleStart}
-                className={`flex items-center justify-center gap-3 px-6 py-4 rounded-xl font-semibold transition-all duration-200 ${
-                  isRunning 
-                    ? 'bg-orange-500 hover:bg-orange-600 text-white shadow-lg hover:shadow-orange-500/25' 
-                    : 'bg-green-500 hover:bg-green-600 text-white shadow-lg hover:shadow-green-500/25'
+                className={`flex-fallback items-center-fallback justify-center-fallback gap-3 px-6 py-4 rounded-fallback font-semibold transition-all duration-200 shadow-lg ${
+                  isRunning
+                    ? 'bg-orange-500 hover:bg-orange-600 text-white'
+                    : 'bg-green-500 hover:bg-green-600 text-white'
                 }`}
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  gap: '0.75rem',
+                  padding: '1rem 1.5rem',
+                  borderRadius: '0.75rem',
+                  backgroundColor: isRunning ? '#f97316' : '#10b981',
+                  color: '#ffffff',
+                  boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.1)',
+                  cursor: 'pointer'
+                }}
+                onMouseOver={(e) => {
+                  e.target.style.backgroundColor = isRunning ? '#ea580c' : '#059669';
+                }}
+                onMouseOut={(e) => {
+                  e.target.style.backgroundColor = isRunning ? '#f97316' : '#10b981';
+                }}
+                aria-label={isRunning ? 'Pause stopwatch' : 'Start stopwatch'}
               >
                 {isRunning ? <Pause size={20} /> : <Play size={20} />}
                 {isRunning ? 'Pause' : 'Start'}
               </button>
-
               <button
                 onClick={handleStop}
-                className="flex items-center justify-center gap-3 px-6 py-4 rounded-xl font-semibold bg-red-500 hover:bg-red-600 text-white transition-all duration-200 shadow-lg hover:shadow-red-500/25"
+                className="flex-fallback items-center-fallback justify-center-fallback gap-3 px-6 py-4 rounded-fallback font-semibold transition-all duration-200 shadow-lg bg-red-500 hover:bg-red-600 text-white"
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  gap: '0.75rem',
+                  padding: '1rem 1.5rem',
+                  borderRadius: '0.75rem',
+                  backgroundColor: '#ef4444',
+                  color: '#ffffff',
+                  boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.1)',
+                  cursor: 'pointer'
+                }}
+                onMouseOver={(e) => e.target.style.backgroundColor = '#dc2626'}
+                onMouseOut={(e) => e.target.style.backgroundColor = '#ef4444'}
+                aria-label="Stop stopwatch"
               >
                 <Square size={20} />
                 Stop
               </button>
-
               <button
                 onClick={handleReset}
-                className="flex items-center justify-center gap-3 px-6 py-4 rounded-xl font-semibold bg-gray-500 hover:bg-gray-600 text-white transition-all duration-200 shadow-lg hover:shadow-gray-500/25"
+                className="flex-fallback items-center-fallback justify-center-fallback gap-3 px-6 py-4 rounded-fallback font-semibold transition-all duration-200 shadow-lg bg-gray-500 hover:bg-gray-600 text-white"
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  gap: '0.75rem',
+                  padding: '1rem 1.5rem',
+                  borderRadius: '0.75rem',
+                  backgroundColor: '#6b7280',
+                  color: '#ffffff',
+                  boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.1)',
+                  cursor: 'pointer'
+                }}
+                onMouseOver={(e) => e.target.style.backgroundColor = '#4b5563'}
+                onMouseOut={(e) => e.target.style.backgroundColor = '#6b7280'}
+                aria-label="Reset stopwatch"
               >
                 <RotateCcw size={20} />
                 Reset
               </button>
-
               <button
                 onClick={handleLap}
                 disabled={time === 0}
-                className="flex items-center justify-center gap-3 px-6 py-4 rounded-xl font-semibold bg-blue-500 hover:bg-blue-600 text-white transition-all duration-200 shadow-lg hover:shadow-blue-500/25 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="flex-fallback items-center-fallback justify-center-fallback gap-3 px-6 py-4 rounded-fallback font-semibold transition-all duration-200 shadow-lg bg-blue-500 hover:bg-blue-600 text-white disabled:opacity-50 disabled:cursor-not-allowed"
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  gap: '0.75rem',
+                  padding: '1rem 1.5rem',
+                  borderRadius: '0.75rem',
+                  backgroundColor: time === 0 ? 'rgba(59, 130, 246, 0.5)' : '#3b82f6',
+                  color: '#ffffff',
+                  boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.1)',
+                  cursor: time === 0 ? 'not-allowed' : 'pointer',
+                  opacity: time === 0 ? 0.5 : 1
+                }}
+                onMouseOver={(e) => {
+                  if (time > 0) e.target.style.backgroundColor = '#2563eb';
+                }}
+                onMouseOut={(e) => {
+                  if (time > 0) e.target.style.backgroundColor = '#3b82f6';
+                }}
+                aria-label="Record lap time"
               >
                 <Flag size={20} />
                 Lap
               </button>
             </div>
-
             {/* Lap Times */}
             {laps.length > 0 && (
-              <div className="bg-white/5 rounded-2xl p-6 backdrop-blur-sm border border-white/10">
-                <h3 className="text-lg font-semibold text-white mb-4 flex items-center gap-2">
+              <div className="rounded-fallback p-6 backdrop-blur-sm border border-white/10"
+                style={{
+                  backgroundColor: 'rgba(255, 255, 255, 0.05)',
+                  borderRadius: '1rem',
+                  padding: '1.5rem'
+                }}>
+                <h3 className="text-lg font-semibold text-white mb-4 flex-fallback items-center-fallback gap-2"
+                  style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '0.5rem'
+                  }}>
                   <Flag size={18} />
                   Lap Times
                 </h3>
-                <div className="max-h-40 overflow-y-auto space-y-2 lap-scroll">
+                <div className="lap-scroll space-y-2"
+                  style={{
+                    maxHeight: '10rem',
+                    overflowY: 'auto'
+                  }}>
                   {laps.map((lap, index) => (
-                    <div key={lap.id} className="flex justify-between items-center p-3 bg-white/5 rounded-lg">
-                      <span className="text-white/80">Lap {lap.id}</span>
-                      <span className="font-mono text-white font-semibold">{lap.timestamp}</span>
+                    <div key={lap.id}
+                      className="flex-fallback justify-between items-center-fallback p-3 rounded-lg"
+                      style={{
+                        display: 'flex',
+                        justifyContent: 'space-between',
+                        alignItems: 'center',
+                        padding: '0.75rem',
+                        backgroundColor: 'rgba(255, 255, 255, 0.05)',
+                        borderRadius: '0.5rem'
+                      }}>
+                      <span style={{ color: 'rgba(255, 255, 255, 0.8)' }}>Lap {lap.id}</span>
+                      <span className="font-mono font-semibold"
+                        style={{
+                          fontFamily: 'ui-monospace, SFMono-Regular, Monaco, Consolas, "Liberation Mono", "Menlo", monospace',
+                          color: '#ffffff',
+                          fontWeight: '600'
+                        }}>
+                        {lap.timestamp}
+                      </span>
                     </div>
                   ))}
                 </div>
               </div>
             )}
-          </div>
-        </div>
-
-        {/* Status Indicator */}
-        <div className="text-center mt-8">
-          <div className={`inline-flex items-center gap-2 px-4 py-2 rounded-full ${
-            isRunning ? 'bg-green-500/20 text-green-400' : 'bg-gray-500/20 text-gray-400'
-          }`}>
-            <div className={`w-2 h-2 rounded-full ${isRunning ? 'bg-green-400 animate-pulse' : 'bg-gray-400'}`}></div>
-            {isRunning ? 'Running' : 'Stopped'}
           </div>
         </div>
       </div>

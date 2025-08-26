@@ -2,42 +2,244 @@
 @tailwind components;
 @tailwind utilities;
 
+/* CSS Reset and Base Styles */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 html {
   scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%; /* Prevent font scaling in iOS */
+  -ms-text-size-adjust: 100%; /* Prevent font scaling in IE */
 }
 
 body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
-/* Custom scrollbar for lap times */
+/* Button Reset for Cross-Browser Consistency */
+button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+button:focus {
+  outline: 2px solid rgba(59, 130, 246, 0.5);
+  outline-offset: 2px;
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+/* Cross-browser Backdrop Blur Support */
+.backdrop-blur-lg {
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+}
+
+/* Fallback for browsers without backdrop-filter support */
+@supports not (backdrop-filter: blur(16px)) {
+  .backdrop-blur-lg {
+    background-color: rgba(255, 255, 255, 0.15) !important;
+  }
+}
+
+/* Custom scrollbar for lap times - Cross Browser */
 .lap-scroll {
+  /* Firefox */
   scrollbar-width: thin;
   scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
+  
+  /* Webkit browsers */
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
 }
 
 .lap-scroll::-webkit-scrollbar {
   width: 6px;
+  height: 6px;
 }
 
 .lap-scroll::-webkit-scrollbar-track {
   background: transparent;
+  border-radius: 3px;
 }
 
 .lap-scroll::-webkit-scrollbar-thumb {
   background: rgba(255, 255, 255, 0.3);
   border-radius: 3px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .lap-scroll::-webkit-scrollbar-thumb:hover {
   background: rgba(255, 255, 255, 0.5);
 }
 
-/* Smooth animations */
+/* IE/Edge scrollbar styling */
+.lap-scroll {
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+/* Smooth animations with cross-browser support */
 * {
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
+  
+  /* Vendor prefixes for older browsers */
+  -webkit-transition-property: color, background-color, border-color, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  -moz-transition-property: color, background-color, border-color, opacity, box-shadow, transform, filter;
+  -ms-transition-property: color, background-color, border-color, opacity, box-shadow, transform, filter;
+  -o-transition-property: color, background-color, border-color, opacity, box-shadow, transform, filter;
+}
+
+/* Transform animations cross-browser */
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  -webkit-animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  -moz-animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@-webkit-keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@-moz-keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* Gradient fallbacks for older browsers */
+.gradient-fallback {
+  background: #1e293b; /* Fallback color */
+  background: linear-gradient(135deg, #0f172a 0%, #7c3aed 50%, #0f172a 100%);
+  background: -webkit-linear-gradient(135deg, #0f172a 0%, #7c3aed 50%, #0f172a 100%);
+  background: -moz-linear-gradient(135deg, #0f172a 0%, #7c3aed 50%, #0f172a 100%);
+  background: -ms-linear-gradient(135deg, #0f172a 0%, #7c3aed 50%, #0f172a 100%);
+  background: -o-linear-gradient(135deg, #0f172a 0%, #7c3aed 50%, #0f172a 100%);
+}
+
+/* Box shadow fallbacks */
+.shadow-fallback {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+/* Border radius consistency */
+.rounded-fallback {
+  border-radius: 1.5rem;
+  -webkit-border-radius: 1.5rem;
+  -moz-border-radius: 1.5rem;
+}
+
+/* Flexbox fallbacks for IE */
+.flex-fallback {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.items-center-fallback {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.justify-center-fallback {
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+/* Grid fallback for older browsers */
+@supports not (display: grid) {
+  .grid-fallback {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+  
+  .grid-fallback > * {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 50%;
+    -moz-box-flex: 1;
+    -ms-flex: 1 1 50%;
+    flex: 1 1 50%;
+    min-width: 300px;
+  }
+}
+
+/* Font loading optimization */
+@font-face {
+  font-display: swap; /* Better font loading performance */
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .text-white {
+    color: #ffffff !important;
+  }
+  
+  .bg-white\/10 {
+    background-color: rgba(255, 255, 255, 0.2) !important;
+    border: 2px solid #ffffff !important;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  
+  .animate-pulse {
+    animation: none !important;
+  }
 }
