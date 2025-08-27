@@ -26,6 +26,18 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
+          <script async src="https://www.googletagmanager.com/gtag/js?id=G-S5KZMZMEM7"></script>
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'G-S5KZMZMEM7');
+              `,
+            }}
+          />
+
         <title>Online Stopwatch – Free & Simple Timer | Stopwatch.lol</title>
         <meta name="description" content="A free, simple, and accurate online stopwatch and timer. Start, stop, and reset your stopwatch instantly – no downloads required. Perfect for studying, workouts, cooking, and productivity." />
         <meta name="keywords" content="online stopwatch, free stopwatch, stopwatch timer, timer online, stopwatch for study, stopwatch for workout" />
@@ -70,6 +82,7 @@ export default function RootLayout({ children }) {
             }),
           }}
         />
+        
       </head>
       <body className={inter.className}>
         {children}
