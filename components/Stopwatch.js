@@ -80,36 +80,60 @@ const StopwatchLogo = ({ size = 64 }) => (
 );
 
 const Stopwatch = () => {
-  const [time, setTime] = useState(0);
+  const [time, setTime] = useState(0); // elapsed time in ms
   const [isRunning, setIsRunning] = useState(false);
   const [laps, setLaps] = useState([]);
+  const startTimeRef = useRef(null); // timestamp when started
   const intervalRef = useRef(null);
 
+  // Start or resume stopwatch
+  const handleStart = () => {
+    if (!isRunning) {
+      startTimeRef.current = Date.now() - time;
+      setIsRunning(true);
+    }
+  };
+
+  // Pause stopwatch
+  const handlePause = () => {
+    setIsRunning(false);
+  };
+
+  // Stop and reset stopwatch
+  const handleStop = () => {
+    setIsRunning(false);
+    setTime(0);
+    setLaps([]);
+    startTimeRef.current = null;
+  };
+
+  // Reset time and laps
+  const handleReset = () => {
+    setTime(0);
+    setLaps([]);
+    startTimeRef.current = isRunning ? Date.now() : null;
+  };
+
+  // Lap
+  const handleLap = () => {
+    if (time > 0) {
+      setLaps(prev => [...prev, { id: prev.length + 1, time, timestamp: formatTime(time) }]);
+    }
+  };
+
+    // Update time based on real elapsed time
   useEffect(() => {
     if (isRunning) {
       intervalRef.current = setInterval(() => {
-        setTime(prevTime => prevTime + 10);
+        setTime(Date.now() - startTimeRef.current);
       }, 10);
-    } else {
-      if (intervalRef.current) {
-        clearInterval(intervalRef.current);
-      }
+    } else if (intervalRef.current) {
+      clearInterval(intervalRef.current);
     }
     return () => {
-      if (intervalRef.current) {
-        clearInterval(intervalRef.current);
-      }
+      if (intervalRef.current) clearInterval(intervalRef.current);
     };
   }, [isRunning]);
-
-  // Clean up interval on component unmount
-  useEffect(() => {
-    return () => {
-      if (intervalRef.current) {
-        clearInterval(intervalRef.current);
-      }
-    };
-  }, []);
 
   const formatTime = (ms) => {
     const hours = Math.floor(ms / 3600000);
@@ -122,24 +146,6 @@ const Stopwatch = () => {
         .toString()
         .padStart(2, '0')}.${centiseconds.toString().padStart(2, '0')}`;
   };
-
-  const handleStart = () => setIsRunning(true);
-  const handlePause = () => setIsRunning(false);
-  const handleStop = () => {
-    setIsRunning(false);
-    setTime(0);
-    setLaps([]);
-  };
-  const handleReset = () => {
-    setTime(0);
-    setLaps([]);
-  };
-  const handleLap = () => {
-    if (time > 0) {
-      setLaps(prev => [...prev, { id: prev.length + 1, time, timestamp: formatTime(time) }]);
-    }
-  };
-
   // Handle keyboard shortcuts for accessibility
   useEffect(() => {
     const handleKeyPress = (event) => {
