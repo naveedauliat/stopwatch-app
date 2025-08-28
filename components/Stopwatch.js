@@ -112,10 +112,15 @@ const Stopwatch = () => {
   }, []);
 
   const formatTime = (ms) => {
-    const minutes = Math.floor(ms / 60000);
+    const hours = Math.floor(ms / 3600000);
+    const minutes = Math.floor((ms % 3600000) / 60000);
     const seconds = Math.floor((ms % 60000) / 1000);
     const centiseconds = Math.floor((ms % 1000) / 10);
-    return `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}.${centiseconds.toString().padStart(2, '0')}`;
+    return `${hours.toString().padStart(2, '0')}:${minutes
+      .toString()
+      .padStart(2, '0')}:${seconds
+        .toString()
+        .padStart(2, '0')}.${centiseconds.toString().padStart(2, '0')}`;
   };
 
   const handleStart = () => setIsRunning(true);
@@ -169,8 +174,14 @@ const Stopwatch = () => {
 
   // Analog clock calculations
   const totalSeconds = time / 1000;
+  const hours = Math.floor(time / 3600000) % 12;
+  const minutes = Math.floor((time % 3600000) / 60000);
+  const seconds = Math.floor((time % 60000) / 1000);
+
+  // Calculate angles
+  const hourAngle = ((hours + minutes / 60 + seconds / 3600) * 30); // 360° / 12 hours = 30° per hour
+  const minuteAngle = ((minutes + seconds / 60) * 6); // 360° / 60 minutes = 6° per minute
   const secondAngle = (totalSeconds % 60) * 6; // 360° / 60 seconds = 6° per second
-  const minuteAngle = (totalSeconds / 60) * 6; // 360° / 60 minutes = 6° per minute
 
   return (
     <div className="min-h-screen gradient-fallback flex-fallback items-center-fallback justify-center-fallback p-4"
@@ -249,6 +260,21 @@ const Stopwatch = () => {
                     {num}
                   </div>
                 ))}
+                {/* Hour hand */}
+                <div
+                  className="absolute origin-bottom rounded-full shadow-lg"
+                  style={{
+                    width: '6px',
+                    backgroundColor: '#fbbf24',
+                    left: '50%',
+                    bottom: '50%',
+                    height: '60px',
+                    borderRadius: '3px',
+                    transform: `translateX(-50%) rotate(${hourAngle}deg)`,
+                    transformOrigin: '50% 100%',
+                    zIndex: 2
+                  }}
+                />
                 {/* Minute hand */}
                 <div
                   className="absolute origin-bottom rounded-full shadow-lg"
@@ -260,7 +286,8 @@ const Stopwatch = () => {
                     height: '80px',
                     borderRadius: '2px',
                     transform: `translateX(-50%) rotate(${minuteAngle}deg)`,
-                    transformOrigin: '50% 100%'
+                    transformOrigin: '50% 100%',
+                    zIndex: 3
                   }}
                 />
                 {/* Second hand */}
@@ -274,7 +301,8 @@ const Stopwatch = () => {
                     height: '90px',
                     borderRadius: '1px',
                     transform: `translateX(-50%) rotate(${secondAngle}deg)`,
-                    transformOrigin: '50% 100%'
+                    transformOrigin: '50% 100%',
+                    zIndex: 4
                   }}
                 />
                 {/* Center dot */}
@@ -304,28 +332,29 @@ const Stopwatch = () => {
                 padding: '2rem',
                 marginBottom: '2rem'
               }}>
-              <div className="text-6xl font-mono font-bold text-center tracking-wider"
+              <div className="text-5xl font-mono font-bold text-center tracking-wider"
                 style={{
-                  fontSize: '3.75rem',
+                  fontSize: '2.75rem', // slightly smaller for more digits
                   fontFamily: 'ui-monospace, SFMono-Regular, Monaco, Consolas, "Liberation Mono", "Menlo", monospace',
                   color: '#10b981',
-                  letterSpacing: '0.1em'
+                  letterSpacing: '0.08em',
+                  wordSpacing: '0.2em'
                 }}>
                 {formatTime(time)}
               </div>
               <div className="text-center mt-2" style={{ color: 'rgba(255, 255, 255, 0.6)' }}>
-                MM:SS.CS
+                HH:MM:SS.CS
               </div>
             </div>
+
             {/* Control Buttons */}
             <div className="grid grid-cols-2 gap-4 mb-6 grid-fallback">
               <button
                 onClick={isRunning ? handlePause : handleStart}
-                className={`flex-fallback items-center-fallback justify-center-fallback gap-3 px-6 py-4 rounded-fallback font-semibold transition-all duration-200 shadow-lg ${
-                  isRunning
-                    ? 'bg-orange-500 hover:bg-orange-600 text-white'
-                    : 'bg-green-500 hover:bg-green-600 text-white'
-                }`}
+                className={`flex-fallback items-center-fallback justify-center-fallback gap-3 px-6 py-4 rounded-fallback font-semibold transition-all duration-200 shadow-lg ${isRunning
+                  ? 'bg-orange-500 hover:bg-orange-600 text-white'
+                  : 'bg-green-500 hover:bg-green-600 text-white'
+                  }`}
                 style={{
                   display: 'flex',
                   alignItems: 'center',
