@@ -40,7 +40,7 @@ export default function RootLayout({ children }) {
 
         <title>Online Stopwatch – Free & Simple Timer | Stopwatch.lol</title>
         <meta name="description" content="A free, simple, and accurate online stopwatch and timer. Start, stop, and reset your stopwatch instantly – no downloads required. Perfect for studying, workouts, cooking, and productivity." />
-        <meta name="keywords" content="online stopwatch, free stopwatch, stopwatch timer, timer online, stopwatch for study, stopwatch for workout" />
+        <meta name="keywords" content="online stopwatch, free stopwatch, stopwatch timer, timer online, stopwatch for study, stopwatch for workout, stopwatch, timer, laps, reset" />
         <link rel="canonical" href="https://stopwatch.lol/" />
         <link rel="icon" href="/favicon.ico" />
         
@@ -71,16 +71,48 @@ export default function RootLayout({ children }) {
               "@type": "FAQPage",
               mainEntity: [
                 {
-                  "@type": "Question",
-                  name: "Is this stopwatch accurate?",
-                  acceptedAnswer: {
-                    "@type": "Answer",
-                    text: "Yes, Stopwatch.lol uses precise browser timing functions to keep time as accurately as your device allows."
-                  }
-                }
-              ]
-            }),
-          }}
+          "@type": "Question",
+          name: "Is this stopwatch accurate?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes, Stopwatch.lol uses precise browser timing functions to keep time as accurately as your device allows."
+          }
+        },
+        {
+          "@type": "Question",
+          name: "Can I use this stopwatch on my phone?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes, Stopwatch.lol is fully responsive and works on all modern smartphones, tablets, and desktops."
+          }
+        },
+        {
+          "@type": "Question",
+          name: "Does the stopwatch work in the background?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes, the stopwatch is designed to keep accurate time even if you switch tabs or minimize your browser."
+          }
+        },
+        {
+          "@type": "Question",
+          name: "Is Stopwatch.lol free to use?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes, Stopwatch.lol is completely free and does not require any downloads or registration."
+          }
+        },
+        {
+          "@type": "Question",
+          name: "Can I record lap times?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes, you can record and view lap times with the Lap button."
+          }
+        }
+      ]
+    }),
+  }}
         />
         
       </head>
