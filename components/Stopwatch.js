@@ -10,7 +10,7 @@ const StopwatchLogo = ({ size = 64 }) => (
     height={size}
     viewBox="0 0 64 64"
     fill="none"
-    xmlns="http://www.w3.org/2000/svg"
+    xmlns="https://www.w3.org/2000/svg"
     className="drop-shadow-lg"
   >
     {/* Outer ring */}
