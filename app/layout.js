@@ -114,7 +114,7 @@ export default function RootLayout({ children }) {
     }),
   }}
         />
-        
+        <script src="https://analytics.ahrefs.com/analytics.js" data-key="c+AOAwm4irUYx0afNWNcBw" async></script>
       </head>
       <body className={inter.className}>
         {children}
