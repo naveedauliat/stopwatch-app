@@ -54,7 +54,7 @@ export default function RootLayout({ children }) {
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "WebApplication",
-              name: "Stopwatch.lol",
+              name: "Online Stopwatch",
               url: "https://stopwatch.lol",
               applicationCategory: "Utility",
               operatingSystem: "Any",
