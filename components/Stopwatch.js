@@ -3,6 +3,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Play, Pause, Square, RotateCcw, Flag } from 'lucide-react';
 import { Download } from 'lucide-react'; // Add this to your imports
+import { Gamepad2 } from 'lucide-react'; // Add this to your imports
 
 
 // Professional Stopwatch Logo Component
@@ -577,14 +578,33 @@ const Stopwatch = () => {
                     <Download size={18} />
                     Download Laps (CSV)
                   </button>
-                  </div>
                 </div>
-            )}
               </div>
-        </div>
+            )}
+
+            <div
+              style={{
+                position: 'fixed',
+                left: '2rem',
+                bottom: '2rem',
+                zIndex: 50,
+              }}
+            >
+              <a
+                href="/tic-tac-toe"
+                className="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-lg font-semibold flex items-center gap-2 transition"
+                aria-label="Play Tic Tac Toe"
+                style={{ textDecoration: 'none', display: 'flex', alignItems: 'center' }}
+              >
+                <Gamepad2 size={24} />
+                Tic Tac Toe
+              </a>
+            </div>
+          </div>
         </div>
       </div>
-      );
+    </div>
+  );
 };
 
-      export default Stopwatch;
+export default Stopwatch;
