@@ -9,7 +9,6 @@ export const metadata = {
   //description: 'Professional stopwatch application with analog and digital displays, lap timing, and precision controls.',
   //keywords: 'stopwatch, timer, precision timer, lap timer, analog clock, digital clock',
   author: 'Your Name',
-  viewport: 'width=device-width, initial-scale=1',
   icons: {
     icon: [
       { url: '/favicon.ico', sizes: '16x16', type: 'image/x-icon' },
@@ -21,6 +20,11 @@ export const metadata = {
   },
   manifest: '/manifest.json',
 }
+
+export const viewport = {
+  width: 'width=device-width, initial-scale=1',
+}
+
 
 export default function RootLayout({ children }) {
   return (
