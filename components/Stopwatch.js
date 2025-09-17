@@ -234,7 +234,7 @@ const Stopwatch = () => {
             }}>
             <StopwatchLogo size={72} />
             <div>
-              <h1 className="text-4xl font-bold text-white mb-2">Professional Stopwatch</h1>
+              <h1 className="text-4xl font-bold text-white mb-2">Online Stopwatch</h1>
               <p className="text-white/70">High-precision timing with analog and digital displays</p>
             </div>
           </div>
