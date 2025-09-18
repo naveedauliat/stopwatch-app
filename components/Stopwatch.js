@@ -586,7 +586,7 @@ const Stopwatch = () => {
               style={{
                 position: 'fixed',
                 left: '2rem',
-                bottom: '2rem',
+                bottom: '6rem',
                 zIndex: 50,
               }}
             >
@@ -600,6 +600,27 @@ const Stopwatch = () => {
                 Tic Tac Toe
               </a>
             </div>
+
+                        <div
+              style={{
+                position: 'fixed',
+                left: '2rem',
+                bottom: '2rem',
+                zIndex: 50,
+              }}
+            >
+              <a
+                href="/randomnumber"
+                className="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-lg font-semibold flex items-center gap-2 transition"
+                aria-label="Play Tic Tac Toe"
+                style={{ textDecoration: 'none', display: 'flex', alignItems: 'center' }}
+              >
+                <Gamepad2 size={24} />
+               Random Number Guesser
+              </a>
+            </div>
+
+            
           </div>
         </div>
       </div>
