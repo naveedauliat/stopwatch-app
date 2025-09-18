@@ -586,7 +586,7 @@ const Stopwatch = () => {
               style={{
                 position: 'fixed',
                 left: '2rem',
-                bottom: '6rem',
+                bottom: '5rem',
                 zIndex: 50,
               }}
             >
