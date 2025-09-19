@@ -586,7 +586,7 @@ const Stopwatch = () => {
               style={{
                 position: 'fixed',
                 left: '2rem',
-                bottom: '5rem',
+                bottom: '6rem',
                 zIndex: 50,
               }}
             >
@@ -601,11 +601,11 @@ const Stopwatch = () => {
               </a>
             </div>
 
-                        <div
+            <div
               style={{
                 position: 'fixed',
                 left: '2rem',
-                bottom: '2rem',
+                bottom: '0rem',
                 zIndex: 50,
               }}
             >
@@ -616,11 +616,30 @@ const Stopwatch = () => {
                 style={{ textDecoration: 'none', display: 'flex', alignItems: 'center' }}
               >
                 <Gamepad2 size={24} />
-               Random Number Guesser
+                Random Number Guesser
               </a>
             </div>
 
-            
+            <div
+              style={{
+                position: 'fixed',
+                left: '2rem',
+                bottom: '3rem',
+                zIndex: 50,
+              }}
+            >
+              <a
+                href="/rock-paper-scissors"
+                className="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-lg font-semibold flex items-center gap-2 transition"
+                aria-label="Play Tic Tac Toe"
+                style={{ textDecoration: 'none', display: 'flex', alignItems: 'center' }}
+              >
+                <Gamepad2 size={24} />
+                Rock Paper Scissors
+              </a>
+            </div>
+
+
           </div>
         </div>
       </div>
