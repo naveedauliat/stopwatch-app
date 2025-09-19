@@ -610,7 +610,7 @@ const Stopwatch = () => {
               }}
             >
               <a
-                href="/randomnumber"
+                href="/random-number-guesser"
                 className="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-lg font-semibold flex items-center gap-2 transition"
                 aria-label="Play Tic Tac Toe"
                 style={{ textDecoration: 'none', display: 'flex', alignItems: 'center' }}
