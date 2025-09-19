@@ -43,7 +43,7 @@ export default function RootLayout({ children }) {
           />
 
         <title>Online Stopwatch – Free & Simple Timer | Stopwatch.lol</title>
-        <meta name="description" content="A free, simple, and accurate online stopwatch and timer. Start, stop, and reset your stopwatch instantly – no downloads required. Perfect for studying, workouts, cooking, and productivity." />
+        <meta name="description" content="A free, simple, and accurate online stopwatch and timer. Start, stop, and reset your stopwatch instantly no downloads required." />
         <meta name="keywords" content="online stopwatch, free stopwatch, stopwatch timer, timer online, stopwatch for study, stopwatch for workout, stopwatch online, timer, laps, reset" />
         <link rel="canonical" href="https://stopwatch.lol/" />
         <link rel="icon" href="/favicon.ico" />
