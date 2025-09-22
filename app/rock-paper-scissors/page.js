@@ -4,10 +4,13 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Head from "next/head";
+import { Twitter, Facebook, Linkedin, MessageCircle } from "lucide-react";
 
 const choices = ["rock", "paper", "scissors"];
 
 export default function Home() {
+  const url = "https://stopwatch.lol/rock-paper-scissors";
+  const text = "🎮 Play Rock Paper Scissors online for free!";
   const [playerChoice, setPlayerChoice] = useState(null);
   const [computerChoice, setComputerChoice] = useState(null);
   const [result, setResult] = useState("");
@@ -44,7 +47,19 @@ export default function Home() {
           name="keywords"
           content="rock paper scissors, online game, free game, play game"
         />
-        <link rel="canonical" href="https://yourdomain.com/" />
+        <link rel="canonical" href="https://stopwatch.lol/rock-peper-scissors" />
+
+        <title>Rock Paper Scissors Game | Play Online</title>
+        <meta
+          name="description"
+          content="Play Rock Paper Scissors online for free. Fun, simple, and mobile-friendly game with animations!"
+        />
+        <link rel="canonical" href={url} />
+        <meta property="og:title" content="Rock Paper Scissors Game" />
+        <meta property="og:description" content={text} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={url} />
+        <meta property="og:image" content={`${url}preview.png`} />
 
         {/* Open Graph (Facebook, LinkedIn, etc.) */}
         <meta property="og:title" content="Rock Paper Scissors Game" />
@@ -53,10 +68,10 @@ export default function Home() {
           content="Play Rock Paper Scissors online for free."
         />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://yourdomain.com/" />
+        <meta property="og:url" content="https://stopwatch.lol/rock-peper-scissors" />
         <meta
           property="og:image"
-          content="https://yourdomain.com/preview.png"
+          content="https://stopwatch.lol/rock-peper-scissors/preview.png"
         />
 
         {/* Twitter Cards */}
@@ -68,7 +83,7 @@ export default function Home() {
         />
         <meta
           name="twitter:image"
-          content="https://yourdomain.com/preview.png"
+          content="https://stopwatch.lol/rock-peper-scissors/preview.png"
         />
         </Head>
 
@@ -109,6 +124,55 @@ export default function Home() {
               </motion.div>
             )}
           </AnimatePresence>
+
+           {/* 🔗 Share Buttons */}
+        <div className="flex gap-4 mt-10">
+          {/* Twitter */}
+          <a
+            href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(
+              url
+            )}&text=${encodeURIComponent(text)}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-blue-500 p-3 rounded-full hover:bg-blue-600 transition"
+          >
+            <Twitter className="w-6 h-6 text-white" />
+          </a>
+
+          {/* Facebook */}
+          <a
+            href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
+              url
+            )}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-blue-700 p-3 rounded-full hover:bg-blue-800 transition"
+          >
+            <Facebook className="w-6 h-6 text-white" />
+          </a>
+
+          {/* LinkedIn */}
+          <a
+            href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(
+              url
+            )}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-sky-600 p-3 rounded-full hover:bg-sky-700 transition"
+          >
+            <Linkedin className="w-6 h-6 text-white" />
+          </a>
+
+          {/* WhatsApp */}
+          <a
+            href={`https://wa.me/?text=${encodeURIComponent(`${text} ${url}`)}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-green-500 p-3 rounded-full hover:bg-green-600 transition"
+          >
+            <MessageCircle className="w-6 h-6 text-white" />
+          </a>
+        </div>
 
           <a
             href="/"
