@@ -140,6 +140,13 @@ export default function Home() {
             <MessageCircle className="w-6 h-6 text-white" />
           </a>
         </div>
+
+         <a
+            href="/"
+            className="mt-8 text-blue-200 hover:text-white underline"
+          >
+            ← Back to Stopwatch
+          </a>
       </main>
     </>
   );
