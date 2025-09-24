@@ -10,7 +10,7 @@ export default function Home() {
   const [message, setMessage] = useState("Guess a number between 1 and 100!");
   const [attempts, setAttempts] = useState(0);
 
-  const url = "https://stopwatch.lol/number-guesser";
+  const url = "https://stopwatch.lol/random-number-guesser";
   const text = "🎮 Try this fun Number Guessing Game! Can you guess the secret number between 1 and 100?";
 
   const handleGuess = () => {
