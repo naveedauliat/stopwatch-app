@@ -3,6 +3,7 @@
 import Head from "next/head";
 import { useState } from "react";
 import { Twitter, Facebook, Linkedin, MessageCircle } from "lucide-react";
+import Link from "next/link";
 
 export default function Home() {
   const [target, setTarget] = useState(() => Math.floor(Math.random() * 100) + 1);
@@ -141,12 +142,24 @@ export default function Home() {
           </a>
         </div>
 
-         <a
-            href="/games"
-            className="mt-8 text-blue-200 hover:text-white underline"
-          >
-            ← Back to Games
-          </a>
+        <a
+          href="/games"
+          className="mt-8 text-blue-200 hover:text-white underline"
+        >
+          ← Back to Games
+        </a>
+
+        <div className="mt-8 text-center">
+          <p className="mb-2 text-white-600">Enjoyed Tic Tac Toe? Try more games:</p>
+          <div className="flex gap-4 justify-center">
+            <Link href="/games/tic-tac-toe" className="text-black-600 hover:underline">
+              Tic Tac Toe
+            </Link>
+            <Link href="/games/rock-paper-scissors" className="text-red-600 hover:underline">
+              Rock Paper Scissors
+            </Link>
+          </div>
+        </div>
       </main>
     </>
   );

@@ -3,6 +3,8 @@
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import { Gamepad2, Twitter, Facebook, Linkedin, MessageCircle } from 'lucide-react';
+import Link from "next/link";
+
 
 // Firework component
 function Firework({ style }) {
@@ -204,18 +206,31 @@ export default function TicTacToe() {
             >
               <MessageCircle className="w-6 h-6 text-white" />
             </a>
-            </div>
-        </div>
-      
-            
-              <a
-                href="/games"
-                className="mt-8 text-blue-200 hover:text-white underline"
-              >
-                ← Back to Games
-              </a>
-            
           </div>
+        </div>
+
+
+        <a
+          href="/games"
+          className="mt-8 text-blue-200 hover:text-white underline"
+        >
+          ← Back to Games
+        </a>
+
+
+
+        <div className="mt-8 text-center">
+          <p className="mb-2 text-white-600">Enjoyed Tic Tac Toe? Try more games:</p>
+          <div className="flex gap-4 justify-center">
+            <Link href="/games/rock-paper-scissors" className="text-blue-600 hover:underline">
+              Rock Paper Scissors
+            </Link>
+            <Link href="/games/random-number-guesser" className="text-green-600 hover:underline">
+              Number Guesser
+            </Link>
+          </div>
+        </div>
+      </div>
     </>
   );
 }

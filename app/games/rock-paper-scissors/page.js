@@ -5,6 +5,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Head from "next/head";
 import { Twitter, Facebook, Linkedin, MessageCircle } from "lucide-react";
+import Link from "next/link";
 
 const choices = ["rock", "paper", "scissors"];
 
@@ -180,6 +181,18 @@ export default function Home() {
           >
             ← Back to Games
           </a>
+
+          <div className="mt-8 text-center">
+          <p className="mb-2 text-white-600">Enjoyed Tic Tac Toe? Try more games:</p>
+          <div className="flex gap-4 justify-center">
+            <Link href="/games/tic-tac-toe" className="text-blue-600 hover:underline">
+              Tic Tac Toe
+            </Link>
+            <Link href="/games/random-number-guesser" className="text-green-600 hover:underline">
+              Number Guesser
+            </Link>
+          </div>
+        </div>
         </main>
     </>
         
