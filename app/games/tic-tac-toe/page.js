@@ -58,7 +58,7 @@ export default function TicTacToe() {
   const [blink, setBlink] = useState(false);
   const [showFireworks, setShowFireworks] = useState(false);
 
-  const url = "https://stopwatch.lol/tic-tac-toe"; // 🔗 replace with your domain
+  const url = "https://stopwatch.lol.com/tictactoe"; // 🔗 replace with your domain
   const text = "🎮 Play Tic Tac Toe online with animations and fireworks!";
 
   const winnerObj = calculateWinner(board);
@@ -209,10 +209,10 @@ export default function TicTacToe() {
       
             
               <a
-                href="/"
+                href="/games"
                 className="mt-8 text-blue-200 hover:text-white underline"
               >
-                ← Back to Stopwatch
+                ← Back to Games
               </a>
             
           </div>

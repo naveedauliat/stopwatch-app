@@ -142,10 +142,10 @@ export default function Home() {
         </div>
 
          <a
-            href="/"
+            href="/games"
             className="mt-8 text-blue-200 hover:text-white underline"
           >
-            ← Back to Stopwatch
+            ← Back to Games
           </a>
       </main>
     </>

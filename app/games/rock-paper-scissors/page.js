@@ -47,7 +47,7 @@ export default function Home() {
           name="keywords"
           content="rock paper scissors, online game, free game, play game"
         />
-        <link rel="canonical" href="https://stopwatch.lol/rock-paper-scissors" />
+        <link rel="canonical" href="https://stopwatch.lol/rock-peper-scissors" />
 
         <title>Rock Paper Scissors Game | Play Online</title>
         <meta
@@ -68,10 +68,10 @@ export default function Home() {
           content="Play Rock Paper Scissors online for free."
         />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://stopwatch.lol/rock-paper-scissors" />
+        <meta property="og:url" content="https://stopwatch.lol/rock-peper-scissors" />
         <meta
           property="og:image"
-          content="https://stopwatch.lol/rock-paper-scissors/preview.png"
+          content="https://stopwatch.lol/rock-peper-scissors/preview.png"
         />
 
         {/* Twitter Cards */}
@@ -83,7 +83,7 @@ export default function Home() {
         />
         <meta
           name="twitter:image"
-          content="https://stopwatch.lol/rock-paper-scissors/preview.png"
+          content="https://stopwatch.lol/rock-peper-scissors/preview.png"
         />
         </Head>
 
@@ -175,10 +175,10 @@ export default function Home() {
         </div>
 
           <a
-            href="/"
+            href="/games"
             className="mt-8 text-blue-200 hover:text-white underline"
           >
-            ← Back to Stopwatch
+            ← Back to Games
           </a>
         </main>
     </>
