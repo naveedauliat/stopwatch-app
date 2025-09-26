@@ -213,11 +213,6 @@ button:active {
   }
 }
 
-/* Font loading optimization */
-@font-face {
-  font-display: swap; /* Better font loading performance */
-}
-
 /* High contrast mode support */
 @media (prefers-contrast: high) {
   .text-white {

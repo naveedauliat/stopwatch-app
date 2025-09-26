@@ -43,7 +43,17 @@ export default function Home() {
         <title>Number Guessing Game | Play Online</title>
         <meta
           name="description"
-          content="Play a fun Number Guessing Game online! Guess the secret number between 1 and 100. Free, simple, and mobile-friendly."
+          content="Play a fun Number Guessing Game online! Guess the secret number between 1 and 100. Free, simple, and mobile-friendly. 
+        The random number guesser game is a simple coding project for beginners.
+        It works by generating a random number and asking the user to guess it.
+        If the guess is too high, the program says “Too high.”
+        If the guess is too low, the program says “Too low.”
+        The loop continues until the user finds the correct number.
+        This project teaches logic, loops, and random number generation.
+        It is easy to build in Python, JavaScript, or any language.
+        You can add difficulty levels and attempt limits for more fun.
+        It is a great way to practice programming basics interactively.
+        The random number guesser game is perfect for learning and improving coding skills."
         />
         <meta
           name="keywords"
