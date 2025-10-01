@@ -1,4 +1,5 @@
 import Link from "next/link";
+import ShareButtons from "/components/ShareButtons";
 
 export const metadata = {
   title: "Play Free Online Games | Stopwatch.lol",
@@ -50,6 +51,13 @@ export default function GamesPage() {
           🏠 Back to Stopwatch
         </Link>
       </div>
+            <div>
+      <games/>
+      <ShareButtons
+        url="https://stopwatch.lol/games"
+        title="Play Tic Tac Toe Online — Stopwatch.lol 🎮"
+      />
+    </div>
     </div>
   );
 }
