@@ -1,49 +1,55 @@
-'use client';
+import Link from "next/link";
 
-import { Gamepad2, Hand, Dice6 } from 'lucide-react';
-import Link from 'next/link';
+export const metadata = {
+  title: "Play Free Online Games | Stopwatch.lol",
+  description: "Enjoy free online games like Tic Tac Toe, Number Guesser, and Rock Paper Scissors at Stopwatch.lol. Fun, simple, and free!",
+};
 
-export default function GamesHub() {
+export default function GamesPage() {
+  const games = [
+    {
+      name: "Tic Tac Toe",
+      path: "/games/tic-tac-toe",
+      color: "from-purple-600 to-pink-600",
+      desc: "Classic X vs O strategy game.",
+    },
+    {
+      name: "Number Guesser",
+      path: "/games/random-number-guesser",
+      color: "from-green-500 to-teal-600",
+      desc: "Guess the secret number!",
+    },
+    {
+      name: "Rock Paper Scissors",
+      path: "/games/rock-paper-scissors",
+      color: "from-orange-500 to-red-600",
+      desc: "Battle against the computer.",
+    },
+  ];
+
   return (
-    <main className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-r from-indigo-600 to-purple-700 text-white p-6">
-      <h1 className="text-4xl font-bold mb-10">🎮 Play Our Games</h1>
-
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
-        {/* Tic Tac Toe */}
+    <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-blue-900 to-gray-900 text-white p-8">
+      <h1 className="text-4xl font-bold mb-10">🎮 Free Online Games</h1>
+      <div className="grid gap-6 md:grid-cols-3 w-full max-w-5xl">
+        {games.map((game) => (
+          <Link
+            key={game.path}
+            href={game.path}
+            className={`rounded-2xl shadow-lg p-6 bg-gradient-to-br ${game.color} hover:scale-105 transition transform`}
+          >
+            <h2 className="text-2xl font-bold mb-2">{game.name}</h2>
+            <p className="text-sm opacity-80">{game.desc}</p>
+          </Link>
+        ))}
+      </div>
+      <div className="mt-10">
         <Link
-          href="/games/tic-tac-toe"
-          className="flex flex-col items-center bg-white/10 hover:bg-white/20 p-6 rounded-2xl shadow-lg transition"
+          href="/"
+          className="text-sm font-medium px-4 py-2 bg-white/20 rounded-lg hover:bg-white/30 transition"
         >
-          <Gamepad2 className="w-12 h-12 mb-3 text-yellow-300" />
-          <span className="text-lg font-semibold">Tic Tac Toe</span>
-        </Link>
-
-        {/* Rock Paper Scissors */}
-        <Link
-          href="/games/rock-paper-scissors"
-          className="flex flex-col items-center bg-white/10 hover:bg-white/20 p-6 rounded-2xl shadow-lg transition"
-        >
-          <Hand className="w-12 h-12 mb-3 text-green-300" />
-          <span className="text-lg font-semibold">Rock Paper Scissors</span>
-        </Link>
-
-        {/* Random Number Guesser */}
-        <Link
-          href="/games/random-number-guesser"
-          className="flex flex-col items-center bg-white/10 hover:bg-white/20 p-6 rounded-2xl shadow-lg transition"
-        >
-          <Dice6 className="w-12 h-12 mb-3 text-pink-300" />
-          <span className="text-lg font-semibold">Number Guesser</span>
+          🏠 Back to Stopwatch
         </Link>
       </div>
-              <a
-                href="/"
-                className="mt-8 text-blue-200 hover:text-white underline"
-              >
-                ← Back to Stopwatch
-              </a>
-    </main>
-
-    
+    </div>
   );
 }
