@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
+import ShareButtons from "/components/ShareButtons";
 
 export default function TicTacToe() {
   const [board, setBoard] = useState(Array(9).fill(null));
@@ -105,6 +106,12 @@ export default function TicTacToe() {
           Play Again
         </motion.button>
       )}
+                  <div className="mt-6">
+            <ShareButtons
+              url="https://stopwatch.lol/games/tic-tac-toe"
+              title="Play Tic Tac Toe Online — Stopwatch.lol 🎮"
+            />
+          </div>
     </div>
   );
 }
