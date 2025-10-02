@@ -8,7 +8,7 @@ export const metadata = {
 
 export default function Page() {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-red-600 to-orange-700 text-white p-6">
+    <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-blue-600 to-black-700 text-white p-6">
       <NavLinks />
       <RockPaperScissors />
     </div>

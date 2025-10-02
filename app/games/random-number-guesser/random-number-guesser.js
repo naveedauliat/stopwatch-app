@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
+import ShareButtons from "/components/ShareButtons";
+import Link from "next/link";
 
 export default function NumberGuesser() {
     const [target, setTarget] = useState(Math.floor(Math.random() * 101)); // 0-100
@@ -36,7 +38,7 @@ export default function NumberGuesser() {
 
     return (
         <div className="flex flex-col items-center justify-center min-h-400 
-      bg-gradient-to-br from-yellow-50 via-white to-orange-100 p-6 rounded-2xl shadow-lg">
+      bg-gradient-to-br from-black-50 via-white to-black-100 p-6 rounded-2xl shadow-lg">
 
             <h1 className="text-3xl font-extrabold text-orange-700 mb-6">
                 🔢 Number Guesser
@@ -81,6 +83,52 @@ export default function NumberGuesser() {
                     Play Again
                 </motion.button>
             )}
+
+
+
+            
+            <div className="mt-8 flex flex-col items-center gap-3">
+
+                {/* Back Links */}
+                <div className="flex gap-4">
+                    <Link
+                        href="/games"
+                        className="px-4 py-2 bg-blue-500 text-white rounded-lg shadow hover:bg-blue-600 transition"
+                    >
+                        ⬅ Play More Online Games
+                    </Link>
+
+                    <Link
+                        href="/"
+                        className="px-4 py-2 bg-purple-500 text-white rounded-lg shadow hover:bg-purple-600 transition"
+                    >
+                        ⏱ Stopwatch Online Timer
+                    </Link>
+                </div>
+
+                {/* Cross Game Links */}
+                <div className="flex gap-4 mt-4">
+                    <Link
+                        href="/games/tic-tac-toe"
+                        className="px-4 py-2 bg-green-500 text-white rounded-lg shadow hover:bg-green-600 transition"
+                    >
+                        Tic Tac Toe
+                    </Link>
+
+                    <Link
+                        href="/games/rock-paper-scissors"
+                        className="px-4 py-2 bg-orange-500 text-white rounded-lg shadow hover:bg-orange-600 transition"
+                    >
+                        Rock Paper Scissors
+                    </Link>
+                </div>
+            </div>
+             <div className="mt-6">
+                <ShareButtons
+                    url="https://stopwatch.lol/games/random-number-guesser"
+                    title="Play Tic Tac Toe Online — Stopwatch.lol 🎮"
+                />
+            </div>
         </div>
     );
 }
