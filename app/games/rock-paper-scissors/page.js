@@ -2,8 +2,12 @@ import RockPaperScissors from "./rock-paper-scissors";
 import NavLinks from "/components/NavLinks";
 
 export const metadata = {
-  title: "Play Rock Paper Scissors Online | Stopwatch.lol",
-  description: "Challenge the computer in Rock Paper Scissors! Free online fun at Stopwatch.lol.",
+  title: "Rock Paper Scissors Online – Stopwatch.lol",
+  description: "Play Rock Paper Scissors online with smooth animations. Fun, quick, and easy to play anytime!",
+  keywords: ["rock paper scissors online", "play rock paper scissors", "rps game", "rock paper scissors free"],
+  alternates: {
+    canonical: "https://stopwatch.lol/games/rock-paper-scissors",
+  },
 };
 
 export default function Page() {

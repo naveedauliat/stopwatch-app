@@ -2,8 +2,12 @@ import NumberGuesser from "./random-number-guesser";
 import NavLinks from "/components/NavLinks";
 
 export const metadata = {
-  title: "Play Number Guesser Online | Stopwatch.lol",
-  description: "Try your luck with Number Guesser! Pick a number and see if you can guess it correctly. Play free on Stopwatch.lol.",
+  title: "Number Guesser Game – Stopwatch.lol",
+  description: "Play the fun Number Guesser game online! Guess numbers between 0–100 with hints and animations.",
+  keywords: ["number guesser game", "guess the number", "number guessing online", "fun guessing game"],
+  alternates: {
+    canonical: "https://stopwatch.lol/games/random-number-guesser",
+  },
 };
 
 export default function Page() {
