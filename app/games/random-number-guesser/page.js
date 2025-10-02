@@ -3,7 +3,7 @@ import NavLinks from "/components/NavLinks";
 
 export const metadata = {
   title: "Number Guesser Game – Stopwatch.lol",
-  description: "Play the fun Number Guesser game online! Guess numbers between 0–100 with hints and animations.",
+  description: "Play the fun Number Guesser game online for free! Guess numbers between 0 to 100 with hints and animations. The best number guessing game online.",
   keywords: ["number guesser game", "guess the number", "number guessing online", "fun guessing game"],
   alternates: {
     canonical: "https://stopwatch.lol/games/random-number-guesser",
