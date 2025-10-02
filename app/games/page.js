@@ -4,6 +4,9 @@ import ShareButtons from "/components/ShareButtons";
 export const metadata = {
   title: "Play Free Online Games | Stopwatch.lol",
   description: "Enjoy free online games like Tic Tac Toe, Number Guesser, and Rock Paper Scissors at Stopwatch.lol. Fun, simple, and free!",
+   alternates: {
+    canonical: "https://stopwatch.lol/games",
+  },
 };
 
 export default function GamesPage() {
