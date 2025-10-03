@@ -8,7 +8,7 @@ export const metadata = {
   },
   openGraph: {
     title: "Play Tic Tac Toe Online – Stopwatch.lol",
-    description: "Enjoy a smooth and animated Tic Tac Toe game online. Challenge friends or test your strategy against the computer.",
+    description: "Enjoy a smooth and animated Tic Tac Toe game online. Challenge friends or test your strategy against the computer. What are you waiting for? Play now!",
     url: "https://stopwatch.lol/games/tic-tac-toe",
     siteName: "Stopwatch.lol",
     type: "website",
