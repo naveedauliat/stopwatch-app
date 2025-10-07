@@ -3,7 +3,7 @@ import NavLinks from "/components/NavLinks";
 
 export const metadata = {
   title: "Rock Paper Scissors Online – Stopwatch.lol",
-  description: "Play Rock Paper Scissors free online vs computer with smooth animations. Fun, quick, and easy to play anytime!. The best rock paper scissors game online.",
+  description: "Play Rock Paper Scissors free online vs computer with smooth animations. Fun, quick, and easy to play anytime!. The best rock paper scissors game online. Bring it on!",
   keywords: ["rock paper scissors online", "play rock paper scissors", "rps game", "rock paper scissors free"],
   alternates: {
     canonical: "https://stopwatch.lol/games/rock-paper-scissors",
