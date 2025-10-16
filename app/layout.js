@@ -16,9 +16,9 @@ export const metadata = {
     "laps", "reset"
   ],
   authors: [{ name: "Your Name" }],
-  metadataBase: new URL("https://stopwatch.lol"),
+  metadataBase: new URL("https://www.stopwatch.lol"),
   alternates: {
-    canonical: "https://stopwatch.lol/",
+    canonical: "https://www.stopwatch.lol/",
   },
   icons: {
     icon: [
