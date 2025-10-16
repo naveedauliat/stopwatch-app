@@ -243,7 +243,7 @@ const Stopwatch = () => {
           {/* Analog Clock */}
           <div className="flex-fallback flex-col items-center-fallback"
             style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-            <h2 className="text-xl font-semibold text-white mb-6"></h2>
+            <h2 className="text-xl font-semibold text-white mb-6">Analog</h2>
             <div className="relative">
               {/* Clock Face */}
               <div className="w-64 h-64 rounded-full shadow-fallback relative border-8 border-gray-300"
@@ -351,7 +351,7 @@ const Stopwatch = () => {
           {/* Digital Display and Controls */}
           <div className="flex-fallback flex-col"
             style={{ display: 'flex', flexDirection: 'column' }}>
-            <h2 className="text-xl font-semibold text-white mb-6 text-center"></h2>
+            <h2 className="text-xl font-semibold text-white mb-6 text-center">Digital</h2>
             {/* Digital Time Display */}
             <div className="rounded-fallback p-8 mb-8 border border-white/10"
               style={{
