@@ -9,7 +9,7 @@ export const metadata = {
     default: "Online Stopwatch – Free & Simple Timer, No Ads, No Signup",
     template: "%s | Stopwatch.lol",
   },
-  description: "A free, simple, and accurate online stopwatch and timer. Start, stop, and reset instantly – no downloads required.",
+  description: "A free, simple, and accurate online stopwatch and timer. Start, stop, and reset instantly – no downloads required. Perfect for workouts, study sessions, and more.",
   keywords: [
     "online stopwatch", "free stopwatch", "stopwatch timer",
     "timer online", "stopwatch for study", "stopwatch for workout",
