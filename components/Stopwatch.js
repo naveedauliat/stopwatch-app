@@ -483,7 +483,7 @@ const Stopwatch = () => {
             <div className="flex justify-center gap-4 mb-8">
               {/* Twitter/X */}
               <a
-                href={`https://twitter.com/intent/tweet?text=Check%20out%20this%20free%20online%20stopwatch!%20https://stopwatch.lol`}
+                href={`https://twitter.com/intent/tweet?text=Check%20out%20this%20free%20online%20stopwatch!%20https://www.stopwatch.lol`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg font-semibold flex items-center gap-2 transition"
@@ -494,7 +494,7 @@ const Stopwatch = () => {
               </a>
               {/* Facebook */}
               <a
-                href={`https://www.facebook.com/sharer/sharer.php?u=https://stopwatch.lol`}
+                href={`https://www.facebook.com/sharer/sharer.php?u=https://www.stopwatch.lol`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-blue-700 hover:bg-blue-800 text-white px-4 py-2 rounded-lg font-semibold flex items-center gap-2 transition"

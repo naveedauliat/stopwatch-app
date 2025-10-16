@@ -1,0 +1,15 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /_next/
+Disallow: /static/
+
+# Allow search engines to access JS and CSS files
+Allow: /*.js$
+Allow: /*.css$
+
+# Sitemap location
+Sitemap: https://www.stopwatch.lol/sitemap.xml
+
+# Crawl delay to prevent server overload
+Crawl-delay: 10
