@@ -4,7 +4,7 @@
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
-    <!-- Homepage -->
+    <!-- Main Pages -->
     <url>
         <loc>https://www.stopwatch.lol</loc>
         <lastmod>2023-10-16</lastmod>
@@ -12,7 +12,7 @@
         <priority>1.0</priority>
     </url>
 
-    <!-- Tic Tac Toe Game -->
+    <!-- Games Section -->
     <url>
         <loc>https://www.stopwatch.lol/tic-tac-toe</loc>
         <lastmod>2023-10-16</lastmod>
@@ -20,6 +20,32 @@
         <priority>0.8</priority>
     </url>
 
-    <!-- Add more URLs as you add more pages -->
+    <!-- Static Assets -->
+    <url>
+        <loc>https://www.stopwatch.lol/manifest.json</loc>
+        <lastmod>2023-10-16</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+    </url>
+
+    <!-- Images -->
+    <url>
+        <loc>https://www.stopwatch.lol/favicon.ico</loc>
+        <lastmod>2023-10-16</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.2</priority>
+    </url>
+    <url>
+        <loc>https://www.stopwatch.lol/favicon-32x32.png</loc>
+        <lastmod>2023-10-16</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.2</priority>
+    </url>
+    <url>
+        <loc>https://www.stopwatch.lol/apple-touch-icon.png</loc>
+        <lastmod>2023-10-16</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.2</priority>
+    </url>
 
 </urlset>
