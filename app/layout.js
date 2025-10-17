@@ -36,9 +36,17 @@ export const metadata = {
     title: "Online Stopwatch – Free & Simple Timer",
     description: "A free, simple, and accurate online stopwatch and timer. Start, stop, and reset instantly – no downloads required.",
     url: "https://www.stopwatch.lol/",
-    image: "https://www.stopwatch.lol/og_image.png",
     siteName: "Stopwatch.lol",
     type: "website",
+     images: [
+      {
+        url: 'https://www.stopwatch.lol/og_image.png',
+        width: 1200,
+        height: 630,
+        alt: 'free online stopwatch and timer',
+        type: 'image/png',
+      },
+     ]
   },
   twitter: {
     card: "summary_large_image",
