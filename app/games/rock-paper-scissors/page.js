@@ -2,7 +2,7 @@ import RockPaperScissors from "./rock-paper-scissors";
 import NavLinks from "/components/NavLinks";
 
 export const metadata = {
-  title: "Rock Paper Scissors Online – Stopwatch.lol",
+  title: "Rock Paper Scissors Online – Play Free RPS Game!",
   description: "Play Rock Paper Scissors free online vs computer with smooth animations. Fun, quick, and easy to play anytime!. The best rock paper scissors game online.",
   keywords: ["rock paper scissors online", "play rock paper scissors", "rps game", "rock paper scissors free"],
   alternates: {
