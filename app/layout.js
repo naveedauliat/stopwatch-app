@@ -1,6 +1,7 @@
 import './globals.css'
 import { Inter } from 'next/font/google'
 import { SpeedInsights } from '@vercel/speed-insights/next';
+import { image } from 'framer-motion/client';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -34,7 +35,8 @@ export const metadata = {
   openGraph: {
     title: "Online Stopwatch – Free & Simple Timer",
     description: "A free, simple, and accurate online stopwatch and timer. Start, stop, and reset instantly – no downloads required.",
-    url: "https://stopwatch.lol/",
+    url: "https://www.stopwatch.lol/",
+    image: "https://www.stopwatch.lol/og-image.png",
     siteName: "Stopwatch.lol",
     type: "website",
   },
@@ -42,6 +44,19 @@ export const metadata = {
     card: "summary_large_image",
     title: "Online Stopwatch – Free & Simple Timer",
     description: "A free, simple, and accurate online stopwatch and timer. Start, stop, and reset instantly – no downloads required.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    nocache: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      noimageindex: false,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   },
 };
 
