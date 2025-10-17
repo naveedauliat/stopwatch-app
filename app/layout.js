@@ -18,7 +18,7 @@ export const metadata = {
   authors: [{ name: "Your Name" }],
   metadataBase: new URL("https://www.stopwatch.lol"),
   alternates: {
-    canonical: "https://www.stopwatch.lol/",
+    canonical: "https://stopwatch.lol/",
   },
   icons: {
     icon: [
