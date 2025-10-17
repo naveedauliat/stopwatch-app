@@ -9,16 +9,16 @@ export const metadata = {
     default: "Online Stopwatch – Free & Simple Timer, No Ads, No Signup",
     template: "%s | Stopwatch.lol",
   },
-  description: "A free, simple, and accurate online stopwatch and timer. Start, stop, and reset instantly – no downloads required. Perfect for workouts, study sessions, and more.",
+  description: "A free, simple, and accurate online stopwatch and timer. Start, stop, and reset instantly – no downloads required. For workouts, study sessions, and more.",
   keywords: [
     "online stopwatch", "free stopwatch", "stopwatch timer",
     "timer online", "stopwatch for study", "stopwatch for workout",
     "laps", "reset"
   ],
   authors: [{ name: "Your Name" }],
-  metadataBase: new URL("https://www.stopwatch.lol"),
+  metadataBase: new URL("https://stopwatch.lol"),
   alternates: {
-    canonical: "https://stopwatch.lol/",
+    canonical: "https://www.stopwatch.lol/",
   },
   icons: {
     icon: [
