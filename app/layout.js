@@ -10,11 +10,13 @@ export const metadata = {
     default: "Online Stopwatch – Free & Simple Timer, No Ads, No Signups",
     template: "%s | Stopwatch.lol",
   },
-  description: "A free, simple, and accurate online stopwatch and timer. Start, stop, and reset instantly – no downloads required. For workouts, study sessions, and more.",
+  description: "Experience our AI-enhanced digital and analog stopwatch with precise timing, lap recording, and smart features. Works in background, perfect for workouts, study sessions, and professional timing needs.",
   keywords: [
     "online stopwatch", "free stopwatch", "stopwatch timer",
     "timer online", "stopwatch for study", "stopwatch for workout",
-    "laps", "reset"
+    "digital stopwatch", "analog stopwatch", "lap timer",
+    "precision timer", "browser stopwatch", "background timer",
+    "AI-powered stopwatch", "smart timer", "intelligent stopwatch"
   ],
   authors: [{ name: "Your Name" }],
   metadataBase: new URL("https://stopwatch.lol"),
@@ -142,8 +144,51 @@ export default function RootLayout({ children }) {
                   "@type": "Question",
                   name: "Can I record lap times?",
                   acceptedAnswer: { "@type": "Answer", text: "Yes, you can record and view lap times with the Lap button." }
+                },
+                {
+                  "@type": "Question",
+                  "name": "How does the AI enhance the stopwatch?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Our AI technology improves timing accuracy, provides smart lap analysis, and ensures precise background operation even when the browser is minimized."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "What makes this stopwatch intelligent?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The stopwatch uses machine learning to optimize timing precision and provide smart features like automated lap time analysis and intelligent background synchronization."
+                  }
                 }
               ]
+            }),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "SoftwareApplication",
+              "name": "AI-Enhanced Stopwatch",
+              "applicationCategory": "Utility",
+              "operatingSystem": "Any",
+              "offers": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "USD"
+              },
+              "featureList": [
+                "AI-powered timing accuracy",
+                "Intelligent lap time analysis",
+                "Smart background operation",
+                "Machine learning enhanced precision",
+                "Automated time tracking",
+                "Digital and analog displays"
+              ],
+              "keywords": "AI stopwatch, smart timer, intelligent timing, machine learning timer",
+              "applicationSubCategory": "AI Tools"
             }),
           }}
         />

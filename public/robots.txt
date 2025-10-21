@@ -1,5 +1,8 @@
 User-agent: *
 Allow: /
+Allow: /ai-features
+Allow: /smart-timing
+Allow: /machine-learning
 Allow: /manifest.json
 Allow: /favicon.ico
 Allow: /favicon-32x32.png
@@ -15,4 +18,4 @@ Disallow: /static/
 Sitemap: https://www.stopwatch.lol/sitemap.xml
 
 # Crawl delay to prevent server overload
-Crawl-delay: 10
+Crawl-delay: 5
