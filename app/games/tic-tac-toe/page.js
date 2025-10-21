@@ -1,6 +1,6 @@
 // app/games/tictactoe/page.js
 export const metadata = {
-  title: "Play Tic Tac Toe Online, two players required!",
+  title: "Play Tic Tac Toe Online, two players required! he",
   description: "Enjoy a smooth and animated Tic Tac Toe game online. Challenge your friends. Simple and fun! No signup needed. Play and share now! at Stopwatch lol",
   keywords: ["tic tac toe online", "play tic tac toe", "tic tac toe game", "tic tac toe free", "tic tac toe vs computer"],
   alternates: {
