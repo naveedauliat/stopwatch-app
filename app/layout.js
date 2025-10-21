@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata = {
   title: {
     default: "Online Stopwatch – Free & Simple Timer, No Ads, No Signup Needed, Just Time.",
-    template: "%s",
+    template: "%s | Stopwatch.lol",
   },
   description: "A free, simple, and accurate online stopwatch and timer. Start, stop, and reset instantly – no downloads required. For workouts, study sessions, and more.",
   keywords: [
