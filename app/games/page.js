@@ -3,11 +3,8 @@ import ShareButtons from "/components/ShareButtons";
 
 export const metadata = {
   title: "Play Free Online Games with us, Just for Fun!",
-  description: "Enjoy free online games like Tic Tac Toe, Number Guesser, and Rock Paper Scissors at Stopwatch. Fun, simple, and free! With single and two player options.",
+  description: "asd asd asd asd Enjoy free online games like Tic Tac Toe, Number Guesser, and Rock Paper Scissors at Stopwatch. Fun, simple, and free! With single and two player options.",
   keywords: ["free online games", "play games online", "tic tac toe", "number guesser", "rock paper scissors"],
-  alternates: {
-    canonical: "https://stopwatch.lol/games",
-  },
 };
 
 export default function GamesPage() {
