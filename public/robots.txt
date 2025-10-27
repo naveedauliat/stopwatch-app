@@ -9,6 +9,8 @@ Allow: /favicon-32x32.png
 Allow: /apple-touch-icon.png
 Allow: /*.js$
 Allow: /*.css$
+Allow: /blog
+Allow: /blog/*
 
 Disallow: /api/
 Disallow: /_next/

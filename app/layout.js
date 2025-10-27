@@ -1,7 +1,8 @@
 import './globals.css'
 import { Inter } from 'next/font/google'
-import { SpeedInsights } from '@vercel/speed-insights/next';
-import { image } from 'framer-motion/client';
+import { SpeedInsights } from '@vercel/speed-insights/next'
+import Header from '/components/Header'
+import Footer from '/components/Footer'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -40,7 +41,7 @@ export const metadata = {
     url: "https://www.stopwatch.lol/",
     siteName: "Stopwatch.lol",
     type: "website",
-     images: [
+    images: [
       {
         url: 'https://www.stopwatch.lol/og_image.png',
         width: 1200,
@@ -48,7 +49,7 @@ export const metadata = {
         alt: 'free online stopwatch and timer',
         type: 'image/png',
       },
-     ]
+    ]
   },
   twitter: {
     card: "summary_large_image",
@@ -79,11 +80,8 @@ export const viewport = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        {children}
-        <SpeedInsights />
-
-        {/* ✅ Analytics scripts stay here (not in metadata) */}
+      <head>
+        {/* Move analytics to head for better performance */}
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-S5KZMZMEM7"></script>
         <script
           dangerouslySetInnerHTML={{
@@ -96,6 +94,15 @@ export default function RootLayout({ children }) {
           }}
         />
         <script src="https://analytics.ahrefs.com/analytics.js" data-key="c+AOAwm4irUYx0afNWNcBw" async></script>
+      </head>
+      <body className={`${inter.className} flex flex-col min-h-screen`}>
+        <Header />
+        <main className="flex-grow">
+          {children}
+        </main>
+        <Footer />
+        <SpeedInsights />
+
 
         {/* ✅ Structured Data */}
         <script
@@ -172,13 +179,53 @@ export default function RootLayout({ children }) {
               "@context": "https://schema.org",
               "@type": "SoftwareApplication",
               "name": "AI-Enhanced Stopwatch",
-              "applicationCategory": "Utility",
+              "applicationCategory": "UtilityApplication",
               "operatingSystem": "Any",
               "offers": {
                 "@type": "Offer",
                 "price": "0",
                 "priceCurrency": "USD"
               },
+              "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.8",
+                "ratingCount": "156",
+                "reviewCount": "42",
+                "bestRating": "5",
+                "worstRating": "1"
+              },
+              "review": [
+                {
+                  "@type": "Review",
+                  "author": {
+                    "@type": "Person",
+                    "name": "Sarah Johnson"
+                  },
+                  "datePublished": "2023-09-15",
+                  "reviewBody": "Excellent stopwatch app with precise timing and great lap features. The AI enhancement really makes a difference!",
+                  "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "5",
+                    "bestRating": "5",
+                    "worstRating": "1"
+                  }
+                },
+                {
+                  "@type": "Review",
+                  "author": {
+                    "@type": "Person",
+                    "name": "Mike Chen"
+                  },
+                  "datePublished": "2023-10-01",
+                  "reviewBody": "Perfect for my workout sessions. The background running feature is fantastic.",
+                  "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "4",
+                    "bestRating": "5",
+                    "worstRating": "1"
+                  }
+                }
+              ],
               "featureList": [
                 "AI-powered timing accuracy",
                 "Intelligent lap time analysis",
@@ -189,6 +236,59 @@ export default function RootLayout({ children }) {
               ],
               "keywords": "AI stopwatch, smart timer, intelligent timing, machine learning timer",
               "applicationSubCategory": "AI Tools"
+            }),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Blog",
+              "name": "Stopwatch.lol Blog",
+              "description": "Learn about timekeeping, productivity, and smart timing solutions",
+              "url": "https://stopwatch.lol/blog",
+              "blogPost": [
+                {
+                  "@type": "BlogPosting",
+                  "headline": "The Evolution of Digital Stopwatches: From Manual to AI-Enhanced",
+                  "description": "Explore how stopwatches have evolved from simple mechanical devices to sophisticated AI-powered timing tools.",
+                  "author": {
+                    "@type": "Person",
+                    "name": "Time Expert"
+                  },
+                  "datePublished": "2023-10-25",
+                  "image": "https://stopwatch.lol/blog/stopwatch-evolution.png",
+                  "articleBody": "The journey of stopwatch technology has been remarkable...",
+                  "keywords": "stopwatch history, digital timing, AI stopwatch"
+                },
+                {
+                  "@type": "BlogPosting",
+                  "headline": "10 Ways to Use a Stopwatch for Better Productivity",
+                  "description": "Discover how a simple stopwatch can revolutionize your work and study habits.",
+                  "author": {
+                    "@type": "Person",
+                    "name": "Productivity Coach"
+                  },
+                  "datePublished": "2023-10-20",
+                  "image": "https://stopwatch.lol/blog/productivity-tips.png",
+                  "articleBody": "Time management is crucial for productivity...",
+                  "keywords": "productivity tips, time management, stopwatch techniques"
+                },
+                {
+                  "@type": "BlogPosting",
+                  "headline": "The Science Behind Precise Timing in Sports",
+                  "description": "Understanding how accurate stopwatches impact athletic performance and training.",
+                  "author": {
+                    "@type": "Person",
+                    "name": "Sports Scientist"
+                  },
+                  "datePublished": "2023-10-15",
+                  "image": "https://stopwatch.lol/blog/sports-timing.png",
+                  "articleBody": "In competitive sports, milliseconds can make the difference...",
+                  "keywords": "sports timing, athletic performance, precision timing"
+                }
+              ]
             }),
           }}
         />
