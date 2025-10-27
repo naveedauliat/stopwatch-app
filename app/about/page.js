@@ -13,7 +13,7 @@ export default function AboutPage() {
           <section className="mb-12">
             <h2 className="text-2xl font-semibold text-white mb-4">Our Mission</h2>
             <p className="text-gray-300 mb-4">
-              At Stopwatch.lol, we're dedicated to providing the most accurate and user-friendly timing solution on the web. 
+              At Stopwatch.lol, we&apos;re dedicated to providing the most accurate and user-friendly timing solution on the web. 
               Our AI-enhanced stopwatch combines precision timing with intelligent features to deliver an exceptional user experience.
             </p>
           </section>
@@ -51,8 +51,8 @@ export default function AboutPage() {
           <section>
             <h2 className="text-2xl font-semibold text-white mb-4">Our Commitment</h2>
             <p className="text-gray-300">
-              We're committed to maintaining a free, ad-free service while continuously improving our features and accuracy. 
-              Your timing needs are our top priority, and we're constantly working to enhance your experience.
+              We&apos;re committed to maintaining a free, ad-free service while continuously improving our features and accuracy. 
+              Your timing needs are our top priority, and we&apos;re constantly working to enhance your experience.
             </p>
           </section>
         </div>

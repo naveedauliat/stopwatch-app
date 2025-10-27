@@ -1,6 +1,6 @@
 export const metadata = {
   title: "Contact Us - Stopwatch.lol",
-  description: "Get in touch with the Stopwatch.lol team. We're here to help with your questions and feedback about our precision timing tools.",
+  description: "Get in touch with the Stopwatch.lol team. We&apos;re here to help with your questions and feedback about our precision timing tools.",
 };
 
 export default function ContactPage() {
@@ -14,7 +14,7 @@ export default function ContactPage() {
             <section>
               <h2 className="text-2xl font-semibold text-white mb-4">Get in Touch</h2>
               <p className="text-gray-300 mb-4">
-                Have questions or feedback? We'd love to hear from you. Our team is here to help with any inquiries about our stopwatch and timing solutions.
+                Have questions or feedback? We&apos;d love to hear from you. Our team is here to help with any inquiries about our stopwatch and timing solutions.
               </p>
               <div className="space-y-4">
                 <div>

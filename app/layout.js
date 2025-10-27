@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import Header from '/components/Header'
 import Footer from '/components/Footer'
+import Script from 'next/script'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -78,19 +79,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        {/* Move analytics to head for better performance */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-S5KZMZMEM7"></script>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-S5KZMZMEM7');
-            `,
-          }}
-        />
-        <script src="https://analytics.ahrefs.com/analytics.js" data-key="c+AOAwm4irUYx0afNWNcBw" async></script>
+        {/* Remove old GA scripts from head */}
       </head>
       <body className={`${inter.className} flex flex-col min-h-screen`}>
         <Header />
@@ -100,6 +89,24 @@ export default function RootLayout({ children }) {
         <Footer />
         <SpeedInsights />
 
+        {/* Add GA scripts using next/script */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-S5KZMZMEM7"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-S5KZMZMEM7');
+          `}
+        </Script>
+        <Script 
+          src="https://analytics.ahrefs.com/analytics.js" 
+          data-key="c+AOAwm4irUYx0afNWNcBw"
+          strategy="afterInteractive"
+        />
 
         {/* ✅ Structured Data */}
         <script

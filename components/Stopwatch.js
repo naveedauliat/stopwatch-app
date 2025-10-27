@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { Play, Pause, Square, RotateCcw, Flag } from 'lucide-react';
 import { Download } from 'lucide-react'; // Add this to your imports
 import { Gamepad2 } from 'lucide-react'; // Add this to your imports
@@ -90,12 +90,12 @@ const Stopwatch = () => {
   const intervalRef = useRef(null);
 
   // Start or resume stopwatch
-  const handleStart = () => {
+  const handleStart = useCallback(() => {
     if (!isRunning) {
       startTimeRef.current = Date.now() - time;
       setIsRunning(true);
     }
-  };
+  }, [isRunning, time]);
 
   // Pause stopwatch
   const handlePause = () => {
@@ -111,18 +111,18 @@ const Stopwatch = () => {
   };
 
   // Reset time and laps
-  const handleReset = () => {
+  const handleReset = useCallback(() => {
     setTime(0);
     setLaps([]);
     startTimeRef.current = isRunning ? Date.now() : null;
-  };
+  }, [isRunning]);
 
   // Lap
-  const handleLap = () => {
+  const handleLap = useCallback(() => {
     if (time > 0) {
       setLaps(prev => [...prev, { id: prev.length + 1, time, timestamp: formatTime(time) }]);
     }
-  };
+  }, [time, formatTime]);
 
   // Update time based on real elapsed time
   useEffect(() => {
@@ -179,7 +179,7 @@ const Stopwatch = () => {
     };
     window.addEventListener('keydown', handleKeyPress);
     return () => window.removeEventListener('keydown', handleKeyPress);
-  }, [isRunning, time]);
+  }, [isRunning, handleStart, handlePause, handleReset, handleLap, handleStop]); // Added missing dependencies
 
   // Analog clock calculations
   const totalSeconds = time / 1000;
