@@ -8,16 +8,13 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
   title: {
-    default: "Online Stopwatch – Free & Simple Timer, No Ads, No Signups",
+    default: "Online Stopwatch – Free & Simple Timer | Stopwatch.lol",
     template: "%s | Stopwatch.lol",
   },
-  description: "Experience our AI-enhanced digital and analog stopwatch with precise timing, lap recording, and smart features. Works in background, perfect for workouts, study sessions, and professional timing needs.",
+  description: "A free, simple, and accurate online stopwatch and timer. Start, stop, and reset your stopwatch instantly – no downloads required.",
   keywords: [
     "online stopwatch", "free stopwatch", "stopwatch timer",
-    "timer online", "stopwatch for study", "stopwatch for workout",
-    "digital stopwatch", "analog stopwatch", "lap timer",
-    "precision timer", "browser stopwatch", "background timer",
-    "AI-powered stopwatch", "smart timer", "intelligent stopwatch"
+    "timer online", "stopwatch for study", "stopwatch for workout"
   ],
   authors: [{ name: "Your Name" }],
   metadataBase: new URL("https://stopwatch.lol"),
@@ -34,7 +31,6 @@ export const metadata = {
     ],
   },
   manifest: "/manifest.json",
-  themeColor: "#1e293b",
   openGraph: {
     title: "Online Stopwatch – Free & Simple Timer",
     description: "A free, simple, and accurate online stopwatch and timer. Start, stop, and reset instantly – no downloads required.",
@@ -71,8 +67,9 @@ export const metadata = {
   },
 };
 
-// ✅ viewport can also be handled by Next.js
+// Add viewport export
 export const viewport = {
+  themeColor: "#1e293b",
   width: 'device-width',
   initialScale: 1,
 };
