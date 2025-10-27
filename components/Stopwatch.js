@@ -98,17 +98,17 @@ const Stopwatch = () => {
   }, [isRunning, time]);
 
   // Pause stopwatch
-  const handlePause = () => {
+  const handlePause = useCallback(() => {
     setIsRunning(false);
-  };
+  }, []);
 
   // Stop and reset stopwatch
-  const handleStop = () => {
+  const handleStop = useCallback(() => {
     setIsRunning(false);
     setTime(0);
     setLaps([]);
     startTimeRef.current = null;
-  };
+  }, []);
 
   // Reset time and laps
   const handleReset = useCallback(() => {
@@ -138,7 +138,8 @@ const Stopwatch = () => {
     };
   }, [isRunning]);
 
-  const formatTime = (ms) => {
+  // Wrap formatTime in useCallback
+  const formatTime = useCallback((ms) => {
     const hours = Math.floor(ms / 3600000);
     const minutes = Math.floor((ms % 3600000) / 60000);
     const seconds = Math.floor((ms % 60000) / 1000);
@@ -146,9 +147,10 @@ const Stopwatch = () => {
     return `${hours.toString().padStart(2, '0')}:${minutes
       .toString()
       .padStart(2, '0')}:${seconds
-        .toString()
-        .padStart(2, '0')}.${centiseconds.toString().padStart(2, '0')}`;
-  };
+      .toString()
+      .padStart(2, '0')}.${centiseconds.toString().padStart(2, '0')}`;
+  }, []);
+
   // Handle keyboard shortcuts for accessibility
   useEffect(() => {
     const handleKeyPress = (event) => {
