@@ -82,7 +82,7 @@ export function generateMetadata({ params }) {
   if (!post) return { title: 'Post Not Found' };
   
   return {
-    title: `${post.title} | Stopwatch.lol Blog`,
+    title: `${post.title} | Blog`,
     description: post.content.substring(0, 160).replace(/<[^>]*>/g, '') + '...',
   };
 }
