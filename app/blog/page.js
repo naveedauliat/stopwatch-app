@@ -31,7 +31,7 @@ export default function BlogPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-700 to-blue-900 p-8">
       <div className="max-w-4xl mx-auto">
-        <h1 className="text-4xl font-bold text-white mb-8">Stopwatch Blog</h1>
+        <h1 className="text-4xl font-bold text-white mb-8"></h1>
         <div className="space-y-8">
           {blogPosts.map((post) => (
             <article key={post.slug} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 shadow-lg border border-white/20">
