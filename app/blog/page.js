@@ -6,14 +6,14 @@ export const metadata = {
 export default function BlogPage() {
   const blogPosts = [
     {
-      title: "The Evolution of Digital Stopwatches: From Manual to AI-Enhanced",
+      title: "The Evolution of Digital Stopwatches",
       excerpt: "Explore how stopwatches have evolved from simple mechanical devices to sophisticated AI-powered timing tools.",
       date: "October 25, 2023",
       author: "Time Expert",
       slug: "stopwatch-evolution"
     },
     {
-      title: "10 Ways to Use a Stopwatch for Better Productivity",
+      title: "10 Ways to Use a Stopwatch for Productivity",
       excerpt: "Discover how a simple stopwatch can revolutionize your work and study habits.",
       date: "October 20, 2023",
       author: "Productivity Coach",

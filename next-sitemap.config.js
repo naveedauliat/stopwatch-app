@@ -6,4 +6,7 @@ module.exports = {
   changefreq: 'daily',               // how often pages change
   priority: 0.7,                     // default priority
   generateIndexSitemap: true,
+  output: 'standalone',
+  outDir: './public',
+
 }
