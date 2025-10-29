@@ -2,7 +2,7 @@ import { notFound } from 'next/navigation';
 
 const blogPosts = {
   'stopwatch-evolution': {
-    title: "The Evolution of Digital Stopwatches: From Manual to AI-Enhanced",
+    title: "The Evolution of Digital Stopwatches",
     date: "October 25, 2023",
     author: "Time Expert",
     content: `
@@ -26,7 +26,7 @@ const blogPosts = {
     `
   },
   'productivity-tips': {
-    title: "10 Ways to Use a Stopwatch for Better Productivity",
+    title: "10 Ways to Use a Stopwatch for Productivity",
     date: "October 20, 2023",
     author: "Productivity Coach",
     content: `
