@@ -65,11 +65,24 @@ export default function Footer() {
           </div>
         </div>
         
-        {/* Bottom Bar */}
+        {/* Bottom Bar - Update this section */}
         <div className="mt-8 pt-8 border-t border-white/10">
-          <p className="text-center text-gray-400">
-            © {new Date().getFullYear()} Stopwatch.lol. All rights reserved.
-          </p>
+          <div className="flex flex-col items-center space-y-2">
+            <p className="text-center text-gray-400">
+              © {new Date().getFullYear()} Stopwatch.lol. All rights reserved.
+            </p>
+            <p className="text-center text-gray-400">
+              Powered by{' '}
+              <a 
+                href="https://asepticware.com" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-blue-400 hover:text-blue-300 transition"
+              >
+                asepticware.com
+              </a>
+            </p>
+          </div>
         </div>
       </div>
     </footer>
