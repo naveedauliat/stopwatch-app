@@ -26,7 +26,7 @@ const blogPosts = {
     `
   },
   'productivity-tips': {
-    title: "10 Ways to Use a Stopwatch for Better Productivity",
+    title: "10 Ways to Use a Stopwatch for Productivity",
     date: "October 20, 2023",
     author: "Productivity Coach",
     content: `
