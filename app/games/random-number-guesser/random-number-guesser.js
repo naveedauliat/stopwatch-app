@@ -37,6 +37,8 @@ export default function NumberGuesser() {
     };
 
     return (
+
+        
         <div className="flex flex-col items-center justify-center min-h-400 
       bg-gradient-to-br from-black-50 via-white to-black-100 p-6 rounded-2xl shadow-lg">
 

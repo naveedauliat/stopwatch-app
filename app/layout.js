@@ -271,49 +271,13 @@ export default function RootLayout({ children }) {
               "@context": "https://schema.org",
               "@type": "Blog",
               "name": "Stopwatch.lol Blog",
-              "description": "Learn about timekeeping, productivity, and smart timing solutions",
+              "description": "Articles about timing, productivity, and stopwatch applications",
               "url": "https://stopwatch.lol/blog",
-              "blogPost": [
-                {
-                  "@type": "BlogPosting",
-                  "headline": "The Evolution of Digital Stopwatches: From Manual to AI-Enhanced",
-                  "description": "Explore how stopwatches have evolved from simple mechanical devices to sophisticated AI-powered timing tools.",
-                  "author": {
-                    "@type": "Person",
-                    "name": "Time Expert"
-                  },
-                  "datePublished": "2023-10-25",
-                  "image": "https://stopwatch.lol/blog/stopwatch-evolution.png",
-                  "articleBody": "The journey of stopwatch technology has been remarkable...",
-                  "keywords": "stopwatch history, digital timing, AI stopwatch"
-                },
-                {
-                  "@type": "BlogPosting",
-                  "headline": "10 Ways to Use a Stopwatch for Better Productivity",
-                  "description": "Discover how a simple stopwatch can revolutionize your work and study habits.",
-                  "author": {
-                    "@type": "Person",
-                    "name": "Productivity Coach"
-                  },
-                  "datePublished": "2023-10-20",
-                  "image": "https://stopwatch.lol/blog/productivity-tips.png",
-                  "articleBody": "Time management is crucial for productivity...",
-                  "keywords": "productivity tips, time management, stopwatch techniques"
-                },
-                {
-                  "@type": "BlogPosting",
-                  "headline": "The Science Behind Precise Timing in Sports",
-                  "description": "Understanding how accurate stopwatches impact athletic performance and training.",
-                  "author": {
-                    "@type": "Person",
-                    "name": "Sports Scientist"
-                  },
-                  "datePublished": "2023-10-15",
-                  "image": "https://stopwatch.lol/blog/sports-timing.png",
-                  "articleBody": "In competitive sports, milliseconds can make the difference...",
-                  "keywords": "sports timing, athletic performance, precision timing"
-                }
-              ]
+              "author": {
+                "@type": "Organization",
+                "name": "Stopwatch.lol",
+                "url": "https://stopwatch.lol"
+              }
             }),
           }}
         />

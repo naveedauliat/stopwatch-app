@@ -14,10 +14,20 @@ module.exports = {
       },
       fontFamily: {
         'mono': ['ui-monospace', 'SFMono-Regular', 'Monaco', 'Consolas', 'Liberation Mono', 'Menlo', 'monospace'],
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+        serif: ['Merriweather', 'Georgia', 'serif'],
       },
       animation: {
         'pulse': 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-      }
+      },
+      typography: {
+        DEFAULT: {
+          css: {
+            maxWidth: 'none',
+            color: 'inherit',
+          },
+        },
+      },
     },
   },
   plugins: [

@@ -10,6 +10,8 @@ export const metadata = {
   },
 };
 
+
+
 export default function Page() {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-green-600 to-teal-700 text-white p-6">

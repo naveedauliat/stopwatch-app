@@ -1,7 +1,15 @@
-export const metadata = {
-  title: "Stopwatch Blog - Time Management & Productivity Tips",
-  description: "Explore articles about time management, productivity techniques, and the science of precise timing. Learn how to make the most of your time.",
-};
+export function generateMetadata() {
+  return {
+    title: "Stopwatch Blog - Time Management & Productivity Tips",
+    description: "Explore articles about time management, productivity techniques, and the science of precise timing. Learn how to make the most of your time.",
+    openGraph: {
+      title: "Stopwatch.lol Blog",
+      description: "Time management articles and productivity tips",
+      type: "website",
+      url: "https://stopwatch.lol/blog",
+    }
+  };
+}
 
 export default function BlogPage() {
   const blogPosts = [
@@ -25,6 +33,14 @@ export default function BlogPage() {
       date: "October 15, 2023",
       author: "Sports Scientist",
       slug: "sports-timing"
+    },
+    {
+      title: "The Impact of Stopwatches on Human Life: From Sports to Mindfulness",
+      excerpt: "Explore how stopwatches influence various aspects of human life, from athletic performance to mental wellness and professional efficiency.",
+      date: "November 7, 2023",
+      author: "Time Management Expert",
+      slug: "stopwatch-human-life",
+      readTime: "15 min read"
     }
   ];
 
