@@ -7,7 +7,7 @@ export function generateMetadata() {
     description: "Explore how stopwatches influence many aspects of human life: productivity, sports, mindfulness and more.",
     keywords: "stopwatch, time management, productivity, mindfulness, sports timing",
     alternates: {
-      canonical: "https://stopwatch.lol/blog/stopwatch-human-life"
+      canonical: "https://www.stopwatch.lol/blog/stopwatch-human-life"
     },
     openGraph: {
       title: "Impact of Stopwatches on Life",

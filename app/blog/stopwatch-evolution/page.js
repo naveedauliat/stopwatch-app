@@ -7,7 +7,7 @@ export function generateMetadata() {
     description: "A comprehensive history of stopwatches, from mechanical roots to AI-enhanced timing.",
     keywords: "stopwatch history, digital timing, mechanical stopwatch, AI timing",
     alternates: {
-      canonical: "https://stopwatch.lol/blog/stopwatch-evolution"
+      canonical: "https://www.stopwatch.lol/blog/stopwatch-evolution"
     },
     openGraph: {
       title: "Evolution of Stopwatches",

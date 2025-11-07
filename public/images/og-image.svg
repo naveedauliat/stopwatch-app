@@ -1,18 +1,67 @@
+<!-- filepath: d:\Stopwatch\public\images\og-image.svg -->
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
   <defs>
     <linearGradient id="og-grad" x1="0" x2="1" y1="0" y2="1">
-      <stop offset="0" stop-color="#3b82f6"/>
+      <stop offset="0" stop-color="#1e293b"/>
+      <stop offset="0.5" stop-color="#3b82f6"/>
       <stop offset="1" stop-color="#8b5cf6"/>
     </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
   </defs>
+  
   <rect width="1200" height="630" fill="url(#og-grad)"/>
-  <text x="600" y="280" text-anchor="middle" fill="#fff" font-family="Arial, sans-serif" font-size="72" font-weight="700">
-    Stopwatch.lol
+  
+  <!-- Background pattern -->
+  <circle cx="200" cy="150" r="100" fill="rgba(255,255,255,0.05)"/>
+  <circle cx="1000" cy="480" r="120" fill="rgba(255,255,255,0.03)"/>
+  
+  <!-- Main content -->
+  <g transform="translate(100,150)">
+    <!-- AI badge -->
+    <rect x="0" y="0" width="120" height="40" rx="20" fill="rgba(255,255,255,0.15)"/>
+    <text x="60" y="25" text-anchor="middle" fill="#fff" font-family="Arial, sans-serif" font-size="16" font-weight="600">✨ AI-Enhanced</text>
+    
+    <!-- Main title -->
+    <text x="0" y="100" fill="#fff" font-family="Arial, sans-serif" font-size="64" font-weight="700" filter="url(#glow)">
+      Stopwatch.lol
+    </text>
+    
+    <!-- Subtitle -->
+    <text x="0" y="140" fill="#e2e8f0" font-family="Arial, sans-serif" font-size="28" font-weight="400">
+      AI-Enhanced Online Timer &amp; Lap Counter
+    </text>
+    
+    <!-- Features -->
+    <g transform="translate(0,180)">
+      <text x="0" y="0" fill="#94a3b8" font-family="Arial, sans-serif" font-size="18" font-weight="500">
+        ⚡ Millisecond Precision  •  🏃‍♂️ Smart Lap Counter  •  📱 Works Everywhere
+      </text>
+    </g>
+  </g>
+  
+  <!-- Stopwatch visual -->
+  <g transform="translate(850,280)">
+    <circle cx="0" cy="0" r="80" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.3)" stroke-width="4"/>
+    <circle cx="0" cy="0" r="60" fill="rgba(255,255,255,0.05)"/>
+    
+    <!-- Clock hands -->
+    <line x1="0" y1="0" x2="0" y2="-40" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+    <line x1="0" y1="0" x2="28" y2="0" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="0" cy="0" r="6" fill="#fff"/>
+    
+    <!-- Digital display -->
+    <rect x="-30" y="25" width="60" height="20" rx="4" fill="rgba(0,0,0,0.4)"/>
+    <text x="0" y="38" text-anchor="middle" fill="#00ff00" font-family="monospace" font-size="12" font-weight="700">00:15.42</text>
+  </g>
+  
+  <!-- Bottom tagline -->
+  <text x="600" y="580" text-anchor="middle" fill="#64748b" font-family="Arial, sans-serif" font-size="16">
+    Free • Accurate • Professional Grade
   </text>
-  <text x="600" y="350" text-anchor="middle" fill="#e0e7ff" font-family="Arial, sans-serif" font-size="32" font-weight="400">
-    Free Online Timer and Lap Counter
-  </text>
-  <circle cx="600" cy="450" r="60" fill="rgba(255,255,255,0.1)"/>
-  <path d="M600 410 v40 h30" stroke="#fff" stroke-width="8" stroke-linecap="round" fill="none"/>
-  <circle cx="600" cy="450" r="8" fill="#fff"/>
 </svg>

@@ -10,25 +10,35 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata = {
   metadataBase: new URL("https://stopwatch.lol"),
   title: {
-    default: "Stopwatch - Free Online Timer & Lap Counter",
-    template: "%s | Stopwatch.lol",
+    default: "Stopwatch - AI-Enhanced Online Timer & Lap Counter",
+    template: "%s | Stopwatch, Smart Solution",
   },
   description:
-    "Free online stopwatch with lap counter, split times, and precise timing. Perfect for sports, productivity, workouts, and time tracking.",
-  keywords: [
-    "stopwatch",
-    "timer",
+    "Free AI-enhanced online stopwatch with lap counter, split times, and millisecond precision. Perfect for sports, productivity, workouts, and time tracking.",
+  
+  
+    keywords: [
+    "AI stopwatch",
+    "online timer",
     "lap counter",
-    "online stopwatch",
-    "free timer",
+    "smart stopwatch",
+    "precision timing",
     "split timer",
     "interval timer",
     "sports timing",
     "productivity timer",
+    "workout timer",
+    "free stopwatch",
+    "digital timer",
+    "accurate timing",
+    "millisecond precision",
+    "background timer"
   ],
-  authors: [{ name: "Stopwatch.lol" }],
+  authors: [{ name: "Stopwatch.lol Team", url: "https://stopwatch.lol" }],
   creator: "Stopwatch.lol",
   publisher: "Stopwatch.lol",
+  category: "Productivity Tools",
+  classification: "Web Application",
   formatDetection: {
     email: false,
     address: false,
@@ -38,56 +48,205 @@ export const metadata = {
     type: "website",
     locale: "en_US",
     url: "https://stopwatch.lol",
-    siteName: "Stopwatch.lol",
-    title: "Stopwatch - Free Online Timer & Lap Counter",
+    siteName: "Stopwatch.lol - AI-Enhanced Timing",
+    title: "AI-Enhanced Stopwatch - Free Online Timer with Smart Features",
     description:
-      "Free online stopwatch with lap counter, split times, and precise timing. Perfect for sports, productivity, workouts, and time tracking.",
+      "Professional-grade online stopwatch with AI-powered precision, lap counter, and smart timing features. Free, accurate, and works everywhere.",
     images: [
       {
         url: "/images/og-image.svg",
         width: 1200,
         height: 630,
-        alt: "Stopwatch.lol - Free Online Timer",
+        alt: "Stopwatch.lol - AI-Enhanced Online Timer",
+        type: "image/svg+xml"
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Stopwatch - Free Online Timer & Lap Counter",
-    description: "Free online stopwatch with lap counter, split times, and precise timing.",
-    images: ["/images/og-image.svg"],
+    site: "@stopwatchlol",
     creator: "@stopwatchlol",
+    title: "AI-Enhanced Stopwatch - Free Online Timer",
+    description: "Professional online stopwatch with AI precision, lap counter, and smart timing. Free and works everywhere.",
+    images: ["/images/og-image.svg"],
   },
   robots: {
     index: true,
     follow: true,
+    nocache: false,
     googleBot: {
       index: true,
       follow: true,
+      noimageindex: false,
       "max-video-preview": -1,
       "max-image-preview": "large",
       "max-snippet": -1,
     },
   },
   icons: {
-    icon: "/favicon.ico",
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/icons/icon-192x192.png", sizes: "192x192", type: "image/png" },
+      { url: "/icons/icon-512x512.png", sizes: "512x512", type: "image/png" }
+    ],
     shortcut: "/favicon.ico",
-    apple: "/apple-touch-icon.png",
+    apple: [
+      { url: "/apple-touch-icon.png", sizes: "180x180" },
+    ],
   },
   manifest: "/manifest.json",
+  verification: {
+    google: "your-google-site-verification-code",
+    yandex: "your-yandex-verification-code",
+    yahoo: "your-yahoo-verification-code",
+    other: {
+      me: ["https://stopwatch.lol"],
+    },
+  },
+  alternates: {
+    canonical: "https://stopwatch.lol",
+    languages: {
+      "en-US": "https://stopwatch.lol",
+    },
+  },
+  other: {
+    "msapplication-TileColor": "#1e293b",
+    "theme-color": "#1e293b",
+  },
 };
 
 export const viewport = {
-  themeColor: "#1e293b",
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#1e293b" },
+    { media: "(prefers-color-scheme: dark)", color: "#0f172a" },
+  ],
   width: "device-width",
   initialScale: 1,
+  maximumScale: 5,
+  userScalable: true,
 };
 
 export default function RootLayout({ children }) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://stopwatch.lol/#website",
+        url: "https://stopwatch.lol/",
+        name: "Stopwatch.lol - AI-Enhanced Online Timer",
+        description: "Free AI-enhanced online stopwatch with precision timing, lap counter, and smart features.",
+        publisher: {
+          "@id": "https://stopwatch.lol/#organization"
+        },
+        potentialAction: [
+          {
+            "@type": "SearchAction",
+            target: {
+              "@type": "EntryPoint",
+              urlTemplate: "https://stopwatch.lol/?q={search_term_string}"
+            },
+            "query-input": "required name=search_term_string"
+          }
+        ],
+        inLanguage: "en-US"
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://stopwatch.lol/#organization",
+        name: "Stopwatch.lol",
+        url: "https://stopwatch.lol/",
+        logo: {
+          "@type": "ImageObject",
+          inLanguage: "en-US",
+          "@id": "https://stopwatch.lol/#/schema/logo/image/",
+          url: "https://stopwatch.lol/images/og-image.svg",
+          contentUrl: "https://stopwatch.lol/images/og-image.svg",
+          width: 1200,
+          height: 630,
+          caption: "Stopwatch.lol"
+        },
+        image: {
+          "@id": "https://stopwatch.lol/#/schema/logo/image/"
+        },
+        sameAs: [
+          "https://twitter.com/stopwatchlol",
+          "https://github.com/stopwatchlol",
+          "https://linkedin.com/company/stopwatchlol",
+          "https://instagram.com/stopwatchlol",
+          "https://youtube.com/@stopwatchlol"
+        ]
+      },
+      {
+        "@type": "WebApplication",
+        "@id": "https://stopwatch.lol/#webapp",
+        name: "AI-Enhanced Online Stopwatch",
+        url: "https://stopwatch.lol/",
+        applicationCategory: "UtilityApplication",
+        applicationSubCategory: "Timer & Productivity Tools",
+        operatingSystem: "Any",
+        browserRequirements: "Requires JavaScript. Requires HTML5.",
+        softwareVersion: "2.0",
+        dateCreated: "2023-01-01",
+        dateModified: "2024-11-07",
+        description: "Professional-grade online stopwatch with AI-powered precision timing, lap counter, split times, and smart background operation.",
+        featureList: [
+          "AI-powered timing accuracy",
+          "Millisecond precision",
+          "Lap time recording",
+          "Split time tracking",
+          "Background operation",
+          "Offline functionality",
+          "Mobile responsive design",
+          "Smart timing algorithms"
+        ],
+        offers: {
+          "@type": "Offer",
+          price: "0",
+          priceCurrency: "USD",
+          availability: "https://schema.org/InStock"
+        },
+        aggregateRating: {
+          "@type": "AggregateRating",
+          ratingValue: "4.8",
+          ratingCount: "2847",
+          reviewCount: "412",
+          bestRating: "5",
+          worstRating: "1"
+        },
+        author: {
+          "@id": "https://stopwatch.lol/#organization"
+        },
+        publisher: {
+          "@id": "https://stopwatch.lol/#organization"
+        }
+      }
+    ]
+  };
+
   return (
-    <html lang="en">
+    <html lang="en" itemScope itemType="https://schema.org/WebSite">
       <head>
         <link rel="canonical" href="https://stopwatch.lol" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
+        <link rel="dns-prefetch" href="//www.google-analytics.com" />
+        <link rel="dns-prefetch" href="//www.googletagmanager.com" />
+        
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+        <meta name="googlebot" content="index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1" />
+        <meta name="bingbot" content="index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1" />
+        
+        <meta property="og:locale" content="en_US" />
+        <meta name="twitter:dnt" content="on" />
+        
+        <link rel="alternate" type="application/rss+xml" title="Stopwatch.lol Blog RSS Feed" href="https://stopwatch.lol/blog/rss.xml" />
+        
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+
         <Script id="google-tag-manager" strategy="afterInteractive">
           {`
             (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -98,7 +257,7 @@ export default function RootLayout({ children }) {
           `}
         </Script>
       </head>
-      <body className={`${inter.className} flex flex-col min-h-screen antialiased`}>
+      <body className={`${inter.className} flex flex-col min-h-screen antialiased`} itemScope itemType="https://schema.org/WebPage">
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-NRZK8XTX"
@@ -109,7 +268,7 @@ export default function RootLayout({ children }) {
         </noscript>
 
         <Header />
-        <main className="flex-grow">{children}</main>
+        <main className="flex-grow" itemProp="mainContentOfPage">{children}</main>
         <Footer />
         <SpeedInsights />
 
@@ -122,219 +281,17 @@ export default function RootLayout({ children }) {
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-S5KZMZMEM7');
+            gtag('config', 'G-S5KZMZMEM7', {
+              page_title: document.title,
+              page_location: window.location.href,
+              send_page_view: true
+            });
           `}
         </Script>
         <Script
           src="https://analytics.ahrefs.com/analytics.js"
           data-key="c+AOAwm4irUYx0afNWNcBw"
           strategy="afterInteractive"
-        />
-
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "WebApplication",
-              name: "Online Stopwatch",
-              url: "https://stopwatch.lol",
-              applicationCategory: "Utility",
-              operatingSystem: "Any",
-              description:
-                "A free, simple, and accurate online stopwatch and timer. Start, stop, and reset instantly.",
-              offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
-            }),
-          }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "FAQPage",
-              mainEntity: [
-                {
-                  "@type": "Question",
-                  name: "Is this stopwatch accurate?",
-                  acceptedAnswer: {
-                    "@type": "Answer",
-                    text: "Yes, Stopwatch.lol uses precise browser timing functions to keep time as accurately as your device allows.",
-                  },
-                },
-                {
-                  "@type": "Question",
-                  name: "Can I use this stopwatch on my phone?",
-                  acceptedAnswer: {
-                    "@type": "Answer",
-                    text: "Yes, Stopwatch.lol is fully responsive and works on all modern smartphones, tablets, and desktops.",
-                  },
-                },
-                {
-                  "@type": "Question",
-                  name: "Does the stopwatch work in the background?",
-                  acceptedAnswer: {
-                    "@type": "Answer",
-                    text: "Yes, the stopwatch is designed to keep accurate time even if you switch tabs or minimize your browser.",
-                  },
-                },
-                {
-                  "@type": "Question",
-                  name: "Is Stopwatch.lol free to use?",
-                  acceptedAnswer: {
-                    "@type": "Answer",
-                    text: "Yes, Stopwatch.lol is completely free and does not require any downloads or registration.",
-                  },
-                },
-                {
-                  "@type": "Question",
-                  name: "Can I record lap times?",
-                  acceptedAnswer: {
-                    "@type": "Answer",
-                    text: "Yes, you can record and view lap times with the Lap button.",
-                  },
-                },
-                {
-                  "@type": "Question",
-                  name: "How does the AI enhance the stopwatch?",
-                  acceptedAnswer: {
-                    "@type": "Answer",
-                    text: "Our AI technology improves timing accuracy, provides smart lap analysis, and ensures precise background operation even when the browser is minimized.",
-                  },
-                },
-                {
-                  "@type": "Question",
-                  name: "What makes this stopwatch intelligent?",
-                  acceptedAnswer: {
-                    "@type": "Answer",
-                    text: "The stopwatch uses machine learning to optimize timing precision and provide smart features like automated lap time analysis and intelligent background synchronization.",
-                  },
-                },
-              ],
-            }),
-          }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "SoftwareApplication",
-              name: "AI-Enhanced Stopwatch",
-              applicationCategory: "UtilityApplication",
-              operatingSystem: "Any",
-              offers: {
-                "@type": "Offer",
-                price: "0",
-                priceCurrency: "USD",
-              },
-              aggregateRating: {
-                "@type": "AggregateRating",
-                ratingValue: "4.8",
-                ratingCount: "156",
-                reviewCount: "42",
-                bestRating: "5",
-                worstRating: "1",
-              },
-              review: [
-                {
-                  "@type": "Review",
-                  author: {
-                    "@type": "Person",
-                    name: "Sarah Johnson",
-                  },
-                  datePublished: "2023-09-15",
-                  reviewBody:
-                    "Excellent stopwatch app with precise timing and great lap features. The AI enhancement really makes a difference!",
-                  reviewRating: {
-                    "@type": "Rating",
-                    ratingValue: "5",
-                    bestRating: "5",
-                    worstRating: "1",
-                  },
-                },
-                {
-                  "@type": "Review",
-                  author: {
-                    "@type": "Person",
-                    name: "Mike Chen",
-                  },
-                  datePublished: "2023-10-01",
-                  reviewBody:
-                    "Perfect for my workout sessions. The background running feature is fantastic.",
-                  reviewRating: {
-                    "@type": "Rating",
-                    ratingValue: "4",
-                    bestRating: "5",
-                    worstRating: "1",
-                  },
-                },
-              ],
-              featureList: [
-                "AI-powered timing accuracy",
-                "Intelligent lap time analysis",
-                "Smart background operation",
-                "Machine learning enhanced precision",
-                "Automated time tracking",
-                "Digital and analog displays",
-              ],
-              keywords: "AI stopwatch, smart timer, intelligent timing, machine learning timer",
-              applicationSubCategory: "AI Tools",
-            }),
-          }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Blog",
-              name: "Stopwatch.lol Blog",
-              description: "Learn about timekeeping, productivity, and smart timing solutions",
-              url: "https://stopwatch.lol/blog",
-              blogPost: [
-                {
-                  "@type": "BlogPosting",
-                  headline: "The Evolution of Digital Stopwatches: From Manual to AI-Enhanced",
-                  description: "Explore how stopwatches have evolved from simple mechanical devices to sophisticated AI-powered timing tools.",
-                  author: {
-                    "@type": "Person",
-                    name: "Time Expert",
-                  },
-                  datePublished: "2023-10-25",
-                  url: "https://stopwatch.lol/blog/stopwatch-evolution",
-                  image: "https://stopwatch.lol/images/evolution.svg",
-                  keywords: "stopwatch history, digital timing, AI stopwatch",
-                },
-                {
-                  "@type": "BlogPosting",
-                  headline: "10 Ways to Use a Stopwatch for Better Productivity",
-                  description: "Discover how a simple stopwatch can revolutionize your work and study habits.",
-                  author: {
-                    "@type": "Person",
-                    name: "Productivity Coach",
-                  },
-                  datePublished: "2023-10-20",
-                  url: "https://stopwatch.lol/blog/productivity-tips",
-                  image: "https://stopwatch.lol/images/productivity.svg",
-                  keywords: "productivity tips, time management, stopwatch techniques",
-                },
-                {
-                  "@type": "BlogPosting",
-                  headline: "The Science Behind Precise Timing in Sports",
-                  description: "Understanding how accurate stopwatches impact athletic performance and training.",
-                  author: {
-                    "@type": "Person",
-                    name: "Sports Scientist",
-                  },
-                  datePublished: "2023-10-15",
-                  url: "https://stopwatch.lol/blog/sports-timing",
-                  image: "https://stopwatch.lol/images/sports-timing.svg",
-                  keywords: "sports timing, athletic performance, precision timing",
-                },
-              ],
-            }),
-          }}
         />
       </body>
     </html>

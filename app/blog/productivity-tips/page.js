@@ -7,7 +7,7 @@ export function generateMetadata() {
     description: "Practical stopwatch-based techniques to boost focus, efficiency and habit formation.",
     keywords: "productivity, pomodoro, stopwatch, timeboxing, focus",
     alternates: {
-      canonical: "https://stopwatch.lol/blog/productivity-tips"
+      canonical: "https://www.stopwatch.lol/blog/productivity-tips"
     },
     openGraph: {
       title: "Productivity Tips with Stopwatch",

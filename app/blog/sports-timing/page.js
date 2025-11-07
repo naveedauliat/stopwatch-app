@@ -7,7 +7,7 @@ export function generateMetadata() {
     description: "How precise timing affects athletic performance, coaching, and recovery strategies.",
     keywords: "sports timing, stopwatch, coaching, splits, recovery",
     alternates: {
-      canonical: "https://stopwatch.lol/blog/sports-timing"
+      canonical: "https://www.stopwatch.lol/blog/sports-timing"
     },
     openGraph: {
       title: "Sports Timing & Stopwatches",

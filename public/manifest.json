@@ -1,12 +1,31 @@
 {
-  "name": "Stopwatch - Free Online Timer",
+  "name": "Stopwatch.lol - AI-Enhanced Online Timer",
   "short_name": "Stopwatch",
-  "description": "Free online stopwatch with lap counter and precise timing",
+  "description": "Professional AI-enhanced online stopwatch with millisecond precision, lap counter, and smart timing features",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#3b82f6",
-  "orientation": "portrait",
+  "background_color": "#0f172a",
+  "theme_color": "#1e293b",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "en",
+  "categories": ["productivity", "utilities", "sports"],
+  "screenshots": [
+    {
+      "src": "/images/screenshot-wide.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Stopwatch.lol main interface"
+    },
+    {
+      "src": "/images/screenshot-narrow.png",
+      "sizes": "750x1334",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Mobile stopwatch interface"
+    }
+  ],
   "icons": [
     {
       "src": "/icons/icon-72x72.png",
@@ -55,6 +74,22 @@
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Start Timer",
+      "short_name": "Start",
+      "description": "Quickly start the stopwatch",
+      "url": "/?action=start",
+      "icons": [{ "src": "/icons/start.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "Blog",
+      "short_name": "Blog",
+      "description": "Read timing and productivity tips",
+      "url": "/blog",
+      "icons": [{ "src": "/icons/blog.png", "sizes": "96x96" }]
     }
   ],
   "images": {
