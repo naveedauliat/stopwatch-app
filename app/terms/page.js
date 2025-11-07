@@ -19,14 +19,14 @@ export const metadata = {
 
 export default function TermsPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-600 to-purple-700 p-4 md:p-8">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-gray-900 to-black p-4 md:p-8">
       <div className="max-w-4xl mx-auto">
-        <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-8 md:p-12 border border-white/20 shadow-2xl">
+        <div className="bg-gray-900/80 backdrop-blur-xl rounded-3xl p-8 md:p-12 border border-gray-700/50 shadow-2xl">
           <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-100 mb-4">
               Terms of Service
             </h1>
-            <p className="text-lg text-white/80">
+            <p className="text-lg text-gray-300">
               Last updated: November 8, 2024
             </p>
           </div>
@@ -34,11 +34,11 @@ export default function TermsPage() {
           <div className="prose prose-invert max-w-none space-y-8">
             {/* 1. Agreement */}
             <section>
-              <h2 className="text-2xl font-bold text-white mb-4 flex items-center gap-3">
-                <span className="bg-blue-500/20 w-8 h-8 rounded-full flex items-center justify-center text-blue-300 text-sm font-bold">1</span>
+              <h2 className="text-2xl font-bold text-gray-100 mb-4 flex items-center gap-3">
+                <span className="bg-blue-600/30 w-8 h-8 rounded-full flex items-center justify-center text-blue-300 text-sm font-bold border border-blue-500/30">1</span>
                 Agreement to Terms
               </h2>
-              <div className="text-white/90 space-y-4">
+              <div className="text-gray-300 space-y-4">
                 <p>
                   By accessing and using Stopwatch.lol (&ldquo;Service&rdquo;), you accept and agree to be bound by the terms and provision of this agreement.
                 </p>
@@ -50,15 +50,15 @@ export default function TermsPage() {
 
             {/* 2. Use License */}
             <section>
-              <h2 className="text-2xl font-bold text-white mb-4 flex items-center gap-3">
-                <span className="bg-blue-500/20 w-8 h-8 rounded-full flex items-center justify-center text-blue-300 text-sm font-bold">2</span>
+              <h2 className="text-2xl font-bold text-gray-100 mb-4 flex items-center gap-3">
+                <span className="bg-blue-600/30 w-8 h-8 rounded-full flex items-center justify-center text-blue-300 text-sm font-bold border border-blue-500/30">2</span>
                 Use License
               </h2>
-              <div className="text-white/90 space-y-4">
+              <div className="text-gray-300 space-y-4">
                 <p>
                   Permission is granted to temporarily download one copy of Stopwatch.lol per device for personal, non-commercial transitory viewing only.
                 </p>
-                <p><strong>This license shall automatically terminate if you violate any of these restrictions and may be terminated by us at any time.</strong></p>
+                <p><strong className="text-gray-200">This license shall automatically terminate if you violate any of these restrictions and may be terminated by us at any time.</strong></p>
                 <p>Under this license you may not:</p>
                 <ul className="list-disc list-inside space-y-2 ml-4">
                   <li>Modify or copy the materials</li>
@@ -71,11 +71,11 @@ export default function TermsPage() {
 
             {/* 3. Service Description */}
             <section>
-              <h2 className="text-2xl font-bold text-white mb-4 flex items-center gap-3">
-                <span className="bg-blue-500/20 w-8 h-8 rounded-full flex items-center justify-center text-blue-300 text-sm font-bold">3</span>
+              <h2 className="text-2xl font-bold text-gray-100 mb-4 flex items-center gap-3">
+                <span className="bg-blue-600/30 w-8 h-8 rounded-full flex items-center justify-center text-blue-300 text-sm font-bold border border-blue-500/30">3</span>
                 Service Description
               </h2>
-              <div className="text-white/90 space-y-4">
+              <div className="text-gray-300 space-y-4">
                 <p>
                   Stopwatch.lol provides a free online stopwatch and timing service with the following features:
                 </p>
@@ -95,11 +95,11 @@ export default function TermsPage() {
 
             {/* 4. Acceptable Use */}
             <section>
-              <h2 className="text-2xl font-bold text-white mb-4 flex items-center gap-3">
-                <span className="bg-blue-500/20 w-8 h-8 rounded-full flex items-center justify-center text-blue-300 text-sm font-bold">4</span>
+              <h2 className="text-2xl font-bold text-gray-100 mb-4 flex items-center gap-3">
+                <span className="bg-blue-600/30 w-8 h-8 rounded-full flex items-center justify-center text-blue-300 text-sm font-bold border border-blue-500/30">4</span>
                 Acceptable Use Policy
               </h2>
-              <div className="text-white/90 space-y-4">
+              <div className="text-gray-300 space-y-4">
                 <p>You agree not to use the service:</p>
                 <ul className="list-disc list-inside space-y-2 ml-4">
                   <li>For any unlawful purpose or to solicit unlawful acts</li>
@@ -116,27 +116,27 @@ export default function TermsPage() {
 
             {/* 5. Disclaimer */}
             <section>
-              <h2 className="text-2xl font-bold text-white mb-4 flex items-center gap-3">
-                <span className="bg-blue-500/20 w-8 h-8 rounded-full flex items-center justify-center text-blue-300 text-sm font-bold">5</span>
+              <h2 className="text-2xl font-bold text-gray-100 mb-4 flex items-center gap-3">
+                <span className="bg-blue-600/30 w-8 h-8 rounded-full flex items-center justify-center text-blue-300 text-sm font-bold border border-blue-500/30">5</span>
                 Disclaimer
               </h2>
-              <div className="text-white/90 space-y-4">
+              <div className="text-gray-300 space-y-4">
                 <p>
                   The materials on Stopwatch.lol are provided on an &lsquo;as is&rsquo; basis. Stopwatch.lol makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties including without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights.
                 </p>
                 <p>
-                  <strong>Critical Timing Notice:</strong> While we strive for accuracy, this stopwatch should not be used for critical timing applications where precise measurement is essential for safety, competition results, or legal purposes.
+                  <strong className="text-yellow-300">Critical Timing Notice:</strong> <span className="text-gray-300">While we strive for accuracy, this stopwatch should not be used for critical timing applications where precise measurement is essential for safety, competition results, or legal purposes.</span>
                 </p>
               </div>
             </section>
 
             {/* 6. Limitations */}
             <section>
-              <h2 className="text-2xl font-bold text-white mb-4 flex items-center gap-3">
-                <span className="bg-blue-500/20 w-8 h-8 rounded-full flex items-center justify-center text-blue-300 text-sm font-bold">6</span>
+              <h2 className="text-2xl font-bold text-gray-100 mb-4 flex items-center gap-3">
+                <span className="bg-blue-600/30 w-8 h-8 rounded-full flex items-center justify-center text-blue-300 text-sm font-bold border border-blue-500/30">6</span>
                 Limitations of Liability
               </h2>
-              <div className="text-white/90 space-y-4">
+              <div className="text-gray-300 space-y-4">
                 <p>
                   In no event shall Stopwatch.lol or its suppliers be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption) arising out of the use or inability to use the materials on Stopwatch.lol, even if Stopwatch.lol or an authorized representative has been notified orally or in writing of the possibility of such damage.
                 </p>
@@ -148,11 +148,11 @@ export default function TermsPage() {
 
             {/* 7. Privacy */}
             <section>
-              <h2 className="text-2xl font-bold text-white mb-4 flex items-center gap-3">
-                <span className="bg-blue-500/20 w-8 h-8 rounded-full flex items-center justify-center text-blue-300 text-sm font-bold">7</span>
+              <h2 className="text-2xl font-bold text-gray-100 mb-4 flex items-center gap-3">
+                <span className="bg-blue-600/30 w-8 h-8 rounded-full flex items-center justify-center text-blue-300 text-sm font-bold border border-blue-500/30">7</span>
                 Privacy Policy
               </h2>
-              <div className="text-white/90 space-y-4">
+              <div className="text-gray-300 space-y-4">
                 <p>
                   Your privacy is important to us. Our Privacy Policy explains how we collect, use, and protect your information when you use our service.
                 </p>
@@ -164,11 +164,11 @@ export default function TermsPage() {
 
             {/* 8. Modifications */}
             <section>
-              <h2 className="text-2xl font-bold text-white mb-4 flex items-center gap-3">
-                <span className="bg-blue-500/20 w-8 h-8 rounded-full flex items-center justify-center text-blue-300 text-sm font-bold">8</span>
+              <h2 className="text-2xl font-bold text-gray-100 mb-4 flex items-center gap-3">
+                <span className="bg-blue-600/30 w-8 h-8 rounded-full flex items-center justify-center text-blue-300 text-sm font-bold border border-blue-500/30">8</span>
                 Modifications to Terms
               </h2>
-              <div className="text-white/90 space-y-4">
+              <div className="text-gray-300 space-y-4">
                 <p>
                   Stopwatch.lol may revise these terms of service at any time without notice. By using this website, you are agreeing to be bound by the then current version of these terms of service.
                 </p>
@@ -180,28 +180,28 @@ export default function TermsPage() {
 
             {/* 9. Contact */}
             <section>
-              <h2 className="text-2xl font-bold text-white mb-4 flex items-center gap-3">
-                <span className="bg-blue-500/20 w-8 h-8 rounded-full flex items-center justify-center text-blue-300 text-sm font-bold">9</span>
+              <h2 className="text-2xl font-bold text-gray-100 mb-4 flex items-center gap-3">
+                <span className="bg-blue-600/30 w-8 h-8 rounded-full flex items-center justify-center text-blue-300 text-sm font-bold border border-blue-500/30">9</span>
                 Contact Information
               </h2>
-              <div className="text-white/90 space-y-4">
+              <div className="text-gray-300 space-y-4">
                 <p>
                   If you have any questions about these Terms of Service, please contact us at:
                 </p>
-                <div className="bg-white/5 rounded-xl p-4 border border-white/10">
-                  <p><strong>Email:</strong> legal@stopwatch.lol</p>
-                  <p><strong>Website:</strong> https://stopwatch.lol</p>
-                  <p><strong>Last Updated:</strong> November 8, 2024</p>
+                <div className="bg-gray-800/60 rounded-xl p-4 border border-gray-600/40">
+                  <p><strong className="text-gray-200">Email:</strong> <span className="text-blue-300">legal@stopwatch.lol</span></p>
+                  <p><strong className="text-gray-200">Website:</strong> <span className="text-blue-300">https://stopwatch.lol</span></p>
+                  <p><strong className="text-gray-200">Last Updated:</strong> November 8, 2024</p>
                 </div>
               </div>
             </section>
           </div>
 
           {/* Back to Home */}
-          <div className="text-center mt-12 pt-8 border-t border-white/20">
+          <div className="text-center mt-12 pt-8 border-t border-gray-700/50">
             <a 
               href="/"
-              className="inline-flex items-center text-blue-300 hover:text-blue-200 transition-colors font-medium"
+              className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors font-medium"
             >
               <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
