@@ -1,9 +1,9 @@
 export function generateMetadata() {
   return {
-    title: "Stopwatch Blog - Time Management & Productivity Tips",
+    title: "Stopwatch Blogs - Time Management and Fun",
     description: "Explore articles about time management, productivity techniques, and the science of precise timing. Learn how to make the most of your time.",
     openGraph: {
-      title: "Stopwatch.lol Blog",
+      title: "",
       description: "Time management articles and productivity tips",
       type: "website",
       url: "https://stopwatch.lol/blog",
@@ -47,7 +47,7 @@ export default function BlogPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-700 to-blue-900 p-8">
       <div className="max-w-4xl mx-auto">
-        <h1 className="text-4xl font-bold text-white mb-8">Stopwatch.lol Blogs</h1>
+        <h1 className="text-4xl font-bold text-white mb-8">Stopwatch Blogs</h1>
         <div className="space-y-8">
           {blogPosts.map((post) => (
             <article key={post.slug} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 shadow-lg border border-white/20">

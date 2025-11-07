@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 @layer base {
+  body {
+    @apply bg-gradient-to-br from-blue-600 to-purple-700 min-h-screen;
+  }
+
   h1, h2, h3, h4, h5, h6 {
     @apply font-serif tracking-tight;
   }
@@ -42,7 +46,7 @@
   }
 
   .blog-card {
-    @apply bg-white/10 backdrop-blur-lg rounded-xl p-8 shadow-lg transition-all duration-300 hover:shadow-xl;
+    @apply bg-white/10 backdrop-blur-lg rounded-xl p-6 md:p-8 shadow-lg border border-white/20;
   }
 }
 
@@ -80,11 +84,15 @@
 
 /* Typography Enhancements */
 .lead {
-  @apply text-xl text-white/80 font-light leading-relaxed mb-8;
+  @apply text-lg text-white/90 mb-4;
 }
 
 .author-bio {
-  @apply mt-12 p-6 rounded-lg bg-white/5 border border-white/10;
+  @apply mt-8 pt-6 border-t border-white/20;
+}
+
+.author-bio p {
+  @apply text-white/70 italic;
 }
 
 /* Custom Scrollbar */
