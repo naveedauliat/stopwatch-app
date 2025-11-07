@@ -380,3 +380,25 @@ button:active {
     animation: none !important;
   }
 }
+
+@media (max-width: 640px) {
+  .text-4xl {
+    font-size: 2rem; /* Adjust font size for smaller screens */
+  }
+
+  .text-2xl {
+    font-size: 1.5rem; /* Adjust font size for smaller screens */
+  }
+
+  .p-4 {
+    padding: 1rem; /* Adjust padding for smaller screens */
+  }
+
+  .space-x-4 {
+    margin-left: -1rem; /* Adjust spacing for smaller screens */
+  }
+
+  button {
+    min-width: 80px; /* Ensure buttons are wide enough for touch */
+  }
+}
