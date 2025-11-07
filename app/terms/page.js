@@ -40,7 +40,7 @@ export default function TermsPage() {
               </h2>
               <div className="text-white/90 space-y-4">
                 <p>
-                  By accessing and using Stopwatch.lol ("Service"), you accept and agree to be bound by the terms and provision of this agreement.
+                  By accessing and using Stopwatch.lol (&ldquo;Service&rdquo;), you accept and agree to be bound by the terms and provision of this agreement.
                 </p>
                 <p>
                   If you do not agree to abide by the above, please do not use this service. This Terms of Service agreement applies to all users of the website.
@@ -88,7 +88,7 @@ export default function TermsPage() {
                   <li>Timing-based games and challenges</li>
                 </ul>
                 <p>
-                  The service is provided "as is" without any guarantees of accuracy for critical timing applications.
+                  The service is provided &ldquo;as is&rdquo; without any guarantees of accuracy for critical timing applications.
                 </p>
               </div>
             </section>
@@ -122,7 +122,7 @@ export default function TermsPage() {
               </h2>
               <div className="text-white/90 space-y-4">
                 <p>
-                  The materials on Stopwatch.lol are provided on an 'as is' basis. Stopwatch.lol makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties including without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights.
+                  The materials on Stopwatch.lol are provided on an &lsquo;as is&rsquo; basis. Stopwatch.lol makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties including without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights.
                 </p>
                 <p>
                   <strong>Critical Timing Notice:</strong> While we strive for accuracy, this stopwatch should not be used for critical timing applications where precise measurement is essential for safety, competition results, or legal purposes.

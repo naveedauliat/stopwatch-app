@@ -13,7 +13,7 @@ export function generateMetadata() {
       title: "Impact of Stopwatches on Life",
       description: "Explore how stopwatches influence many aspects of human life: productivity, sports, mindfulness and more.",
       type: "article",
-      url: "https://stopwatch.lol/blog/stopwatch-human-life",
+      url: "https://www.stopwatch.lol/blog/stopwatch-human-life",
       images: [{ url: "https://stopwatch.lol/images/human-life.svg" }]
     },
     twitter: {

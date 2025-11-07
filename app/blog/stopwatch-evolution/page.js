@@ -13,7 +13,7 @@ export function generateMetadata() {
       title: "Evolution of Stopwatches",
       description: "A comprehensive history of stopwatches, from mechanical roots to AI-enhanced timing.",
       type: "article",
-      url: "https://stopwatch.lol/blog/stopwatch-evolution",
+      url: "https://www.stopwatch.lol/blog/stopwatch-evolution",
       images: [{ url: "https://stopwatch.lol/images/evolution.svg" }]
     },
     twitter: {

@@ -13,7 +13,7 @@ export function generateMetadata() {
       title: "Sports Timing & Stopwatches",
       description: "How precise timing affects athletic performance, coaching, and recovery strategies.",
       type: "article",
-      url: "https://stopwatch.lol/blog/sports-timing",
+      url: "https://www.stopwatch.lol/blog/sports-timing",
       images: [{ url: "https://stopwatch.lol/images/sports-timing.svg" }]
     },
     twitter: {

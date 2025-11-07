@@ -265,7 +265,7 @@ export default function PrivacyPage() {
             <section>
               <h2 className="text-2xl font-bold text-white mb-4 flex items-center gap-3">
                 <span className="bg-blue-500/20 w-8 h-8 rounded-full flex items-center justify-center text-blue-300 text-sm font-bold">7</span>
-                Children's Privacy
+                Children&apos;s Privacy
               </h2>
               <div className="text-white/90 space-y-4">
                 <div className="bg-yellow-500/10 rounded-xl p-4 border border-yellow-400/20">
@@ -294,8 +294,8 @@ export default function PrivacyPage() {
                 </p>
                 <ul className="list-disc list-inside space-y-2 ml-4">
                   <li>Posting the new Privacy Policy on this page</li>
-                  <li>Updating the "Last updated" date</li>
-                  <li>Sending an email notification (if you're subscribed to our newsletter)</li>
+                  <li>Updating the &ldquo;Last updated&rdquo; date</li>
+                  <li>Sending an email notification (if you&apos;re subscribed to our newsletter)</li>
                   <li>Displaying a notice on our website for significant changes</li>
                 </ul>
                 <p>

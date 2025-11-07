@@ -13,8 +13,8 @@ export function generateMetadata() {
       title: "Productivity Tips with Stopwatch",
       description: "Practical stopwatch-based techniques to boost focus, efficiency and habit formation.",
       type: "article",
-      url: "https://stopwatch.lol/blog/productivity-tips",
-      images: [{ url: "https://stopwatch.lol/images/productivity.svg" }]
+      url: "https://www.stopwatch.lol/blog/productivity-tips",
+      images: [{ url: "https://www.stopwatch.lol/images/productivity.svg" }]
     },
     twitter: {
       card: "summary_large_image",
