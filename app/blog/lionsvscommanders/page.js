@@ -83,7 +83,7 @@ export default function LionsVsCommandersBlog() {
             </div>
             
             <h1 className="text-4xl md:text-5xl font-extrabold mb-6 text-gray-100 leading-tight">
-              🏈 Lions vs Commanders 2024: Complete Game Preview, Analysis, and Expert Prediction
+              🏈 Lions vs Commanders 2025: Complete Game Preview, Analysis, and Expert Prediction
             </h1>
             
             <p className="text-xl text-gray-300 leading-relaxed">
