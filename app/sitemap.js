@@ -40,6 +40,12 @@ export default function sitemap() {
       priority: 0.8,
     },
     {
+      url: `${baseUrl}/blog/lionsvscommanders`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
       url: `${baseUrl}/games`,
       lastModified: currentDate,
       changeFrequency: 'weekly',

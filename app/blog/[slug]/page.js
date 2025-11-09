@@ -1,6 +1,23 @@
 import { notFound } from 'next/navigation';
 
 const blogPosts = {
+  'lionsvsommanders': {
+    title: "Lions vs Commanders",
+    date: "November 10, 2024",
+    author: "stopwatch.lol",
+    content: `
+      <h2>Your Content Here</h2>
+      <p>Your blog content in HTML format...</p>
+    `
+  },
+
+
+
+
+
+
+
+
   'stopwatch-evolution': {
     title: "The Evolution of Digital Stopwatches",
     date: "October 25, 2023",

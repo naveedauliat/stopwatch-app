@@ -3,6 +3,16 @@
 import Link from "next/link";
 
 const blogPosts = [
+  
+  {
+    title: "Lions vs Commanders",
+    description: "An in-depth analysis of the recent Lions vs Commanders game, highlighting key plays and strategies.",
+    slug: "lionsvscommanders",
+    image: "/images/lions-vs-commanders.png",
+    readTime: "5 min read",
+    tags: ["Lions vs Commanders highlights","Detroit Lions game analysis","Washington Commanders matchup preview","NFL Week preview","Lions vs Commanders","Jared Goff vs Sam Howell","Lions Commanders score prediction","Lions offense vs Commanders defense", "Sports", "Analysis"],
+    date: "November 10, 2024"
+  },
   {
     title: "The Evolution of Stopwatches",
     description: "A comprehensive history of stopwatches, from mechanical roots to AI-enhanced timing.",
