@@ -1,0 +1,54 @@
+<!-- filepath: public/images/fifa-international-break.svg -->
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#1e293b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0f172a;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="ballGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8b5cf6;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bgGradient)"/>
+  
+  <!-- Decorative circles -->
+  <circle cx="100" cy="100" r="150" fill="#1e40af" opacity="0.1"/>
+  <circle cx="1100" cy="530" r="180" fill="#7c3aed" opacity="0.1"/>
+  <circle cx="600" cy="315" r="250" fill="#2563eb" opacity="0.05"/>
+  
+  <!-- Main football icon -->
+  <circle cx="600" cy="315" r="120" fill="url(#ballGradient)" opacity="0.2"/>
+  <circle cx="600" cy="315" r="100" fill="none" stroke="#60a5fa" stroke-width="3"/>
+  
+  <!-- Pentagon pattern (simplified football) -->
+  <path d="M 600 235 L 630 255 L 620 290 L 580 290 L 570 255 Z" fill="none" stroke="#60a5fa" stroke-width="2"/>
+  <path d="M 600 395 L 630 375 L 620 340 L 580 340 L 570 375 Z" fill="none" stroke="#60a5fa" stroke-width="2"/>
+  <path d="M 520 315 L 540 280 L 570 270 L 570 300 L 550 330 Z" fill="none" stroke="#60a5fa" stroke-width="2"/>
+  <path d="M 680 315 L 660 280 L 630 270 L 630 300 L 650 330 Z" fill="none" stroke="#60a5fa" stroke-width="2"/>
+  
+  <!-- Title -->
+  <text x="600" y="480" font-family="Arial, sans-serif" font-size="56" font-weight="bold" fill="#f1f5f9" text-anchor="middle">
+    FIFA International Break
+  </text>
+  
+  <!-- Subtitle -->
+  <text x="600" y="530" font-family="Arial, sans-serif" font-size="32" fill="#94a3b8" text-anchor="middle">
+    World Cup 2026 Qualifiers Guide
+  </text>
+  
+  <!-- Year badge -->
+  <rect x="520" y="90" width="160" height="50" rx="25" fill="#3b82f6" opacity="0.9"/>
+  <text x="600" y="125" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#ffffff" text-anchor="middle">
+    2024-2025
+  </text>
+  
+  <!-- Stopwatch.lol branding -->
+  <text x="600" y="580" font-family="Arial, sans-serif" font-size="20" fill="#64748b" text-anchor="middle">
+    stopwatch.lol/blog
+  </text>
+</svg>

@@ -4,6 +4,16 @@ import Link from "next/link";
 
 const blogPosts = [
   
+
+    {
+    title: "FIFA International Break 2024: Complete Fixtures Guide",
+    description: "Your complete guide to the upcoming FIFA International break featuring World Cup qualifiers, UEFA Nations League matches, and key national team fixtures.",
+    slug: "fifa-international-break",
+    image: "/images/fifa-international-break.svg",
+    readTime: "8 min read",
+    tags: ["FIFA", "World Cup", "International Football", "UEFA Nations League", "Qualifiers", "Soccer"],
+    date: "November 10, 2025"
+  },
   {
     title: "Lions vs Commanders",
     description: "An in-depth analysis of the recent Lions vs Commanders game, highlighting key plays and strategies.",
@@ -11,7 +21,7 @@ const blogPosts = [
     image: "/images/lions-vs-commanders.png",
     readTime: "5 min read",
     tags: ["Lions vs Commanders highlights","Detroit Lions game analysis","Washington Commanders matchup preview","NFL Week preview","Lions vs Commanders","Jared Goff vs Sam Howell","Lions Commanders score prediction","Lions offense vs Commanders defense", "Sports", "Analysis"],
-    date: "November 10, 2024"
+    date: "November 10, 2025"
   },
   {
     title: "The Evolution of Stopwatches",
@@ -20,7 +30,7 @@ const blogPosts = [
     image: "/images/evolution.svg",
     readTime: "8 min read",
     tags: ["History", "Technology", "AI"],
-    date: "November 7, 2024"
+    date: "November 7, 2025"
   },
   {
     title: "Top Productivity Tips Using a Stopwatch",
@@ -29,7 +39,7 @@ const blogPosts = [
     image: "/images/productivity.svg",
     readTime: "6 min read",
     tags: ["Productivity", "Tips", "Focus"],
-    date: "November 6, 2024"
+    date: "November 6, 2025"
   },
   {
     title: "Sports Timing: The Role of Stopwatches",
@@ -38,7 +48,7 @@ const blogPosts = [
     image: "/images/sports-timing.svg",
     readTime: "7 min read",
     tags: ["Sports", "Performance", "Coaching"],
-    date: "November 5, 2024"
+    date: "November 5, 2025"
   },
   {
     title: "The Impact of Stopwatches on Human Life",
@@ -47,7 +57,7 @@ const blogPosts = [
     image: "/images/human-life.svg",
     readTime: "10 min read",
     tags: ["Lifestyle", "Health", "Psychology"],
-    date: "November 4, 2024"
+    date: "November 4, 2025"
   }
 ];
 

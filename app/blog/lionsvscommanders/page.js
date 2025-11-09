@@ -32,7 +32,7 @@ export function generateMetadata() {
       canonical: "https://www.stopwatch.lol/blog/lionsvscommanders"
     },
     openGraph: {
-      title: "Lions vs Commanders 2024: Complete Game Preview & Prediction",
+      title: "Lions vs Commanders 2025: Complete Game Preview & Prediction",
       description: "Expert analysis of Lions vs Commanders: team stats, key matchups, injury reports, betting odds, and game prediction. Complete NFL preview.",
       type: "article",
       url: "https://www.stopwatch.lol/blog/lionsvscommanders",
@@ -44,8 +44,8 @@ export function generateMetadata() {
           alt: "Detroit Lions vs Washington Commanders Game Preview"
         }
       ],
-      publishedTime: "2024-11-10T00:00:00Z",
-      modifiedTime: "2024-11-10T00:00:00Z",
+      publishedTime: "2025-11-10T00:00:00Z",
+      modifiedTime: "2025-11-10T00:00:00Z",
       authors: ["Sports Insights Team"]
     },
     twitter: {
@@ -75,7 +75,7 @@ export default function LionsVsCommandersBlog() {
           {/* Header */}
           <header className="mb-12">
             <div className="flex items-center gap-4 mb-4 text-sm text-gray-400">
-              <time dateTime="2024-11-10">November 10, 2024</time>
+              <time dateTime="2024-11-10">November 10, 2025</time>
               <span>•</span>
               <span>15 min read</span>
               <span>•</span>
