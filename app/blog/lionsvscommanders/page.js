@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 export function generateMetadata() {
   return {
-    title: "Lions vs Commanders 2024: Complete Game Preview, Analysis & Prediction",
+    title: "Lions vs Commanders 2024: Complete Game Analysis",
     description: "In-depth analysis of Lions vs Commanders matchup. Expert breakdown of team stats, key players, betting odds, injury reports, and game prediction for Detroit Lions vs Washington Commanders.",
     keywords: [
       "Lions vs Commanders",
@@ -87,8 +87,8 @@ export default function LionsVsCommandersBlog() {
             </h1>
             
             <p className="text-xl text-gray-300 leading-relaxed">
-              Comprehensive breakdown of the Detroit Lions vs Washington Commanders matchup including team analysis, 
-              key players, tactical strategies, injury reports, betting odds, and expert predictions for this crucial NFL game.
+              Comprehensive breakdown of the <a href="https://www.nfl.com/teams/detroit-lions/" target="_blank" rel="dofollow" className="text-blue-400 hover:text-blue-300 underline">Detroit Lions</a> vs <a href="https://www.commanders.com/" target="_blank" rel="dofollow" className="text-blue-400 hover:text-blue-300 underline">Washington Commanders</a> matchup including team analysis, 
+              key players, tactical strategies, injury reports, betting odds, and expert predictions for this crucial <a href="https://www.nfl.com/" target="_blank" rel="dofollow" className="text-blue-400 hover:text-blue-300 underline">NFL</a> game.
             </p>
           </header>
 
@@ -137,7 +137,7 @@ export default function LionsVsCommandersBlog() {
                 The <strong className="text-blue-400">Detroit Lions vs Washington Commanders</strong> matchup represents 
                 a fascinating collision between two franchises at dramatically different stages of their competitive arcs. 
                 As we break down this game, we&apos;ll explore every angle that makes this contest crucial for both 
-                teams&apos; playoff aspirations and long-term trajectory.
+                teams&apos; <a href="https://www.nfl.com/standings/" target="_blank" rel="dofollow" className="text-blue-400 hover:text-blue-300 underline">playoff aspirations</a> and long-term trajectory.
               </p>
 
               <div className="bg-gray-800/60 border border-gray-600/40 rounded-xl p-6 mb-6">
@@ -145,7 +145,7 @@ export default function LionsVsCommandersBlog() {
                 <div className="grid md:grid-cols-2 gap-4 text-sm">
                   <div>
                     <p><strong className="text-gray-200">Teams:</strong> Detroit Lions vs Washington Commanders</p>
-                    <p><strong className="text-gray-200">Conference:</strong> NFC Matchup</p>
+                    <p><strong className="text-gray-200">Conference:</strong> <a href="https://www.nfl.com/standings/conference/nfc" target="_blank" rel="dofollow" className="text-blue-400 hover:text-blue-300 underline">NFC</a> Matchup</p>
                     <p><strong className="text-gray-200">Significance:</strong> Playoff Race Impact</p>
                   </div>
                   <div>
@@ -158,17 +158,17 @@ export default function LionsVsCommandersBlog() {
 
               <p className="leading-relaxed">
                 For the <strong>Detroit Lions</strong>, this game represents another opportunity to solidify their 
-                position as legitimate NFC contenders. Under head coach <strong>Dan Campbell</strong>, the Lions have 
+                position as legitimate NFC contenders. Under head coach <strong><a href="https://www.nfl.com/teams/detroit-lions/coaches-roster/" target="_blank" rel="dofollow" className="text-blue-400 hover:text-blue-300 underline">Dan Campbell</a></strong>, the Lions have 
                 transformed from perennial underdogs into one of the most feared teams in the conference. Their 
-                high-powered offense, anchored by quarterback <strong>Jared Goff</strong>, has been virtually unstoppable, 
-                averaging over 400 yards per game and ranking among the top five in scoring.
+                high-powered offense, anchored by quarterback <strong><a href="https://www.pro-football-reference.com/players/G/GoffJa00.htm" target="_blank" rel="dofollow" className="text-blue-400 hover:text-blue-300 underline">Jared Goff</a></strong>, has been virtually unstoppable, 
+                averaging over 400 yards per game and ranking among the top five in scoring. Learn more about <Link href="/blog/sports-timing" className="text-blue-400 hover:text-blue-300 underline">sports timing precision</Link> in professional athletics.
               </p>
 
               <p className="leading-relaxed">
                 The <strong>Washington Commanders</strong>, meanwhile, find themselves in the midst of a comprehensive 
                 rebuild under new ownership and coaching leadership. Despite their struggles this season, the Commanders 
-                possess explosive playmakers like <strong>Terry McLaurin</strong> and a defense that can create chaos 
-                when clicking on all cylinders.
+                possess explosive playmakers like <strong><a href="https://www.pro-football-reference.com/players/M/McLaTe00.htm" target="_blank" rel="dofollow" className="text-blue-400 hover:text-blue-300 underline">Terry McLaurin</a></strong> and a defense that can create chaos 
+                when clicking on all cylinders. For optimal game watching, check out our <Link href="/" className="text-blue-400 hover:text-blue-300 underline">free online stopwatch</Link> to track game time.
               </p>
             </section>
 
@@ -182,10 +182,10 @@ export default function LionsVsCommandersBlog() {
               <h3 className="text-2xl font-semibold text-gray-200 mb-4">Offensive Powerhouse</h3>
               
               <p className="leading-relaxed mb-4">
-                The Detroit Lions&apos; offense has emerged as one of the most dynamic and balanced attacks in the NFL. 
+                The Detroit Lions&apos; offense has emerged as one of the most dynamic and balanced attacks in the <a href="https://www.nfl.com/" target="_blank" rel="dofollow" className="text-blue-400 hover:text-blue-300 underline">NFL</a>. 
                 Offensive coordinator <strong>Ben Johnson</strong> has crafted a system that perfectly utilizes the 
                 team&apos;s diverse weapons while protecting quarterback Jared Goff with creative play-calling and 
-                strategic formation usage.
+                strategic formation usage. For more insights on <Link href="/blog/productivity-tips" className="text-blue-400 hover:text-blue-300 underline">time management strategies</Link>, visit our blog.
               </p>
 
               <div className="bg-blue-900/20 border border-blue-700/40 rounded-xl p-6 mb-6">
@@ -204,37 +204,44 @@ export default function LionsVsCommandersBlog() {
                     <p className="text-2xl font-bold text-blue-400">48.3%</p>
                   </div>
                 </div>
+                <p className="text-xs text-gray-400 mt-3">
+                  Stats source: <a href="https://www.nfl.com/stats/team-stats/" target="_blank" rel="dofollow" className="text-blue-400 hover:text-blue-300 underline">NFL Official Stats</a>
+                </p>
               </div>
 
               <h4 className="text-xl font-semibold text-gray-200 mb-3">Key Offensive Players</h4>
               
               <div className="space-y-4 mb-6">
                 <div className="bg-gray-800/60 border border-gray-600/40 rounded-lg p-4">
-                  <h5 className="font-semibold text-gray-100 mb-2">Jared Goff - Quarterback</h5>
+                  <h5 className="font-semibold text-gray-100 mb-2">
+                    <a href="https://www.pro-football-reference.com/players/G/GoffJa00.htm" target="_blank" rel="dofollow" className="text-blue-400 hover:text-blue-300 underline">Jared Goff</a> - Quarterback
+                  </h5>
                   <p className="text-sm leading-relaxed">
                     Goff has silenced critics with a career renaissance in Detroit. His completion percentage hovers 
                     around 70%, and he&apos;s developed incredible chemistry with his receiving corps. His ability to 
                     read defenses pre-snap and make quick decisions has made the Lions&apos; offense nearly impossible 
-                    to slow down. Goff excels in play-action situations and has shown marked improvement in deep-ball accuracy.
+                    to slow down. Goff excels in play-action situations and has shown marked improvement in <a href="https://www.espn.com/nfl/qbr" target="_blank" rel="dofollow" className="text-blue-400 hover:text-blue-300 underline">quarterback rating</a>.
                   </p>
                 </div>
 
                 <div className="bg-gray-800/60 border border-gray-600/40 rounded-lg p-4">
-                  <h5 className="font-semibold text-gray-100 mb-2">Amon-Ra St. Brown - Wide Receiver</h5>
+                  <h5 className="font-semibold text-gray-100 mb-2">
+                    <a href="https://www.pro-football-reference.com/players/S/St.BAm00.htm" target="_blank" rel="dofollow" className="text-blue-400 hover:text-blue-300 underline">Amon-Ra St. Brown</a> - Wide Receiver
+                  </h5>
                   <p className="text-sm leading-relaxed">
                     St. Brown has emerged as one of the NFL&apos;s most reliable slot receivers. His route-running 
                     precision, hands, and chemistry with Goff make him a nightmare for opposing defenses. He&apos;s 
                     particularly dangerous on third downs and in the red zone, where his ability to find soft spots 
-                    in coverage has resulted in numerous clutch conversions and touchdowns.
+                    in coverage has resulted in numerous clutch conversions and touchdowns. Read more about <Link href="/blog/stopwatch-human-life" className="text-blue-400 hover:text-blue-300 underline">timing in human performance</Link>.
                   </p>
                 </div>
 
                 <div className="bg-gray-800/60 border border-gray-600/40 rounded-lg p-4">
                   <h5 className="font-semibold text-gray-100 mb-2">Jahmyr Gibbs & David Montgomery - Running Backs</h5>
                   <p className="text-sm leading-relaxed">
-                    The Lions&apos; two-headed rushing attack provides versatility and explosive plays. Gibbs brings 
+                    The Lions&apos; two-headed rushing attack provides versatility and explosive plays. <a href="https://www.pro-football-reference.com/players/G/GibbJa00.htm" target="_blank" rel="dofollow" className="text-blue-400 hover:text-blue-300 underline">Gibbs</a> brings 
                     speed and elusiveness, capable of breaking long runs or catching passes out of the backfield. 
-                    Montgomery provides power and consistency between the tackles, wearing down defenses with his 
+                    <a href="https://www.pro-football-reference.com/players/M/MontDa01.htm" target="_blank" rel="dofollow" className="text-blue-400 hover:text-blue-300 underline">Montgomery</a> provides power and consistency between the tackles, wearing down defenses with his 
                     physical running style. Together, they average over 150 rushing yards per game.
                   </p>
                 </div>
@@ -246,7 +253,7 @@ export default function LionsVsCommandersBlog() {
                 While the offense garners most attention, the Lions&apos; defense has made significant strides under 
                 coordinator <strong>Aaron Glenn</strong>. The unit has improved against the run and generates consistent 
                 pressure on opposing quarterbacks. The secondary, once a weakness, has developed into a cohesive unit 
-                capable of limiting big plays.
+                capable of limiting big plays. Discover more about <Link href="/blog/stopwatch-evolution" className="text-blue-400 hover:text-blue-300 underline">timing technology evolution</Link>.
               </p>
 
               <div className="bg-gray-800/60 border border-gray-600/40 rounded-xl p-6 mb-6">
@@ -254,7 +261,7 @@ export default function LionsVsCommandersBlog() {
                 <ul className="space-y-2 text-sm">
                   <li className="flex items-start gap-2">
                     <span className="text-blue-400 mt-1">▸</span>
-                    <span><strong>Aidan Hutchinson:</strong> Elite edge rusher with double-digit sack potential</span>
+                    <span><strong><a href="https://www.pro-football-reference.com/players/H/HutcAi00.htm" target="_blank" rel="dofollow" className="text-blue-400 hover:text-blue-300 underline">Aidan Hutchinson</a>:</strong> Elite edge rusher with double-digit sack potential</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-blue-400 mt-1">▸</span>
@@ -283,7 +290,7 @@ export default function LionsVsCommandersBlog() {
               </h2>
 
               <p className="leading-relaxed mb-4">
-                The Washington Commanders enter this matchup facing the harsh realities of a transitional season. 
+                The <a href="https://www.commanders.com/" target="_blank" rel="dofollow" className="text-blue-400 hover:text-blue-300 underline">Washington Commanders</a> enter this matchup facing the harsh realities of a transitional season. 
                 Under the new ownership of <strong>Josh Harris</strong> and head coach <strong>Ron Rivera</strong>, 
                 the organization is undergoing a complete cultural overhaul aimed at establishing sustainable success 
                 rather than quick fixes.
@@ -313,7 +320,7 @@ export default function LionsVsCommandersBlog() {
                 The Commanders&apos; offense has struggled with consistency throughout the season. While they possess 
                 talented skill position players, coordination and execution issues have limited their effectiveness. 
                 The offensive line has been a particular weak point, struggling to provide adequate protection and 
-                create running lanes.
+                create running lanes. Learn about <Link href="/blog/fifa-international-break" className="text-blue-400 hover:text-blue-300 underline">international football timing</Link>.
               </p>
 
               <h4 className="text-xl font-semibold text-gray-200 mb-3">Key Offensive Players</h4>
@@ -325,12 +332,14 @@ export default function LionsVsCommandersBlog() {
                     The young quarterback has shown flashes of potential but remains inconsistent. Howell possesses 
                     a strong arm and athletic ability but struggles with decision-making under pressure. Against 
                     Detroit&apos;s aggressive defense, his ability to process information quickly and avoid turnovers 
-                    will be paramount. His development throughout this season will be crucial for Washington&apos;s future.
+                    will be paramount. Check <a href="https://www.espn.com/nfl/player/_/id/4431148/sam-howell" target="_blank" rel="dofollow" className="text-blue-400 hover:text-blue-300 underline">Sam Howell&apos;s stats</a> for detailed performance metrics.
                   </p>
                 </div>
 
                 <div className="bg-gray-800/60 border border-gray-600/40 rounded-lg p-4">
-                  <h5 className="font-semibold text-gray-100 mb-2">Terry McLaurin - Wide Receiver</h5>
+                  <h5 className="font-semibold text-gray-100 mb-2">
+                    <a href="https://www.pro-football-reference.com/players/M/McLaTe00.htm" target="_blank" rel="dofollow" className="text-blue-400 hover:text-blue-300 underline">Terry McLaurin</a> - Wide Receiver
+                  </h5>
                   <p className="text-sm leading-relaxed">
                     McLaurin remains the Commanders&apos; most dangerous offensive weapon. His elite speed, route-running, 
                     and contested-catch ability make him a constant threat. Despite inconsistent quarterback play, 
@@ -353,34 +362,9 @@ export default function LionsVsCommandersBlog() {
               <h3 className="text-2xl font-semibold text-gray-200 mb-4">Defensive Identity</h3>
 
               <p className="leading-relaxed mb-4">
-                The Commanders&apos; defense, coordinated by <strong>Jack Del Rio</strong>, emphasizes physicality 
-                and creating negative plays. When healthy and clicking, this unit can pressure quarterbacks and 
-                limit explosive plays. However, inconsistency has plagued them, particularly in coverage situations 
-                against elite passing offenses.
-              </p>
-
-              <div className="bg-gray-800/60 border border-gray-600/40 rounded-xl p-6 mb-6">
-                <h4 className="text-lg font-semibold text-gray-100 mb-3">Defensive Strengths</h4>
-                <ul className="space-y-2 text-sm">
-                  <li className="flex items-start gap-2">
-                    <span className="text-red-400 mt-1">▸</span>
-                    <span><strong>Defensive Line:</strong> Chase Young and Montez Sweat provide edge rush capabilities</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-red-400 mt-1">▸</span>
-                    <span><strong>Linebacker Corps:</strong> Physical against the run, solid in short areas</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-red-400 mt-1">▸</span>
-                    <span><strong>Blitz Packages:</strong> Creative pressure schemes to disrupt timing</span>
-                  </li>
-                </ul>
-              </div>
-
-              <p className="leading-relaxed">
-                Against Detroit&apos;s balanced attack, Washington&apos;s defense faces a monumental challenge. They 
-                must contain the run while preventing Goff from dissecting them through the air—a tall order given 
-                the Lions&apos; offensive firepower.
+                The Commanders&apos; defense emphasizes physicality and creating negative plays. When healthy and clicking, 
+                this unit can pressure quarterbacks and limit explosive plays. However, inconsistency has plagued them, 
+                particularly in coverage situations against elite passing offenses like Detroit&apos;s.
               </p>
             </section>
 
@@ -722,20 +706,18 @@ export default function LionsVsCommandersBlog() {
                   <div>
                     <h4 className="font-semibold text-gray-200 mb-3">Traditional TV</h4>
                     <ul className="space-y-2 text-sm text-gray-300">
-                      <li>• <strong>Network:</strong> FOX / CBS (check local listings)</li>
+                      <li>• <strong>Network:</strong> <a href="https://www.foxsports.com/" target="_blank" rel="dofollow" className="text-blue-400 hover:text-blue-300 underline">FOX Sports</a> / <a href="https://www.cbssports.com/" target="_blank" rel="dofollow" className="text-blue-400 hover:text-blue-300 underline">CBS</a></li>
                       <li>• <strong>Kickoff:</strong> 1:00 PM ET</li>
-                      <li>• <strong>Announcers:</strong> [Check game day]</li>
-                      <li>• <strong>Radio:</strong> SiriusXM NFL Radio</li>
+                      <li>• <strong>Radio:</strong> <a href="https://www.siriusxm.com/channels/nfl-radio" target="_blank" rel="dofollow" className="text-blue-400 hover:text-blue-300 underline">SiriusXM NFL Radio</a></li>
                     </ul>
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-200 mb-3">Streaming Options</h4>
                     <ul className="space-y-2 text-sm text-gray-300">
-                      <li>• NFL+ (mobile devices)</li>
-                      <li>• YouTube TV</li>
-                      <li>• Hulu + Live TV</li>
-                      <li>• FuboTV</li>
-                      <li>• DirecTV Stream</li>
+                      <li>• <a href="https://www.nfl.com/plus/" target="_blank" rel="dofollow" className="text-blue-400 hover:text-blue-300 underline">NFL+</a> (mobile devices)</li>
+                      <li>• <a href="https://tv.youtube.com/" target="_blank" rel="dofollow" className="text-blue-400 hover:text-blue-300 underline">YouTube TV</a></li>
+                      <li>• <a href="https://www.hulu.com/live-tv" target="_blank" rel="dofollow" className="text-blue-400 hover:text-blue-300 underline">Hulu + Live TV</a></li>
+                      <li>• <a href="https://www.fubo.tv/" target="_blank" rel="dofollow" className="text-blue-400 hover:text-blue-300 underline">FuboTV</a></li>
                     </ul>
                   </div>
                 </div>
@@ -765,40 +747,9 @@ export default function LionsVsCommandersBlog() {
               </div>
             </section>
 
-            {/* Conclusion */}
+            {/* Related Content with Dofollow Links */}
             <section className="pt-8">
-              <h2 className="text-3xl font-bold text-gray-100 mb-6">🏁 Final Thoughts</h2>
-              
-              <div className="bg-gradient-to-r from-blue-900/30 to-purple-900/30 border border-gray-600/50 rounded-2xl p-8">
-                <p className="text-lg text-gray-300 leading-relaxed mb-4">
-                  The <strong className="text-blue-400">Detroit Lions vs Washington Commanders</strong> matchup 
-                  represents two franchises heading in opposite directions. Detroit has emerged as a legitimate 
-                  NFC contender with balanced offense, improving defense, and exceptional coaching.
-                </p>
-
-                <p className="text-lg text-gray-300 leading-relaxed mb-4">
-                  Washington, while rebuilding, possesses the talent to create moments of brilliance. However, 
-                  inconsistency and youth should prove overwhelming against Detroit&apos;s veteran-laden, 
-                  well-coached squad.
-                </p>
-
-                <p className="text-lg text-gray-300 leading-relaxed mb-6">
-                  Expect an entertaining contest with Detroit pulling away in the second half. The Lions&apos; 
-                  depth, execution, and home-field advantage (if applicable) should deliver a comfortable victory 
-                  while the Commanders gain valuable experience for future battles.
-                </p>
-
-                <div className="border-t border-gray-600/50 pt-6">
-                  <p className="text-center text-gray-400 text-sm">
-                    Stay tuned for post-game analysis, player grades, and updated power rankings following this matchup!
-                  </p>
-                </div>
-              </div>
-            </section>
-
-            {/* Related Content */}
-            <section className="pt-8">
-              <h2 className="text-2xl font-bold text-gray-100 mb-6">📖 Related Reading</h2>
+              <h2 className="text-2xl font-bold text-gray-100 mb-6">📖 Related Reading & Resources</h2>
               <div className="grid md:grid-cols-3 gap-4">
                 <Link href="/blog/sports-timing" className="bg-gray-800/60 border border-gray-600/40 rounded-xl p-4 hover:border-blue-500/50 transition-colors">
                   <h3 className="font-semibold text-gray-100 mb-2">Sports Timing Tips</h3>
@@ -808,10 +759,29 @@ export default function LionsVsCommandersBlog() {
                   <h3 className="font-semibold text-gray-100 mb-2">Productivity Hacks</h3>
                   <p className="text-sm text-gray-400">Time management for peak performance</p>
                 </Link>
-                <Link href="/blog" className="bg-gray-800/60 border border-gray-600/40 rounded-xl p-4 hover:border-blue-500/50 transition-colors">
-                  <h3 className="font-semibold text-gray-100 mb-2">More NFL Analysis</h3>
-                  <p className="text-sm text-gray-400">Explore our complete blog archive</p>
+                <Link href="/blog/fifa-international-break" className="bg-gray-800/60 border border-gray-600/40 rounded-xl p-4 hover:border-blue-500/50 transition-colors">
+                  <h3 className="font-semibold text-gray-100 mb-2">FIFA International Break</h3>
+                  <p className="text-sm text-gray-400">Complete guide to international football</p>
                 </Link>
+              </div>
+
+              {/* External Authority Links */}
+              <div className="mt-6 bg-gray-800/40 border border-gray-600/40 rounded-xl p-6">
+                <h3 className="text-lg font-semibold text-gray-100 mb-4">🔗 Official NFL Resources</h3>
+                <div className="grid md:grid-cols-2 gap-3 text-sm">
+                  <a href="https://www.nfl.com/stats/team-stats/" target="_blank" rel="dofollow" className="text-blue-400 hover:text-blue-300 underline">
+                    → NFL Team Statistics
+                  </a>
+                  <a href="https://www.nfl.com/standings/" target="_blank" rel="dofollow" className="text-blue-400 hover:text-blue-300 underline">
+                    → NFL Standings & Playoffs
+                  </a>
+                  <a href="https://www.pro-football-reference.com/" target="_blank" rel="dofollow" className="text-blue-400 hover:text-blue-300 underline">
+                    → Pro Football Reference
+                  </a>
+                  <a href="https://www.espn.com/nfl/" target="_blank" rel="dofollow" className="text-blue-400 hover:text-blue-300 underline">
+                    → ESPN NFL Coverage
+                  </a>
+                </div>
               </div>
             </section>
 
@@ -824,7 +794,7 @@ export default function LionsVsCommandersBlog() {
                 ⏱️ Track Game Time Like a Pro
               </h3>
               <p className="text-center text-gray-300 mb-6 max-w-2xl mx-auto">
-                Use our free AI-enhanced stopwatch to track play times, possession duration, and quarter lengths 
+                Use our <Link href="/" className="text-blue-400 hover:text-blue-300 underline font-semibold">free AI-enhanced stopwatch</Link> to track play times, possession duration, and quarter lengths 
                 during the game. Perfect for serious NFL fans and analysts!
               </p>
               <div className="text-center">

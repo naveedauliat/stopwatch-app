@@ -11,7 +11,7 @@ export const metadata = {
   metadataBase: new URL("https://stopwatch.lol"),
   title: {
     default: "Stopwatch - AI-Enhanced Online Timer & Lap Counter",
-    template: "%s | Stopwatch, Smart Solution",
+    template: "%s | Stopwatch",
   },
   description:
     "Free AI-enhanced online stopwatch with lap counter, split times, and millisecond precision. Perfect for sports, productivity, workouts, and time tracking.",

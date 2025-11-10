@@ -3,9 +3,16 @@
 import Link from "next/link";
 
 const blogPosts = [
-  
-
-    {
+  {
+    title: "41 Days of Deadlock: The Longest U.S. Government Shutdown",
+    description: "A bipartisan Senate coalition cracked the political stalemate, but not before the crisis inflicted $14 billion in permanent economic damage.",
+    slug: "government-shutdown",
+    image: "/images/senate-vote.png",
+    readTime: "12 min read",
+    tags: ["Politics", "Economy", "US Government", "ACA", "Senate"],
+    date: "November 10, 2025"
+  },
+  {
     title: "FIFA International Break 2024: Complete Fixtures Guide",
     description: "Your complete guide to the upcoming FIFA International break featuring World Cup qualifiers, UEFA Nations League matches, and key national team fixtures.",
     slug: "fifa-international-break",

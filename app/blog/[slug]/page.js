@@ -1,6 +1,33 @@
 import { notFound } from 'next/navigation';
 
 const blogPosts = {
+  'government-shutdown': {
+    title: "41 Days of Deadlock: The Full Story of the Longest U.S. Government Shutdown",
+    date: "November 10, 2025",
+    author: "AI News Editor",
+    excerpt: "A bipartisan Senate coalition, spearheaded by eight centrist Democrats, cracked the political stalemate, but not before the crisis inflicted permanent economic damage.",
+    content: `
+      <h2>The Political Crucible: ACA Subsidies vs. Government Funding</h2>
+      <p>The government shutdown 2025, which began on October 1st after Congress failed to pass funding bills for the new fiscal year, became a titanic battle over health care...</p>
+      
+      <h3>The Core Dispute: The Subsidy Cliff</h3>
+      <p>At the heart of the deadlock was the looming "subsidy cliff." The enhanced ACA subsidies, initially authorized during the COVID-19 pandemic, significantly lowered health insurance premiums for millions of Americans...</p>
+      
+      <h2>The Compromise: How Eight Democrats Broke the Gridlock</h2>
+      <p>The resolution came not from leadership, but from the center. After 14 previous Senate votes failed to reach the necessary 60-vote threshold, a group of moderate and centrist senators hammered out a critical compromise...</p>
+      
+      <h3>The 60-40 Breakthrough Vote</h3>
+      <p>On Sunday night, the Senate voted 60-40 to invoke cloture on a funding measure. This required at least eight members of the Democratic caucus to defect from their leadership's position...</p>
+      
+      <h2>The Staggering Economic and Human Cost</h2>
+      <p>The prolonged deadlock severely hindered economic growth, inflicted financial pain on hundreds of thousands of families, and undermined key government functions.</p>
+      
+      <h3>The Macroeconomic Blow: $7 Billion to $16 Billion Weekly</h3>
+      <p>According to the Congressional Budget Office (CBO), the economic damage from the shutdown is monumental. The CBO estimates that between $7 billion and $14 billion of economic output will be permanently lost...</p>
+      
+      <p>For more insights on time management during crisis situations, check out our <a href="/blog/productivity-tips" class="text-blue-300 hover:text-blue-200">productivity tips guide</a>.</p>
+    `
+  },
   'lionsvsommanders': {
     title: "Lions vs Commanders",
     date: "November 10, 2024",
@@ -340,6 +367,12 @@ const blogPosts = {
 };
 
 const articleStyles = {
+  'government-shutdown': {
+    gradient: 'from-red-600 to-orange-700',
+    accent: 'text-red-300',
+    hover: 'hover:text-red-200',
+    border: 'border-red-400/20'
+  },
   'stopwatch-evolution': {
     gradient: 'from-blue-600 to-purple-700',
     accent: 'text-blue-300',

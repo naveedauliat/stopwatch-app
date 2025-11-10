@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 export function generateMetadata() {
   return {
-    title: "FIFA International Break 2025: Complete Guide to Upcoming Fixtures & Qualifiers",
+    title: "FIFA International Break 2025: Complete Guide",
     description: "Everything you need to know about the next FIFA International break: World Cup qualifiers, UEFA Nations League matches, key fixtures, player call-ups, and streaming information.",
     keywords: [
       "FIFA International break",
