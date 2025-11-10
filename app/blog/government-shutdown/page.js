@@ -130,7 +130,7 @@ export default function GovernmentShutdownBlog() {
               <h3 className="text-2xl font-semibold text-gray-200 mb-4">The Core Dispute: The Subsidy Cliff</h3>
               
               <p className="leading-relaxed mb-4">
-                At the heart of the deadlock was the looming <strong className="text-red-400">"subsidy cliff."</strong> The 
+                At the heart of the deadlock was the looming <strong className="text-red-400">&ldquo;subsidy cliff.&rdquo;</strong> The 
                 enhanced <a href="https://www.healthcare.gov/" target="_blank" rel="dofollow" className="text-blue-400 hover:text-blue-300 underline">ACA subsidies</a>, initially authorized during the COVID-19 pandemic, significantly lowered 
                 health insurance premiums for millions of Americans, especially those with middle incomes. These 
                 enhanced credits were set to expire at the end of 2025.
@@ -187,7 +187,7 @@ export default function GovernmentShutdownBlog() {
                 <p className="leading-relaxed mb-4">
                   On Sunday night, the <a href="https://www.senate.gov/" target="_blank" rel="dofollow" className="text-blue-400 hover:text-blue-300 underline">Senate</a> voted <strong className="text-green-400 text-2xl">60-40</strong> to invoke 
                   cloture on a funding measure. This procedural vote was the first true sign of a resolution. It 
-                  required at least eight members of the Democratic caucus to defect from their leadership's 
+                  required at least eight members of the Democratic caucus to defect from their leadership&apos;s 
                   position—and they delivered.
                 </p>
               </div>
@@ -217,7 +217,7 @@ export default function GovernmentShutdownBlog() {
                     <tr className="hover:bg-gray-700/20">
                       <td className="py-3 px-4 text-sm text-gray-300"><strong>Jeanne Shaheen</strong></td>
                       <td className="py-3 px-4 text-sm text-gray-400">D-NH</td>
-                      <td className="py-3 px-4 text-sm text-gray-300">&quot;Waiting longer will only prolong the pain&quot;</td>
+                      <td className="py-3 px-4 text-sm text-gray-300">&ldquo;Waiting longer will only prolong the pain&rdquo;</td>
                     </tr>
                     <tr className="hover:bg-gray-700/20">
                       <td className="py-3 px-4 text-sm text-gray-300"><strong>Maggie Hassan</strong></td>
@@ -232,7 +232,7 @@ export default function GovernmentShutdownBlog() {
                     <tr className="hover:bg-gray-700/20">
                       <td className="py-3 px-4 text-sm text-gray-300"><strong>John Fetterman</strong></td>
                       <td className="py-3 px-4 text-sm text-gray-400">D-PA</td>
-                      <td className="py-3 px-4 text-sm text-gray-300">Party &quot;overplaying its hand&quot;</td>
+                      <td className="py-3 px-4 text-sm text-gray-300">Party &ldquo;overplaying its hand&rdquo;</td>
                     </tr>
                     <tr className="hover:bg-gray-700/20">
                       <td className="py-3 px-4 text-sm text-gray-300"><strong>Catherine Cortez Masto</strong></td>
@@ -329,7 +329,7 @@ export default function GovernmentShutdownBlog() {
                   <span>
                     <strong className="text-gray-100">Permanent GDP Loss:</strong> The <a href="https://www.cbo.gov/" target="_blank" rel="dofollow" className="text-blue-400 hover:text-blue-300 underline">CBO</a> estimates 
                     that between <strong className="text-red-400">$7 billion and $14 billion</strong> of economic 
-                    output will be permanently lost—activity that will never be recovered.
+                    output will be permanently lost&mdash;activity that will never be recovered.
                   </span>
                 </li>
                 <li className="flex items-start gap-2">
@@ -375,7 +375,7 @@ export default function GovernmentShutdownBlog() {
                     The <strong>SNAP</strong> (food stamps) program, which provides critical food aid to over 
                     <strong className="text-red-400"> 40 million Americans</strong>, faced severe disruption. The 
                     <a href="https://www.sba.gov/" target="_blank" rel="dofollow" className="text-blue-400 hover:text-blue-300 underline"> Small Business Administration (SBA)</a> froze 
-                    the distribution of federally guaranteed loans—estimated at <strong className="text-red-400">$170 million per day</strong>.
+                    the distribution of federally guaranteed loans&mdash;estimated at <strong className="text-red-400">$170 million per day</strong>.
                   </p>
                 </div>
 
@@ -387,7 +387,7 @@ export default function GovernmentShutdownBlog() {
                     For the <strong className="text-red-400">1.4 million federal employees</strong> either furloughed 
                     or working without pay, the crisis was personal. Missed paychecks meant delayed mortgage payments, 
                     maxed-out credit cards, and drawing down retirement savings. Beyond the financial scramble, the 
-                    crisis inflicted a &quot;gut punch to morale.&quot;
+                    crisis inflicted a &ldquo;gut punch to morale.&rdquo;
                   </p>
                   <div className="bg-yellow-900/20 border border-yellow-700/40 rounded-lg p-3 mt-3">
                     <p className="text-xs text-yellow-400">
