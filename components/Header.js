@@ -72,7 +72,7 @@ export default function Header() {
               </a>
               
               <a
-                href="https://instagram.com/stopwatchlol"
+                href="https://instagram.com/stopwatch.lol"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-white/70 hover:text-pink-400 transition-colors"
@@ -152,7 +152,7 @@ export default function Header() {
                   </svg>
                 </a>
                 <a
-                  href="https://instagram.com/stopwatchlol"
+                  href="https://instagram.com/stopwatch.lol"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-white/70 hover:text-pink-400 transition-colors"

@@ -74,7 +74,7 @@ export default function Footer() {
                 </a>
                 
                 <a
-                  href="https://instagram.com/stopwatchlol"
+                  href="https://instagram.com/stopwatch.lol"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-white/60 hover:text-pink-400 transition-colors p-1"
