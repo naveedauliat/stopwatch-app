@@ -17,6 +17,12 @@ export default function sitemap() {
     },
     // All Blog Posts
     {
+      url: `${baseUrl}/blog/premier-league`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+    {
       url: `${baseUrl}/blog/government-shutdown`,
       lastModified: currentDate,
       changeFrequency: 'monthly',

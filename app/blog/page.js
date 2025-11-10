@@ -4,6 +4,15 @@ import Link from "next/link";
 
 const blogPosts = [
   {
+    title: "Premier League Fixtures November 23, 2025: Complete Match Preview",
+    description: "Expert analysis and predictions for all Premier League fixtures on November 23, 2025. Liverpool vs Man City headline fixture, team news, and viewing information.",
+    slug: "premier-league",
+    image: "/images/premier-league.webp",
+    readTime: "15 min read",
+    tags: ["Football", "Premier League", "Liverpool", "Manchester City", "Arsenal"],
+    date: "November 10, 2025"
+  },
+  {
     title: "41 Days of Deadlock: The Longest U.S. Government Shutdown",
     description: "A bipartisan Senate coalition cracked the political stalemate, but not before the crisis inflicted $14 billion in permanent economic damage.",
     slug: "government-shutdown",
@@ -17,9 +26,9 @@ const blogPosts = [
     description: "Your complete guide to the upcoming FIFA International break featuring World Cup qualifiers, UEFA Nations League matches, and key national team fixtures.",
     slug: "fifa-international-break",
     image: "/images/fifa-international-break.svg",
-    readTime: "8 min read",
-    tags: ["FIFA", "World Cup", "International Football", "UEFA Nations League", "Qualifiers", "Soccer"],
-    date: "November 10, 2025"
+    readTime: "10 min read",
+    tags: ["Football", "International", "FIFA", "World Cup Qualifiers"],
+    date: "November 8, 2024"
   },
   {
     title: "Lions vs Commanders",

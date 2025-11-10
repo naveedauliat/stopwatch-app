@@ -1,6 +1,39 @@
 import { notFound } from 'next/navigation';
 
 const blogPosts = {
+  'premier-league': {
+    title: "Premier League Fixtures November 23, 2025: Complete Match Preview & Expert Predictions",
+    date: "November 10, 2025",
+    author: "Football Insights Team",
+    excerpt: "Expert analysis and predictions for all Premier League fixtures on November 23, 2025. Liverpool vs Manchester City headline a crucial matchday.",
+    content: `
+      <h2>⚽ Premier League Matchday Overview</h2>
+      <p>November 23, 2025, presents one of the most exciting Premier League matchdays of the season, with six compelling fixtures scheduled across the day...</p>
+      
+      <h3>Featured Match: Liverpool vs Manchester City</h3>
+      <p>The headline fixture sees Liverpool host Manchester City at Anfield in what could be a pivotal encounter for the championship race. Both teams enter in exceptional form...</p>
+      
+      <h3>Complete Fixtures Breakdown</h3>
+      <ul>
+        <li><strong>12:30 PM:</strong> Manchester United vs Chelsea - Old Trafford</li>
+        <li><strong>3:00 PM:</strong> Arsenal vs Nottingham Forest - Emirates Stadium</li>
+        <li><strong>3:00 PM:</strong> Everton vs Brentford - Goodison Park</li>
+        <li><strong>3:00 PM:</strong> Fulham vs Wolverhampton - Craven Cottage</li>
+        <li><strong>3:00 PM:</strong> Leicester City vs Brighton - King Power Stadium</li>
+        <li><strong>5:30 PM:</strong> Liverpool vs Manchester City - Anfield</li>
+      </ul>
+      
+      <h3>Title Race Implications</h3>
+      <p>This matchday could significantly impact the title race dynamics. With Liverpool and Manchester City facing off directly, Arsenal will be watching closely...</p>
+      
+      <h3>How to Watch</h3>
+      <p>UK viewers can watch on Sky Sports Premier League and Sky Sports Main Event. International viewers should check local listings...</p>
+      
+      <p>Track all match times perfectly with our <a href="/" class="text-blue-300 hover:text-blue-200">free online stopwatch</a>. Perfect for following multiple fixtures!</p>
+      
+      <p>For more football content, check out our <a href="/blog/fifa-international-break" class="text-blue-300 hover:text-blue-200">FIFA International Break guide</a>.</p>
+    `
+  },
   'government-shutdown': {
     title: "41 Days of Deadlock: The Full Story of the Longest U.S. Government Shutdown",
     date: "November 10, 2025",
@@ -28,7 +61,7 @@ const blogPosts = {
       <p>For more insights on time management during crisis situations, check out our <a href="/blog/productivity-tips" class="text-blue-300 hover:text-blue-200">productivity tips guide</a>.</p>
     `
   },
-  'lionsvsommanders': {
+  'lionsvscommanders': {
     title: "Lions vs Commanders",
     date: "November 10, 2024",
     author: "stopwatch.lol",
@@ -367,6 +400,12 @@ const blogPosts = {
 };
 
 const articleStyles = {
+  'premier-league': {
+    gradient: 'from-purple-600 to-pink-700',
+    accent: 'text-purple-300',
+    hover: 'hover:text-purple-200',
+    border: 'border-purple-400/20'
+  },
   'government-shutdown': {
     gradient: 'from-red-600 to-orange-700',
     accent: 'text-red-300',
