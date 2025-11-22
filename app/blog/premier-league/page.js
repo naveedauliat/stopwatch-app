@@ -33,7 +33,7 @@ export default function PremierLeague2025Blog() {
           <h2 className="text-2xl md:text-3xl font-bold mb-4 text-indigo-100">
             Premier League Fixtures Preview
           </h2>
-          <p className="text-xl leading-relaxed text-purple-100">The final weekend of November brings us an incredible lineup of Premier League action. Here's everything you need to know about the matches on November 29-30, 2025.</p>
+          <p className="text-xl leading-relaxed text-purple-100">The final weekend of November brings us an incredible lineup of Premier League action. Here&apos;s everything you need to know about the matches on November 29-30, 2025.</p>
         </div>
 
         {/* Quick Navigation */}
@@ -67,7 +67,7 @@ export default function PremierLeague2025Blog() {
 
           <div id="man-city-leeds" className="mb-6 p-6 bg-gradient-to-br from-white to-sky-50 rounded-2xl shadow-lg hover:shadow-2xl transition-all border-l-8 border-sky-500 scroll-mt-20">
             <h3 className="text-2xl font-bold mb-3 text-sky-900">3:00 PM - Manchester City vs Leeds United</h3>
-            <p className="mb-3 text-gray-800 text-lg">The champions take on Leeds at the Etihad. City will be favorites, but Leeds' attacking style could make this an entertaining encounter.</p>
+            <p className="mb-3 text-gray-800 text-lg">The champions take on Leeds at the Etihad. City will be favorites, but Leeds&apos; attacking style could make this an entertaining encounter.</p>
             <p className="text-sm text-sky-700 font-semibold">#ManCity #LUFC #MCILEE #PremierLeague</p>
           </div>
 
@@ -105,7 +105,7 @@ export default function PremierLeague2025Blog() {
 
           <div id="villa-wolves" className="mb-6 p-6 bg-gradient-to-br from-white to-amber-50 rounded-2xl shadow-lg hover:shadow-2xl transition-all border-l-8 border-amber-600 scroll-mt-20">
             <h3 className="text-2xl font-bold mb-3 text-amber-900">2:05 PM - Aston Villa vs Wolverhampton Wanderers</h3>
-            <p className="mb-3 text-gray-800 text-lg">The Midlands derby! Villa Park hosts a fierce local rivalry as Villa take on Wolves in what's always a passionate affair.</p>
+            <p className="mb-3 text-gray-800 text-lg">The Midlands derby! Villa Park hosts a fierce local rivalry as Villa take on Wolves in what&apos;s always a passionate affair.</p>
             <p className="text-sm text-amber-700 font-semibold">#AVFC #Wolves #AstonVilla #AVLWOL #MidlandsDerby</p>
           </div>
 
@@ -165,7 +165,7 @@ export default function PremierLeague2025Blog() {
             </li>
             <li className="flex items-start gap-3 p-4 bg-purple-50 rounded-xl border-l-4 border-purple-500">
               <span className="text-2xl text-purple-600 font-bold">•</span>
-              <span className="text-lg"><a href="#tottenham-fulham" className="text-purple-700 font-bold underline hover:text-purple-900">Tottenham's home form</a> will be tested by a solid Fulham side</span>
+              <span className="text-lg"><a href="#tottenham-fulham" className="text-purple-700 font-bold underline hover:text-purple-900">Tottenham&apos;s home form</a> will be tested by a solid Fulham side</span>
             </li>
             <li className="flex items-start gap-3 p-4 bg-red-50 rounded-xl border-l-4 border-red-500">
               <span className="text-2xl text-red-600 font-bold">•</span>
@@ -176,7 +176,7 @@ export default function PremierLeague2025Blog() {
 
         <section className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 rounded-3xl shadow-3xl p-10 text-white mb-10">
           <h2 className="text-4xl font-extrabold mb-6 drop-shadow-lg">🏁 Final Thoughts</h2>
-          <p className="text-xl mb-6 leading-relaxed">November ends with a bang! Ten matches across two days featuring London derbies, historic rivalries, and crucial points up for grabs. Whether you're watching on TV, streaming, or following on your phone — this is Premier League football at its finest.</p>
+          <p className="text-xl mb-6 leading-relaxed">November ends with a bang! Ten matches across two days featuring London derbies, historic rivalries, and crucial points up for grabs. Whether you&apos;re watching on TV, streaming, or following on your phone — this is Premier League football at its finest.</p>
           <p className="text-2xl font-black mb-6">Get your snacks ready, invite your friends, and enjoy the beautiful game! ⚽🔥</p>
           <p className="text-center text-purple-100 text-base font-semibold">
             #PremierLeague #PL2025 #Football #Soccer #November2025 #Matchday #EPL #England #PremierLeagueFixtures
