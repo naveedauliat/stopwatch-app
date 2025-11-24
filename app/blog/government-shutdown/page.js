@@ -32,7 +32,7 @@ export function generateMetadata() {
       url: "https://www.stopwatch.lol/blog/government-shutdown",
       images: [
         { 
-          url: "https://stopwatch.lol/images/senate-vote.png",
+          url: "https://stopwatch.lol/images/senate-vote.jpg",
           width: 1200,
           height: 630,
           alt: "U.S. Senate Vote on Government Shutdown 2025"
@@ -46,7 +46,7 @@ export function generateMetadata() {
       card: "summary_large_image",
       title: "41 Days of Deadlock: The Longest U.S. Government Shutdown",
       description: "Complete analysis of the 2025 government shutdown and its $14 billion economic toll",
-      images: ["https://stopwatch.lol/images/senate-vote.png"]
+      images: ["https://stopwatch.lol/images/senate-vote.jpg"]
     }
   };
 }
@@ -91,7 +91,7 @@ export default function GovernmentShutdownBlog() {
           {/* Featured Image */}
           <div className="mb-12 rounded-2xl overflow-hidden border border-gray-700/50">
             <Image
-              src="/images/senate-vote.png"
+              src="/images/senate-vote.jpg"
               alt="U.S. Senate Vote on Government Shutdown 2025"
               width={1200}
               height={630}

@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const blogPosts = [
   {
-    title: "Premier League Fixtures November 23, 2025: Complete Match Preview",
+    title: "Premier League Fixtures November, 2025: Complete Match Preview",
     description: "Expert analysis and predictions for all Premier League fixtures on November 23, 2025. Liverpool vs Man City headline fixture, team news, and viewing information.",
     slug: "premier-league",
     image: "/images/premier-league.webp",
@@ -16,7 +16,7 @@ const blogPosts = [
     title: "41 Days of Deadlock: The Longest U.S. Government Shutdown",
     description: "A bipartisan Senate coalition cracked the political stalemate, but not before the crisis inflicted $14 billion in permanent economic damage.",
     slug: "government-shutdown",
-    image: "/images/senate-vote.png",
+    image: "/images/senate-vote.jpg",
     readTime: "12 min read",
     tags: ["Politics", "Economy", "US Government", "ACA", "Senate"],
     date: "November 10, 2025"
@@ -34,7 +34,7 @@ const blogPosts = [
     title: "Lions vs Commanders",
     description: "An in-depth analysis of the recent Lions vs Commanders game, highlighting key plays and strategies.",
     slug: "lionsvscommanders",
-    image: "/images/lions-vs-commanders.png",
+    image: "/images/lions-vs-commanders.jpg",
     readTime: "5 min read",
     tags: ["Lions vs Commanders highlights","Detroit Lions game analysis","Washington Commanders matchup preview","NFL Week preview","Lions vs Commanders","Jared Goff vs Sam Howell","Lions Commanders score prediction","Lions offense vs Commanders defense", "Sports", "Analysis"],
     date: "November 10, 2025"

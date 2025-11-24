@@ -1,6 +1,36 @@
 import Head from 'next/head';
 import Link from 'next/link';
 
+
+
+export function generateMetadata() {
+  return {
+    title: "Last Week of November 2025: Premier League Fixtures Preview",
+    description: "Complete preview of Premier League matchday fixtures for November 29-30, 2025. Key clashes, predictions, and where to watch.",
+    keywords: 'productivity, pomodoro, stopwatch, timeboxing, focus, Premier League, November 2025, Chelsea Arsenal, Liverpool, Manchester City, fixtures, football',
+    alternates: {
+      canonical: "https://www.stopwatch.lol/blog/premier-league"
+    },
+    openGraph: {
+      title: 'Premier League: Last Week of November 2025 Fixtures',
+      description: 'Your guide to the final Premier League weekend of November 2025 featuring Chelsea vs Arsenal, West Ham vs Liverpool, and more blockbuster matches.',
+      type: 'article',
+      url: "https://www.stopwatch.lol/blog/premier-league",
+      images: [{ url: "https://www.stopwatch.lol/images/premier-league.svg" }]
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: "Premier League: Last Week of November 2025 Fixtures",
+      description: "Your guide to the final Premier League weekend of November 2025 featuring Chelsea vs Arsenal, West Ham vs Liverpool, and more blockbuster matches.",
+      images: ["https://stopwatch.lol/images/premier-league.svg"]
+    }
+  };
+}
+
+
+
+
+
 export default function PremierLeague2025Blog() {
   return (
     <>
@@ -21,9 +51,9 @@ export default function PremierLeague2025Blog() {
           <Link href="/blog" className="px-4 py-2 bg-white text-purple-600 rounded-lg shadow-md hover:shadow-lg hover:bg-purple-50 transition-all font-semibold">
             Blog
           </Link>
-          <Link href="/fixtures" className="px-4 py-2 bg-white text-pink-600 rounded-lg shadow-md hover:shadow-lg hover:bg-pink-50 transition-all font-semibold">
-            Fixtures
-          </Link>
+          <a href="https://www.stopwatch.lol" className="px-4 py-2 bg-white text-pink-600 rounded-lg shadow-md hover:shadow-lg hover:bg-pink-50 transition-all font-semibold">
+            Stopwatch.lol
+          </a>
         </nav>
 
         <div className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 rounded-3xl shadow-2xl p-10 mb-10 text-white">
@@ -58,7 +88,7 @@ export default function PremierLeague2025Blog() {
               🗓️ Saturday, November 29th, 2025
             </h2>
           </div>
-          
+
           <div id="brentford-burnley" className="mb-6 p-6 bg-gradient-to-br from-white to-green-50 rounded-2xl shadow-lg hover:shadow-2xl transition-all border-l-8 border-green-500 scroll-mt-20">
             <h3 className="text-2xl font-bold mb-3 text-green-900">3:00 PM - Brentford vs Burnley</h3>
             <p className="mb-3 text-gray-800 text-lg">The Bees host the Clarets in what promises to be a competitive mid-table clash. Both teams will be looking to secure crucial points before December.</p>
@@ -96,7 +126,7 @@ export default function PremierLeague2025Blog() {
               🗓️ Sunday, November 30th, 2025
             </h2>
           </div>
-          
+
           <div id="palace-man-utd" className="mb-6 p-6 bg-gradient-to-br from-white to-red-50 rounded-2xl shadow-lg hover:shadow-2xl transition-all border-l-8 border-red-700 scroll-mt-20">
             <h3 className="text-2xl font-bold mb-3 text-red-900">12:00 PM - Crystal Palace vs Manchester United</h3>
             <p className="mb-3 text-gray-800 text-lg">Sunday starts early at Selhurst Park where Palace host the Red Devils. United will be looking to bounce back and secure three points in South London.</p>
@@ -218,6 +248,24 @@ export default function PremierLeague2025Blog() {
               <span className="text-lg font-bold text-red-700">🏆 Chelsea vs Arsenal</span>
             </a>
           </div>
+        </section>
+
+        <section className="pt-8">
+              <h2 className="text-2xl font-bold text-gray-100 mb-6">📖 Related Reading & Resources</h2>
+              <div className="grid md:grid-cols-3 gap-4">
+                <Link href="/blog/productivity-tips" className="bg-gray-800/60 border border-gray-600/40 rounded-xl p-4 hover:border-blue-500/50 transition-colors">
+                  <h3 className="font-semibold text-gray-100 mb-2">Crisis Management Tips</h3>
+                  <p className="text-sm text-gray-400">Time management strategies during uncertain times</p>
+                </Link>
+                <Link href="/blog/stopwatch-human-life" className="bg-gray-800/60 border border-gray-600/40 rounded-xl p-4 hover:border-blue-500/50 transition-colors">
+                  <h3 className="font-semibold text-gray-100 mb-2">Time in Human Life</h3>
+                  <p className="text-sm text-gray-400">Understanding time&apos;s impact on decision-making</p>
+                </Link>
+                <Link href="/blog/fifa-international-break" className="bg-gray-800/60 border border-gray-600/40 rounded-xl p-4 hover:border-blue-500/50 transition-colors">
+                  <h3 className="font-semibold text-gray-100 mb-2">International News</h3>
+                  <p className="text-sm text-gray-400">Stay updated on global events</p>
+                </Link>
+              </div>
         </section>
       </main>
     </>

@@ -38,7 +38,7 @@ export function generateMetadata() {
       url: "https://www.stopwatch.lol/blog/lionsvscommanders",
       images: [
         { 
-          url: "https://stopwatch.lol/images/lions-vs-commanders.png",
+          url: "https://stopwatch.lol/images/lions-vs-commanders.jpg",
           width: 1200,
           height: 630,
           alt: "Detroit Lions vs Washington Commanders Game Preview"
@@ -52,7 +52,7 @@ export function generateMetadata() {
       card: "summary_large_image",
       title: "Lions vs Commanders 2024: Complete Game Preview",
       description: "Expert analysis, predictions, and key matchups for Detroit Lions vs Washington Commanders",
-      images: ["https://stopwatch.lol/images/lions-vs-commanders.png"]
+      images: ["https://stopwatch.lol/images/lions-vs-commanders.jpg"]
     }
   };
 }
@@ -95,7 +95,7 @@ export default function LionsVsCommandersBlog() {
           {/* Featured Image */}
           <div className="mb-12 rounded-2xl overflow-hidden border border-gray-700/50">
             <Image
-              src="/images/lions-vs-commanders.png"
+              src="/images/lions-vs-commanders.jpg"
               alt="Detroit Lions vs Washington Commanders NFL Game Preview 2024"
               width={1200}
               height={630}
