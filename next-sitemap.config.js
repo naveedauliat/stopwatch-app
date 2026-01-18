@@ -1,12 +1,20 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: 'https://stopwatch.lol', // your main domain
-  generateRobotsTxt: true,           // (optional) also generates robots.txt
-  sitemapSize: 7000,                 // split if you ever exceed 7000 pages
-  changefreq: 'daily',               // how often pages change
-  priority: 0.7,                     // default priority
+  siteUrl: 'https://stopwatch.lol',
+  generateRobotsTxt: false,          // Don't regenerate - we have app/robots.js
+  sitemapSize: 7000,
+  changefreq: 'daily',
+  priority: 0.7,
   generateIndexSitemap: true,
-  output: 'standalone',
   outDir: './public',
-
+  exclude: [
+    '/robots.txt',
+    '/sitemap.xml',
+    '/sitemap-0.xml',
+    '/manifest.json',
+    '/site.webmanifest',
+    '/*.xml',
+    '/*.txt',
+    '/*.json',
+  ],
 }
