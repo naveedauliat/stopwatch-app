@@ -1,4 +1,5 @@
 import Stopwatch from "./components/stopwatch";
+import Link from "next/link";
 
 export const metadata = {
   title: "AI Stopwatch - Free Online Timer with Lap Counter",
@@ -155,6 +156,44 @@ export default function Home() {
         <div itemProp="operatingSystem" content="Any" style={{display: 'none'}}></div>
         
         <Stopwatch />
+
+        {/* Games Section */}
+        <section className="mt-12 max-w-4xl mx-auto">
+          <h2 className="text-2xl font-bold text-white text-center mb-6">
+            🎮 Play Free Games
+          </h2>
+          <div className="grid gap-4 md:grid-cols-3">
+            <Link
+              href="/games/tic-tac-toe"
+              className="rounded-xl shadow-lg p-5 bg-gradient-to-br from-purple-600 to-pink-600 hover:scale-105 transition transform text-center"
+            >
+              <h3 className="text-xl font-bold text-white mb-1">Tic Tac Toe</h3>
+              <p className="text-sm text-white/80">Classic X vs O strategy game.</p>
+            </Link>
+            <Link
+              href="/games/random-number-guesser"
+              className="rounded-xl shadow-lg p-5 bg-gradient-to-br from-green-500 to-teal-600 hover:scale-105 transition transform text-center"
+            >
+              <h3 className="text-xl font-bold text-white mb-1">Number Guesser</h3>
+              <p className="text-sm text-white/80">Guess the secret number!</p>
+            </Link>
+            <Link
+              href="/games/rock-paper-scissors"
+              className="rounded-xl shadow-lg p-5 bg-gradient-to-br from-orange-500 to-red-600 hover:scale-105 transition transform text-center"
+            >
+              <h3 className="text-xl font-bold text-white mb-1">Rock Paper Scissors</h3>
+              <p className="text-sm text-white/80">Battle against the computer.</p>
+            </Link>
+          </div>
+          <div className="text-center mt-4">
+            <Link
+              href="/games"
+              className="text-sm font-medium text-white/70 hover:text-white transition"
+            >
+              View all games →
+            </Link>
+          </div>
+        </section>
         
         <section className="mt-16 max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold text-white text-center mb-8">
