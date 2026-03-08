@@ -2,11 +2,22 @@ import RockPaperScissors from "./rock-paper-scissors";
 import NavLinks from "/components/NavLinks";
 
 export const metadata = {
-  title: "Rock Paper Scissors Online – Play Free RPS Game!",
-  description: "Play Rock Paper Scissors free online vs computer with smooth animations. Fun, quick, and easy to play anytime!. The best rock paper scissors game online.",
+  title: "Rock Paper Scissors Online – Play Free vs Computer",
+  description: "Play Rock Paper Scissors free online against the computer with smooth animations. Fun, quick, and easy to play anytime. No signup needed.",
   keywords: ["rock paper scissors online", "play rock paper scissors", "rps game", "rock paper scissors free"],
   alternates: {
     canonical: "https://stopwatch.lol/games/rock-paper-scissors",
+  },
+  openGraph: {
+    title: "Rock Paper Scissors Online – Play Free vs Computer",
+    description: "Play Rock Paper Scissors free online against the computer. Fun, quick, and easy to play anytime.",
+    type: "website",
+    url: "https://stopwatch.lol/games/rock-paper-scissors",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Rock Paper Scissors Online – Play Free vs Computer",
+    description: "Play Rock Paper Scissors free online. No signup needed.",
   },
 };
 

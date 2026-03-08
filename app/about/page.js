@@ -1,6 +1,20 @@
 export const metadata = {
   title: "About Us - Stopwatch.lol",
-  description: "Learn about our mission to provide precise, AI-enhanced timing solutions. Discover the team and technology behind Stopwatch.lol.",
+  description: "Learn about our mission to provide the most accurate and user-friendly free online stopwatch. Discover the team and technology behind Stopwatch.lol.",
+  alternates: {
+    canonical: "https://stopwatch.lol/about"
+  },
+  openGraph: {
+    title: "About Us - Stopwatch.lol",
+    description: "Learn about our mission to provide the most accurate free online stopwatch with lap counter and millisecond precision.",
+    type: "website",
+    url: "https://stopwatch.lol/about"
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About Us - Stopwatch.lol",
+    description: "Learn about the team and technology behind Stopwatch.lol - free online stopwatch."
+  }
 };
 
 export default function AboutPage() {
@@ -13,8 +27,8 @@ export default function AboutPage() {
           <section className="mb-12">
             <h2 className="text-2xl font-semibold text-white mb-4">Our Mission</h2>
             <p className="text-gray-300 mb-4">
-              At Stopwatch.lol, we&apos;re dedicated to providing the most accurate and user-friendly timing solution on the web. 
-              Our AI-enhanced stopwatch combines precision timing with intelligent features to deliver an exceptional user experience.
+              At Stopwatch.lol, we&apos;re dedicated to providing the most accurate and user-friendly timing solution on the web.
+              Our stopwatch combines millisecond precision with a clean, intuitive interface to deliver an exceptional experience for athletes, students, and professionals alike.
             </p>
           </section>
 
@@ -22,9 +36,9 @@ export default function AboutPage() {
             <h2 className="text-2xl font-semibold text-white mb-4">Technology</h2>
             <div className="grid md:grid-cols-2 gap-6">
               <div className="bg-white/5 p-6 rounded-lg">
-                <h3 className="text-xl font-semibold text-white mb-2">AI Enhancement</h3>
+                <h3 className="text-xl font-semibold text-white mb-2">Precision Timing</h3>
                 <p className="text-gray-300">
-                  Our stopwatch utilizes machine learning algorithms to ensure precise timing and intelligent background operation.
+                  Our stopwatch uses the browser&apos;s high-resolution Performance API to achieve millisecond precision and reliable background operation.
                 </p>
               </div>
               <div className="bg-white/5 p-6 rounded-lg">

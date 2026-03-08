@@ -80,7 +80,7 @@ export default function TermsPage() {
                   Stopwatch.lol provides a free online stopwatch and timing service with the following features:
                 </p>
                 <ul className="list-disc list-inside space-y-2 ml-4">
-                  <li>AI-enhanced precision timing</li>
+                  <li>Millisecond precision timing</li>
                   <li>Lap counter and split timing</li>
                   <li>Offline functionality</li>
                   <li>Background operation</li>

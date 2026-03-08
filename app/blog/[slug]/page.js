@@ -62,12 +62,31 @@ const blogPosts = {
     `
   },
   'lionsvscommanders': {
-    title: "Lions vs Commanders",
+    title: "Lions vs Commanders: Game Analysis",
     date: "November 10, 2024",
-    author: "stopwatch.lol",
+    author: "Sports Analyst",
+    excerpt: "An in-depth analysis of the Detroit Lions vs Washington Commanders game, highlighting key plays, strategies, and performance metrics.",
     content: `
-      <h2>Your Content Here</h2>
-      <p>Your blog content in HTML format...</p>
+      <h2>Detroit Lions vs Washington Commanders: Key Takeaways</h2>
+      <p>The matchup between the Detroit Lions and the Washington Commanders delivered an intense battle of offensive firepower and defensive adjustments throughout the game.</p>
+
+      <h3>Offensive Highlights</h3>
+      <p>Jared Goff led the Lions offense with precision passing, exploiting the Commanders secondary with quick release throws and well-timed screen plays. The Lions running game provided critical balance, keeping the Commanders defense guessing on every down.</p>
+
+      <h3>Defensive Strategies</h3>
+      <p>Both teams leaned on their defensive lines to control the pace. The Lions applied consistent pressure on the quarterback, forcing hurried throws and key turnovers that shifted momentum in critical moments.</p>
+
+      <h3>Performance Metrics</h3>
+      <ul>
+        <li><strong>Time of possession:</strong> A key factor — the Lions controlled the clock effectively in the second half</li>
+        <li><strong>Red zone efficiency:</strong> Scoring on the majority of red zone trips proved decisive</li>
+        <li><strong>Turnover differential:</strong> Winning the turnover battle was critical to the final outcome</li>
+      </ul>
+
+      <h3>Timing in Football</h3>
+      <p>Precision timing is fundamental in football — from play-clock management to route timing. Coaches and analysts use stopwatches to measure everything from receiver separation to snap counts. Use our <a href="/" class="text-blue-300 hover:text-blue-200">free online stopwatch</a> to track your own athletic timing drills.</p>
+
+      <p>For more sports timing content, read our guide on <a href="/blog/sports-timing" class="text-blue-300 hover:text-blue-200">how stopwatches are used in sports performance</a>.</p>
     `
   },
 
@@ -243,8 +262,6 @@ const blogPosts = {
     date: "November 7, 2023",
     author: "Time Management Expert",
     content: `
-      <h1>The Impact of Stopwatches on Human Life: From Sports to Mindfulness</h1>
-
       <p class="lead">In our fast-paced world, the humble stopwatch has evolved from a simple timing device to an essential tool that influences various aspects of human life. From professional athletes to meditation practitioners, this precision instrument helps shape how we understand and utilize time.</p>
 
       <h2>1. Sports and Athletic Performance</h2>
@@ -449,19 +466,22 @@ export function generateMetadata({ params }) {
   
   return {
     title: `${post.title} | Stopwatch.lol Blog`,
-    description: post.excerpt,
+    description: post.excerpt || post.title,
+    alternates: {
+      canonical: `https://stopwatch.lol/blog/${params.slug}`,
+    },
     openGraph: {
       title: post.title,
-      description: post.excerpt,
+      description: post.excerpt || post.title,
       type: 'article',
-      publishedTime: post.date,
+      publishedTime: new Date(post.date).toISOString(),
       authors: [post.author],
       url: `https://stopwatch.lol/blog/${params.slug}`,
     },
     twitter: {
       card: 'summary_large_image',
       title: post.title,
-      description: post.excerpt,
+      description: post.excerpt || post.title,
     }
   };
 }

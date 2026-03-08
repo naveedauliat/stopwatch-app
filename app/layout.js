@@ -10,27 +10,27 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata = {
   metadataBase: new URL("https://stopwatch.lol"),
   title: {
-    default: "Stopwatch - AI-Enhanced Online Timer & Lap Counter",
-    template: "%s | Stopwatch",
+    default: "Stopwatch - Free Online Timer & Lap Counter",
+    template: "%s | Stopwatch.lol",
   },
   description:
-    "Free AI-enhanced online stopwatch with lap counter, split times, and millisecond precision. Perfect for sports, productivity, workouts, and time tracking.",
+    "Free online stopwatch with lap counter, split times, and millisecond precision. Perfect for sports, productivity, workouts, and time tracking.",
 
   keywords: [
-    "AI stopwatch",
+    "online stopwatch",
+    "free stopwatch",
     "online timer",
     "lap counter",
-    "smart stopwatch",
-    "precision timing",
     "split timer",
     "interval timer",
     "sports timing",
     "productivity timer",
     "workout timer",
-    "free stopwatch",
     "digital timer",
-    "accurate timing",
-    "millisecond precision",
+    "millisecond timer",
+    "precision timing",
+    "stopwatch online",
+    "countdown timer",
     "background timer",
   ],
   authors: [{ name: "Stopwatch.lol Team", url: "https://stopwatch.lol" }],
@@ -47,17 +47,17 @@ export const metadata = {
     type: "website",
     locale: "en_US",
     url: "https://stopwatch.lol",
-    siteName: "Stopwatch.lol - AI-Enhanced Timing",
-    title: "AI-Enhanced Stopwatch - Free Online Timer with Smart Features",
+    siteName: "Stopwatch.lol",
+    title: "Free Online Stopwatch - Lap Counter & Millisecond Precision",
     description:
-      "Professional-grade online stopwatch with AI-powered precision, lap counter, and smart timing features. Free, accurate, and works everywhere.",
+      "Professional-grade online stopwatch with millisecond precision, lap counter, and split times. Free, accurate, and works everywhere.",
     images: [
       {
-        url: "/images/og-image.svg",
+        url: "/og_image.png",
         width: 1200,
         height: 630,
-        alt: "Stopwatch.lol - AI-Enhanced Online Timer",
-        type: "image/svg+xml",
+        alt: "Stopwatch.lol - Free Online Stopwatch with Lap Counter",
+        type: "image/png",
       },
     ],
   },
@@ -65,10 +65,10 @@ export const metadata = {
     card: "summary_large_image",
     site: "@stopwatchlol",
     creator: "@stopwatchlol",
-    title: "AI-Enhanced Stopwatch - Free Online Timer",
+    title: "Free Online Stopwatch - Lap Counter & Millisecond Precision",
     description:
-      "Professional online stopwatch with AI precision, lap counter, and smart timing. Free and works everywhere.",
-    images: ["/images/og-image.svg"],
+      "Professional online stopwatch with millisecond precision, lap counter, and split times. Free and works everywhere.",
+    images: ["/og_image.png"],
   },
   robots: {
     index: true,
@@ -94,8 +94,6 @@ export const metadata = {
   },
   manifest: "/manifest.json",
   verification: {
-    google: "your-google-verification-code",
-    yandex: "your-yandex-verification-code",
     other: {
       "msvalidate.01": "8A5A3C0DDDEB3C5FD46D17C1723BF37A",
     },
@@ -131,22 +129,12 @@ export default function RootLayout({ children }) {
         "@type": "WebSite",
         "@id": "https://stopwatch.lol/#website",
         url: "https://stopwatch.lol/",
-        name: "Stopwatch.lol - AI-Enhanced Online Timer",
+        name: "Stopwatch.lol - Free Online Stopwatch",
         description:
-          "Free AI-enhanced online stopwatch with precision timing, lap counter, and smart features.",
+          "Free online stopwatch with millisecond precision, lap counter, split times, and background operation.",
         publisher: {
           "@id": "https://stopwatch.lol/#organization",
         },
-        potentialAction: [
-          {
-            "@type": "SearchAction",
-            target: {
-              "@type": "EntryPoint",
-              urlTemplate: "https://stopwatch.lol/?q={search_term_string}",
-            },
-            "query-input": "required name=search_term_string",
-          },
-        ],
         inLanguage: "en-US",
       },
       {
@@ -178,7 +166,7 @@ export default function RootLayout({ children }) {
       {
         "@type": "WebApplication",
         "@id": "https://stopwatch.lol/#webapp",
-        name: "AI-Enhanced Online Stopwatch",
+        name: "Online Stopwatch",
         url: "https://stopwatch.lol/",
         applicationCategory: "UtilityApplication",
         applicationSubCategory: "Timer & Productivity Tools",
@@ -188,30 +176,20 @@ export default function RootLayout({ children }) {
         dateCreated: "2023-01-01",
         dateModified: "2024-11-07",
         description:
-          "Professional-grade online stopwatch with AI-powered precision timing, lap counter, split times, and smart background operation.",
+          "Professional-grade free online stopwatch with millisecond precision, lap counter, split times, and background operation.",
         featureList: [
-          "AI-powered timing accuracy",
-          "Millisecond precision",
+          "Millisecond precision timing",
           "Lap time recording",
           "Split time tracking",
           "Background operation",
           "Offline functionality",
           "Mobile responsive design",
-          "Smart timing algorithms",
         ],
         offers: {
           "@type": "Offer",
           price: "0",
           priceCurrency: "USD",
           availability: "https://schema.org/InStock",
-        },
-        aggregateRating: {
-          "@type": "AggregateRating",
-          ratingValue: "4.8",
-          ratingCount: "2847",
-          reviewCount: "412",
-          bestRating: "5",
-          worstRating: "1",
         },
         author: {
           "@id": "https://stopwatch.lol/#organization",

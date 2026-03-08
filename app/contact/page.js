@@ -1,6 +1,20 @@
 export const metadata = {
   title: "Contact Us - Stopwatch.lol",
-  description: "Get in touch with the Stopwatch.lol team. We&apos;re here to help with your questions and feedback about our precision timing tools.",
+  description: "Get in touch with the Stopwatch.lol team. We're here to help with your questions and feedback about our free online stopwatch.",
+  alternates: {
+    canonical: "https://stopwatch.lol/contact"
+  },
+  openGraph: {
+    title: "Contact Us - Stopwatch.lol",
+    description: "Get in touch with the Stopwatch.lol team for questions and feedback about our free online stopwatch.",
+    type: "website",
+    url: "https://stopwatch.lol/contact"
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Contact Us - Stopwatch.lol",
+    description: "Get in touch with the Stopwatch.lol team."
+  }
 };
 
 export default function ContactPage() {

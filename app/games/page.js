@@ -2,9 +2,23 @@ import Link from "next/link";
 import ShareButtons from "/components/ShareButtons";
 
 export const metadata = {
-  title: "Play Free Online Games with us, Just for Fun!",
-  description: "Enjoy free online games like Tic Tac Toe, Number Guesser, and Rock Paper Scissors at Stopwatch. Fun, simple, and free! With single and two player options.",
+  title: "Free Online Games - Tic Tac Toe, Number Guesser & More",
+  description: "Enjoy free online games like Tic Tac Toe, Number Guesser, and Rock Paper Scissors at Stopwatch.lol. Fun, simple, and free with single and two player options.",
   keywords: ["free online games", "play games online", "tic tac toe", "number guesser", "rock paper scissors"],
+  alternates: {
+    canonical: "https://stopwatch.lol/games"
+  },
+  openGraph: {
+    title: "Free Online Games - Tic Tac Toe, Number Guesser & More",
+    description: "Enjoy free online games like Tic Tac Toe, Number Guesser, and Rock Paper Scissors at Stopwatch.lol.",
+    type: "website",
+    url: "https://stopwatch.lol/games"
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Free Online Games - Tic Tac Toe, Number Guesser & More",
+    description: "Enjoy free online games at Stopwatch.lol. Fun, simple, and free!"
+  }
 };
 
 export default function GamesPage() {
@@ -49,16 +63,15 @@ export default function GamesPage() {
           href="/"
           className="text-sm font-medium px-4 py-2 bg-white/20 rounded-lg hover:bg-white/30 transition"
         >
-          🏠 Back to Stopwatch
+          Back to Stopwatch
         </Link>
       </div>
-            <div>
-      <games/>
-      <ShareButtons
-        url="https://stopwatch.lol/games"
-        title="Play Tic Tac Toe Online — Stopwatch.lol 🎮"
-      />
-    </div>
+      <div className="mt-6">
+        <ShareButtons
+          url="https://stopwatch.lol/games"
+          title="Play Free Online Games at Stopwatch.lol"
+        />
+      </div>
     </div>
   );
 }
