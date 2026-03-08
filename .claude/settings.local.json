@@ -1,7 +1,8 @@
 {
   "permissions": {
     "allow": [
-      "Bash(ls d:/Stopwatch/app/blog/[slug]/)"
+      "Bash(ls d:/Stopwatch/app/blog/[slug]/)",
+      "Bash(node -e \":*)"
     ]
   }
 }
