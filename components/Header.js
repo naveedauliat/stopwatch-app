@@ -23,6 +23,9 @@ export default function Header() {
             <Link href="/" className="text-white/90 hover:text-white transition-colors">
               Home
             </Link>
+            <Link href="/countdown" className="text-white/90 hover:text-white transition-colors">
+              Timer
+            </Link>
             <Link href="/blog" className="text-white/90 hover:text-white transition-colors">
               Blog
             </Link>
@@ -103,6 +106,9 @@ export default function Header() {
             <div className="flex flex-col space-y-3">
               <Link href="/" className="text-white/90 hover:text-white transition-colors">
                 Home
+              </Link>
+              <Link href="/countdown" className="text-white/90 hover:text-white transition-colors">
+                Timer
               </Link>
               <Link href="/blog" className="text-white/90 hover:text-white transition-colors">
                 Blog

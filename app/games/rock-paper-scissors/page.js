@@ -3,29 +3,81 @@ import NavLinks from "/components/NavLinks";
 
 export const metadata = {
   title: "Rock Paper Scissors Online – Play Free vs Computer",
-  description: "Play Rock Paper Scissors free online against the computer with smooth animations. Fun, quick, and easy to play anytime. No signup needed.",
-  keywords: ["rock paper scissors online", "play rock paper scissors", "rps game", "rock paper scissors free"],
+  description:
+    "Play Rock Paper Scissors online free against the computer. Instant play with score tracking, win streaks, and match history. No download or signup needed.",
+  keywords: [
+    "rock paper scissors online",
+    "rock paper scissors game",
+    "play rock paper scissors",
+    "rock paper scissors vs computer",
+    "rps game online",
+    "rock paper scissors free",
+    "rock paper scissors no download",
+    "online rps",
+  ],
   alternates: {
     canonical: "https://stopwatch.lol/games/rock-paper-scissors",
   },
   openGraph: {
     title: "Rock Paper Scissors Online – Play Free vs Computer",
-    description: "Play Rock Paper Scissors free online against the computer. Fun, quick, and easy to play anytime.",
+    description:
+      "Play Rock Paper Scissors online free. Score tracking, win streaks, and match history. No signup needed.",
     type: "website",
     url: "https://stopwatch.lol/games/rock-paper-scissors",
+    siteName: "Stopwatch.lol",
   },
   twitter: {
     card: "summary_large_image",
     title: "Rock Paper Scissors Online – Play Free vs Computer",
-    description: "Play Rock Paper Scissors free online. No signup needed.",
+    description:
+      "Play Rock Paper Scissors online free. Score tracking, win streaks. No signup needed.",
   },
 };
 
 export default function Page() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://stopwatch.lol/games/rock-paper-scissors#webpage",
+    url: "https://stopwatch.lol/games/rock-paper-scissors",
+    name: "Rock Paper Scissors Online – Play Free vs Computer",
+    description:
+      "Play Rock Paper Scissors online free against the computer. Instant play with score tracking and win streaks.",
+    isPartOf: { "@id": "https://stopwatch.lol/#website" },
+    breadcrumb: {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: "https://stopwatch.lol" },
+        { "@type": "ListItem", position: 2, name: "Games", item: "https://stopwatch.lol/games" },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: "Rock Paper Scissors",
+          item: "https://stopwatch.lol/games/rock-paper-scissors",
+        },
+      ],
+    },
+  };
+
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-blue-600 to-black-700 text-white p-6">
-      <NavLinks />
-      <RockPaperScissors />
-    </div>
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <div className="container mx-auto px-4 py-8">
+        <div className="text-center mb-8">
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-3">
+            ✊📄✂️ Rock Paper Scissors
+          </h1>
+          <p className="text-white/70 text-lg max-w-xl mx-auto">
+            Play free online against the computer. Track your score, build win streaks, and see
+            match history — no signup needed.
+          </p>
+        </div>
+        <NavLinks />
+        <RockPaperScissors />
+      </div>
+    </>
   );
 }

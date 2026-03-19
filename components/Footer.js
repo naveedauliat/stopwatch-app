@@ -110,6 +110,16 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/countdown" className="text-white/70 hover:text-white transition-colors text-sm">
+                  Countdown Timer
+                </Link>
+              </li>
+              <li>
+                <Link href="/full-screen-stopwatch" className="text-white/70 hover:text-white transition-colors text-sm">
+                  Full Screen Stopwatch
+                </Link>
+              </li>
+              <li>
                 <Link href="/blog" className="text-white/70 hover:text-white transition-colors text-sm">
                   Blog & Tips
                 </Link>
@@ -188,7 +198,7 @@ export default function Footer() {
         {/* Bottom Section */}
         <div className="border-t border-white/20 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-white/60 text-sm">
-            © 2024 Stopwatch.lol. All rights reserved. Made with ⏱️ for precise timing.
+            © 2026 Stopwatch.lol. All rights reserved. Made with ⏱️ for precise timing.
           </p>
           
           <div className="flex items-center space-x-4 mt-4 md:mt-0">

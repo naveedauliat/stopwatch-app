@@ -1,398 +1,323 @@
 'use client';
 
 import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
 import ShareButtons from "/components/ShareButtons";
 import Link from "next/link";
 
 export default function TicTacToe() {
-    const [board, setBoard] = useState(Array(9).fill(null));
-    const [isXNext, setIsXNext] = useState(true);
-    const [winner, setWinner] = useState(null);
-    const [winningLine, setWinningLine] = useState([]);
-    const [gameMode, setGameMode] = useState(null); // null, '2player', 'computer'
-    const [difficulty, setDifficulty] = useState(null); // 'easy', 'medium', 'hard'
+  const [board, setBoard] = useState(Array(9).fill(null));
+  const [isXNext, setIsXNext] = useState(true);
+  const [winner, setWinner] = useState(null);
+  const [winningLine, setWinningLine] = useState([]);
+  const [gameMode, setGameMode] = useState(null);
+  const [difficulty, setDifficulty] = useState(null);
+  const [score, setScore] = useState({ x: 0, o: 0, draws: 0 });
 
-    const lines = [
-        [0, 1, 2],
-        [3, 4, 5],
-        [6, 7, 8],
-        [0, 3, 6],
-        [1, 4, 7],
-        [2, 5, 8],
-        [0, 4, 8],
-        [2, 4, 6],
-    ];
+  const lines = [
+    [0,1,2],[3,4,5],[6,7,8],
+    [0,3,6],[1,4,7],[2,5,8],
+    [0,4,8],[2,4,6],
+  ];
 
-    const checkWinner = (squares) => {
-        for (let [a, b, c] of lines) {
-            if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
-                return { winner: squares[a], line: [a, b, c] };
-            }
-        }
-        return null;
-    };
-
-    const calculateWinner = (squares) => {
-        const result = checkWinner(squares);
-        if (result) {
-            setWinningLine(result.line);
-            return result.winner;
-        }
-        return null;
-    };
-
-    // Get available moves
-    const getAvailableMoves = (squares) => {
-        return squares.map((cell, index) => cell === null ? index : null).filter(i => i !== null);
-    };
-
-    // Minimax algorithm for hard difficulty
-    const minimax = (squares, isMaximizing) => {
-        const result = checkWinner(squares);
-        if (result) {
-            return result.winner === 'O' ? 10 : -10;
-        }
-        if (!squares.includes(null)) {
-            return 0;
-        }
-
-        if (isMaximizing) {
-            let bestScore = -Infinity;
-            for (let i = 0; i < 9; i++) {
-                if (squares[i] === null) {
-                    squares[i] = 'O';
-                    const score = minimax(squares, false);
-                    squares[i] = null;
-                    bestScore = Math.max(score, bestScore);
-                }
-            }
-            return bestScore;
-        } else {
-            let bestScore = Infinity;
-            for (let i = 0; i < 9; i++) {
-                if (squares[i] === null) {
-                    squares[i] = 'X';
-                    const score = minimax(squares, true);
-                    squares[i] = null;
-                    bestScore = Math.min(score, bestScore);
-                }
-            }
-            return bestScore;
-        }
-    };
-
-    // Get computer move based on difficulty
-    const getComputerMove = (squares) => {
-        const available = getAvailableMoves(squares);
-        if (available.length === 0) return null;
-
-        if (difficulty === 'easy') {
-            // Random move
-            return available[Math.floor(Math.random() * available.length)];
-        }
-
-        if (difficulty === 'medium') {
-            // 50% chance of best move, 50% random
-            if (Math.random() < 0.5) {
-                return available[Math.floor(Math.random() * available.length)];
-            }
-            // Try to win or block
-            for (let move of available) {
-                const testBoard = [...squares];
-                testBoard[move] = 'O';
-                if (checkWinner(testBoard)) return move;
-            }
-            for (let move of available) {
-                const testBoard = [...squares];
-                testBoard[move] = 'X';
-                if (checkWinner(testBoard)) return move;
-            }
-            // Take center if available
-            if (available.includes(4)) return 4;
-            // Take a corner
-            const corners = [0, 2, 6, 8].filter(c => available.includes(c));
-            if (corners.length > 0) return corners[Math.floor(Math.random() * corners.length)];
-            // Random
-            return available[Math.floor(Math.random() * available.length)];
-        }
-
-        if (difficulty === 'hard') {
-            // Minimax - always best move
-            let bestScore = -Infinity;
-            let bestMove = available[0];
-            for (let move of available) {
-                const testBoard = [...squares];
-                testBoard[move] = 'O';
-                const score = minimax(testBoard, false);
-                if (score > bestScore) {
-                    bestScore = score;
-                    bestMove = move;
-                }
-            }
-            return bestMove;
-        }
-
-        return available[0];
-    };
-
-    // Computer makes a move
-    useEffect(() => {
-        if (gameMode === 'computer' && !isXNext && !winner) {
-            const timer = setTimeout(() => {
-                const move = getComputerMove(board);
-                if (move !== null) {
-                    const newBoard = [...board];
-                    newBoard[move] = 'O';
-                    setBoard(newBoard);
-                    setIsXNext(true);
-
-                    const gameWinner = calculateWinner(newBoard);
-                    if (gameWinner) {
-                        setWinner(gameWinner);
-                    } else if (!newBoard.includes(null)) {
-                        setWinner("Draw");
-                    }
-                }
-            }, 500);
-            return () => clearTimeout(timer);
-        }
-    }, [isXNext, gameMode, winner, board]);
-
-    const handleClick = (index) => {
-        if (board[index] || winner) return;
-        if (gameMode === 'computer' && !isXNext) return; // Prevent clicking during computer's turn
-        
-        const newBoard = [...board];
-        newBoard[index] = isXNext ? "X" : "O";
-        setBoard(newBoard);
-        setIsXNext(!isXNext);
-
-        const gameWinner = calculateWinner(newBoard);
-        if (gameWinner) {
-            setWinner(gameWinner);
-        } else if (!newBoard.includes(null)) {
-            setWinner("Draw");
-        }
-    };
-
-    const resetGame = () => {
-        setBoard(Array(9).fill(null));
-        setIsXNext(true);
-        setWinner(null);
-        setWinningLine([]);
-    };
-
-    const backToMenu = () => {
-        resetGame();
-        setGameMode(null);
-        setDifficulty(null);
-    };
-
-    const selectMode = (mode) => {
-        setGameMode(mode);
-        if (mode === '2player') {
-            setDifficulty(null);
-        }
-    };
-
-    const selectDifficulty = (level) => {
-        setDifficulty(level);
-    };
-
-    // Mode selection screen
-    if (!gameMode) {
-        return (
-            <div className="flex flex-col items-center justify-center min-h-400 
-                bg-gradient-to-br from-purple-100 via-green to-white-100 
-                p-6 rounded-2xl shadow-lg">
-                <h1 className="text-3xl font-extrabold text-purple-700 mb-6">
-                    🎮 Tic Tac Toe
-                </h1>
-                <h2 className="text-xl font-bold text-gray-700 mb-4">Select Game Mode</h2>
-                <div className="flex flex-col gap-4">
-                    <motion.button
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
-                        onClick={() => selectMode('2player')}
-                        className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-xl shadow-lg font-bold text-lg"
-                    >
-                        👥 2 Players
-                    </motion.button>
-                    <motion.button
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
-                        onClick={() => selectMode('computer')}
-                        className="px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white rounded-xl shadow-lg font-bold text-lg"
-                    >
-                        🤖 vs Computer
-                    </motion.button>
-                </div>
-            </div>
-        );
+  const checkWinner = (squares) => {
+    for (let [a, b, c] of lines) {
+      if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
+        return { winner: squares[a], line: [a, b, c] };
+      }
     }
+    return null;
+  };
 
-    // Difficulty selection screen (only for computer mode)
-    if (gameMode === 'computer' && !difficulty) {
-        return (
-            <div className="flex flex-col items-center justify-center min-h-400 
-                bg-gradient-to-br from-purple-100 via-green to-white-100 
-                p-6 rounded-2xl shadow-lg">
-                <h1 className="text-3xl font-extrabold text-purple-700 mb-6">
-                    🎮 Tic Tac Toe
-                </h1>
-                <h2 className="text-xl font-bold text-gray-700 mb-4">Select Difficulty</h2>
-                <div className="flex flex-col gap-4">
-                    <motion.button
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
-                        onClick={() => selectDifficulty('easy')}
-                        className="px-8 py-4 bg-gradient-to-r from-green-400 to-green-500 text-white rounded-xl shadow-lg font-bold text-lg"
-                    >
-                        😊 Easy
-                    </motion.button>
-                    <motion.button
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
-                        onClick={() => selectDifficulty('medium')}
-                        className="px-8 py-4 bg-gradient-to-r from-yellow-400 to-orange-500 text-white rounded-xl shadow-lg font-bold text-lg"
-                    >
-                        🤔 Medium
-                    </motion.button>
-                    <motion.button
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
-                        onClick={() => selectDifficulty('hard')}
-                        className="px-8 py-4 bg-gradient-to-r from-red-500 to-red-600 text-white rounded-xl shadow-lg font-bold text-lg"
-                    >
-                        😈 Hard
-                    </motion.button>
-                </div>
-                <motion.button
-                    whileHover={{ scale: 1.05 }}
-                    onClick={() => setGameMode(null)}
-                    className="mt-6 px-4 py-2 bg-gray-400 text-white rounded-lg shadow hover:bg-gray-500 transition"
-                >
-                    ← Back
-                </motion.button>
-            </div>
-        );
+  const calculateWinner = (squares) => {
+    const result = checkWinner(squares);
+    if (result) { setWinningLine(result.line); return result.winner; }
+    return null;
+  };
+
+  const getAvailableMoves = (squares) =>
+    squares.map((c, i) => c === null ? i : null).filter(i => i !== null);
+
+  const minimax = (squares, isMaximizing) => {
+    const result = checkWinner(squares);
+    if (result) return result.winner === "O" ? 10 : -10;
+    if (!squares.includes(null)) return 0;
+    if (isMaximizing) {
+      let best = -Infinity;
+      for (let i = 0; i < 9; i++) {
+        if (squares[i] === null) { squares[i] = "O"; best = Math.max(best, minimax(squares, false)); squares[i] = null; }
+      }
+      return best;
+    } else {
+      let best = Infinity;
+      for (let i = 0; i < 9; i++) {
+        if (squares[i] === null) { squares[i] = "X"; best = Math.min(best, minimax(squares, true)); squares[i] = null; }
+      }
+      return best;
     }
+  };
 
+  const getComputerMove = (squares) => {
+    const available = getAvailableMoves(squares);
+    if (!available.length) return null;
+    if (difficulty === "easy") return available[Math.floor(Math.random() * available.length)];
+    if (difficulty === "medium") {
+      if (Math.random() < 0.5) return available[Math.floor(Math.random() * available.length)];
+      for (let m of available) { const t = [...squares]; t[m] = "O"; if (checkWinner(t)) return m; }
+      for (let m of available) { const t = [...squares]; t[m] = "X"; if (checkWinner(t)) return m; }
+      if (available.includes(4)) return 4;
+      const corners = [0,2,6,8].filter(c => available.includes(c));
+      if (corners.length) return corners[Math.floor(Math.random() * corners.length)];
+      return available[Math.floor(Math.random() * available.length)];
+    }
+    let bestScore = -Infinity, bestMove = available[0];
+    for (let m of available) {
+      const t = [...squares]; t[m] = "O";
+      const s = minimax(t, false);
+      if (s > bestScore) { bestScore = s; bestMove = m; }
+    }
+    return bestMove;
+  };
+
+  useEffect(() => {
+    if (gameMode === "computer" && !isXNext && !winner) {
+      const timer = setTimeout(() => {
+        const move = getComputerMove(board);
+        if (move !== null) {
+          const newBoard = [...board]; newBoard[move] = "O";
+          setBoard(newBoard); setIsXNext(true);
+          const w = calculateWinner(newBoard);
+          if (w) { setWinner(w); setScore(s => ({ ...s, o: s.o + 1 })); }
+          else if (!newBoard.includes(null)) { setWinner("Draw"); setScore(s => ({ ...s, draws: s.draws + 1 })); }
+        }
+      }, 500);
+      return () => clearTimeout(timer);
+    }
+  }, [isXNext, gameMode, winner, board]);
+
+  const handleClick = (index) => {
+    if (board[index] || winner) return;
+    if (gameMode === "computer" && !isXNext) return;
+    const newBoard = [...board];
+    newBoard[index] = isXNext ? "X" : "O";
+    setBoard(newBoard);
+    setIsXNext(!isXNext);
+    const w = calculateWinner(newBoard);
+    if (w) {
+      setWinner(w);
+      if (w === "X") setScore(s => ({ ...s, x: s.x + 1 }));
+      else setScore(s => ({ ...s, o: s.o + 1 }));
+    } else if (!newBoard.includes(null)) {
+      setWinner("Draw"); setScore(s => ({ ...s, draws: s.draws + 1 }));
+    }
+  };
+
+  const resetGame = () => {
+    setBoard(Array(9).fill(null)); setIsXNext(true); setWinner(null); setWinningLine([]);
+  };
+
+  const backToMenu = () => {
+    resetGame(); setGameMode(null); setDifficulty(null); setScore({ x: 0, o: 0, draws: 0 });
+  };
+
+  // ─── Mode selection ───────────────────────────────────────────────────────
+  if (!gameMode) {
     return (
-        <div className="flex flex-col items-center justify-center min-h-400 
-  bg-gradient-to-br from-purple-100 via-green to-white-100 
-  p-6 rounded-2xl shadow-lg">
-
-            <h1 className="text-3xl font-extrabold text-purple-700 mb-2">
-                🎮 Tic Tac Toe
-            </h1>
-            
-            <p className="text-sm text-gray-600 mb-4">
-                {gameMode === '2player' ? '👥 2 Players' : `🤖 vs Computer (${difficulty?.charAt(0).toUpperCase() + difficulty?.slice(1)})`}
-            </p>
-
-            <div className="grid grid-cols-3 gap-3">
-                {board.map((cell, index) => (
-                    <motion.div
-                        key={index}
-                        whileTap={{ scale: 0.9 }}
-                        whileHover={{ scale: 1.05 }}
-                        onClick={() => handleClick(index)}
-                        className={`w-20 h-20 flex items-center justify-center rounded-xl text-3xl font-bold cursor-pointer transition-colors duration-300 shadow-md ${winningLine.includes(index)
-                                ? "bg-green-400 text-white animate-pulse"
-                                : "bg-white text-purple-700 hover:bg-purple-100"
-                            }`}
-                    >
-                        {cell && (
-                            <motion.span
-                                initial={{ scale: 0, rotate: 180 }}
-                                animate={{ scale: 1, rotate: 0 }}
-                                transition={{ duration: 0.4, type: "spring" }}
-                            >
-                                {cell}
-                            </motion.span>
-                        )}
-                    </motion.div>
-                ))}
-            </div>
-
-            <div className="mt-6 text-lg font-semibold text-gray-700">
-                {winner
-                    ? winner === "Draw"
-                        ? "🤝 It's a Draw!"
-                        : gameMode === 'computer' && winner === 'O'
-                            ? "🤖 Computer Wins!"
-                            : gameMode === 'computer' && winner === 'X'
-                                ? "🎉 You Win!"
-                                : `🏆 Winner: ${winner}`
-                    : gameMode === 'computer' && !isXNext
-                        ? "🤖 Computer thinking..."
-                        : `Next Turn: ${isXNext ? "❌ X" : "⭕ O"}`}
-            </div>
-
-            {winner && (
-                <motion.button
-                    onClick={resetGame}
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    className="mt-4 px-6 py-2 bg-purple-600 text-white rounded-full shadow-lg hover:bg-purple-700 transition-all"
-                >
-                    Play Again
-                </motion.button>
-            )}
-            
-            <motion.button
-                onClick={backToMenu}
-                whileHover={{ scale: 1.05 }}
-                className="mt-3 px-4 py-2 bg-gray-400 text-white rounded-lg shadow hover:bg-gray-500 transition"
+      <div className="w-full max-w-md mx-auto space-y-5">
+        <div className="bg-black/30 backdrop-blur-xl rounded-3xl p-8 border border-white/25 shadow-2xl text-center">
+          <div className="text-6xl mb-4">🎮</div>
+          <h2 className="text-2xl font-bold text-white mb-2">Choose Game Mode</h2>
+          <p className="text-white/70 text-sm mb-8">Play against the computer or challenge a friend</p>
+          <div className="flex flex-col gap-4">
+            <button
+              onClick={() => setGameMode("2player")}
+              className="w-full py-4 bg-purple-600/60 hover:bg-purple-600/80 border border-purple-400/60 hover:border-purple-300/80 text-white font-bold text-lg rounded-2xl transition-all duration-200 hover:scale-105 active:scale-95 shadow-lg"
             >
-                ← Change Mode
-            </motion.button>
-           
-            <div className="mt-8 flex flex-col items-center gap-3">
+              👥 2 Players
+            </button>
+            <button
+              onClick={() => setGameMode("computer")}
+              className="w-full py-4 bg-blue-600/60 hover:bg-blue-600/80 border border-blue-400/60 hover:border-blue-300/80 text-white font-bold text-lg rounded-2xl transition-all duration-200 hover:scale-105 active:scale-95 shadow-lg"
+            >
+              🤖 vs Computer
+            </button>
+          </div>
+        </div>
+        <NavFooter />
+      </div>
+    );
+  }
 
-                {/* Back Links */}
-                <div className="flex gap-4">
-                    <Link
-                        href="/games"
-                        className="px-4 py-2 bg-blue-500 text-white rounded-lg shadow hover:bg-blue-600 transition"
-                    >
-                        ⬅ Play More Online Games
-                    </Link>
+  // ─── Difficulty selection ─────────────────────────────────────────────────
+  if (gameMode === "computer" && !difficulty) {
+    return (
+      <div className="w-full max-w-md mx-auto space-y-5">
+        <div className="bg-black/30 backdrop-blur-xl rounded-3xl p-8 border border-white/25 shadow-2xl text-center">
+          <div className="text-6xl mb-4">🤖</div>
+          <h2 className="text-2xl font-bold text-white mb-2">Select Difficulty</h2>
+          <p className="text-white/70 text-sm mb-8">How smart should the computer be?</p>
+          <div className="flex flex-col gap-4">
+            <button
+              onClick={() => setDifficulty("easy")}
+              className="w-full py-4 bg-green-600/60 hover:bg-green-600/80 border border-green-400/60 hover:border-green-300/80 text-white font-bold text-lg rounded-2xl transition-all duration-200 hover:scale-105 active:scale-95 shadow-lg"
+            >
+              😊 Easy
+            </button>
+            <button
+              onClick={() => setDifficulty("medium")}
+              className="w-full py-4 bg-yellow-600/60 hover:bg-yellow-600/80 border border-yellow-400/60 hover:border-yellow-300/80 text-white font-bold text-lg rounded-2xl transition-all duration-200 hover:scale-105 active:scale-95 shadow-lg"
+            >
+              🤔 Medium
+            </button>
+            <button
+              onClick={() => setDifficulty("hard")}
+              className="w-full py-4 bg-red-600/60 hover:bg-red-600/80 border border-red-400/60 hover:border-red-300/80 text-white font-bold text-lg rounded-2xl transition-all duration-200 hover:scale-105 active:scale-95 shadow-lg"
+            >
+              😈 Hard (Unbeatable)
+            </button>
+          </div>
+          <button
+            onClick={() => setGameMode(null)}
+            className="mt-6 text-white/60 hover:text-white text-sm transition font-medium"
+          >
+            ← Back to modes
+          </button>
+        </div>
+        <NavFooter />
+      </div>
+    );
+  }
 
-                    <Link
-                        href="/"
-                        className="px-4 py-2 bg-purple-500 text-white rounded-lg shadow hover:bg-purple-600 transition"
-                    >
-                        ⏱ Stopwatch Online Timer
-                    </Link>
-                </div>
+  const xLabel = gameMode === "computer" ? "You (X)" : "Player X";
+  const oLabel = gameMode === "computer" ? "Computer (O)" : "Player O";
 
-                {/* Cross Game Links */}
-                <div className="flex gap-4 mt-4">
-                    <Link
-                        href="/games/rock-paper-scissors"
-                        className="px-4 py-2 bg-green-500 text-white rounded-lg shadow hover:bg-green-600 transition"
-                    >
-                        ✊ Try Rock Paper Scissors
-                    </Link>
+  const statusText = winner
+    ? winner === "Draw" ? "🤝 It's a Draw!"
+      : gameMode === "computer" && winner === "O" ? "🤖 Computer Wins!"
+      : gameMode === "computer" && winner === "X" ? "🎉 You Win!"
+      : `🏆 Player ${winner} Wins!`
+    : gameMode === "computer" && !isXNext ? "🤖 Computer thinking..."
+    : `Next: ${isXNext ? "❌ X" : "⭕ O"}`;
 
-                    <Link
-                        href="/games/random-number-guesser"
-                        className="px-4 py-2 bg-orange-500 text-white rounded-lg shadow hover:bg-orange-600 transition"
-                    >
-                        🔢 Play Number Guesser
-                    </Link>
-                </div>
-            </div>
-             <div className="mt-6">
-                <ShareButtons
-                    url="https://stopwatch.lol/games/tic-tac-toe"
-                    title="Play Tic Tac Toe Online — Stopwatch.lol 🎮"
-                />
-            </div>
+  const statusColor = winner
+    ? winner === "Draw" ? "text-yellow-300"
+    : winner === "X" ? "text-green-300"
+    : gameMode === "computer" ? "text-red-300"
+    : "text-blue-300"
+    : "text-white";
+
+  return (
+    <div className="w-full max-w-md mx-auto space-y-5">
+      {/* Score board */}
+      <div className="grid grid-cols-3 gap-3">
+        <div className="bg-blue-600/30 border border-blue-400/50 rounded-2xl p-3 text-center">
+          <div className="text-2xl font-bold text-blue-200">{score.x}</div>
+          <div className="text-blue-200 text-xs uppercase tracking-widest mt-0.5 font-semibold">{xLabel}</div>
+        </div>
+        <div className="bg-yellow-600/30 border border-yellow-400/50 rounded-2xl p-3 text-center">
+          <div className="text-2xl font-bold text-yellow-200">{score.draws}</div>
+          <div className="text-yellow-200 text-xs uppercase tracking-widest mt-0.5 font-semibold">Draws</div>
+        </div>
+        <div className="bg-red-600/30 border border-red-400/50 rounded-2xl p-3 text-center">
+          <div className="text-2xl font-bold text-red-200">{score.o}</div>
+          <div className="text-red-200 text-xs uppercase tracking-widest mt-0.5 font-semibold">{oLabel}</div>
+        </div>
+      </div>
+
+      {/* Game board */}
+      <div className="bg-black/30 backdrop-blur-xl rounded-3xl p-6 border border-white/25 shadow-2xl">
+        {/* Mode badge */}
+        <div className="text-center mb-5">
+          <span className="inline-block text-xs text-white/80 font-semibold uppercase tracking-widest bg-white/15 border border-white/25 px-4 py-1.5 rounded-full">
+            {gameMode === "2player" ? "👥 2 Players" : `🤖 vs Computer · ${difficulty}`}
+          </span>
         </div>
 
-    );
+        {/* Grid */}
+        <div className="grid grid-cols-3 gap-3 mb-6">
+          {board.map((cell, index) => (
+            <button
+              key={index}
+              onClick={() => handleClick(index)}
+              className={`w-full aspect-square flex items-center justify-center rounded-2xl text-4xl font-bold transition-all duration-200 border-2 ${
+                winningLine.includes(index)
+                  ? "bg-green-500/40 border-green-400/80 animate-pulse"
+                  : cell === "X"
+                  ? "bg-blue-500/35 border-blue-400/60 text-blue-200 cursor-default"
+                  : cell === "O"
+                  ? "bg-red-500/35 border-red-400/60 text-red-200 cursor-default"
+                  : winner
+                  ? "bg-white/10 border-white/20 cursor-default"
+                  : "bg-white/15 border-white/30 hover:bg-white/30 hover:border-white/50 cursor-pointer hover:scale-105 active:scale-95"
+              }`}
+            >
+              {cell === "X" && "❌"}
+              {cell === "O" && "⭕"}
+            </button>
+          ))}
+        </div>
+
+        {/* Status */}
+        <div className={`text-center text-xl font-bold mb-5 ${statusColor}`}>
+          {statusText}
+        </div>
+
+        {/* Action buttons */}
+        <div className="flex gap-3 justify-center">
+          {winner && (
+            <button
+              onClick={resetGame}
+              className="px-6 py-2.5 bg-white/25 hover:bg-white/40 border border-white/40 text-white font-bold rounded-xl transition-all duration-200 hover:scale-105 active:scale-95"
+            >
+              Play Again
+            </button>
+          )}
+          <button
+            onClick={backToMenu}
+            className="px-6 py-2.5 bg-white/15 hover:bg-white/25 border border-white/30 text-white/80 hover:text-white font-medium rounded-xl transition-all duration-200"
+          >
+            ← Change Mode
+          </button>
+        </div>
+      </div>
+
+      {/* Nav links */}
+      <div className="flex flex-wrap justify-center gap-3">
+        <Link href="/games" className="px-4 py-2 bg-white/20 hover:bg-white/30 border border-white/35 text-white font-medium rounded-xl text-sm transition">
+          ⬅ All Games
+        </Link>
+        <Link href="/games/rock-paper-scissors" className="px-4 py-2 bg-orange-500/35 hover:bg-orange-500/50 border border-orange-400/50 text-orange-100 rounded-xl text-sm font-medium transition">
+          ✊ Rock Paper Scissors
+        </Link>
+        <Link href="/games/random-number-guesser" className="px-4 py-2 bg-green-500/35 hover:bg-green-500/50 border border-green-400/50 text-green-100 rounded-xl text-sm font-medium transition">
+          🔢 Number Guesser
+        </Link>
+        <Link href="/" className="px-4 py-2 bg-blue-500/35 hover:bg-blue-500/50 border border-blue-400/50 text-blue-100 rounded-xl text-sm font-medium transition">
+          ⏱ Stopwatch
+        </Link>
+      </div>
+
+      <div className="flex justify-center">
+        <ShareButtons
+          url="https://stopwatch.lol/games/tic-tac-toe"
+          title="Play Tic Tac Toe Online Free — Stopwatch.lol 🎮"
+        />
+      </div>
+    </div>
+  );
+}
+
+function NavFooter() {
+  return (
+    <div className="flex flex-wrap justify-center gap-3">
+      <Link href="/games" className="px-4 py-2 bg-white/20 hover:bg-white/30 border border-white/35 text-white font-medium rounded-xl text-sm transition">
+        ⬅ All Games
+      </Link>
+      <Link href="/games/rock-paper-scissors" className="px-4 py-2 bg-orange-500/35 hover:bg-orange-500/50 border border-orange-400/50 text-orange-100 rounded-xl text-sm font-medium transition">
+        ✊ Rock Paper Scissors
+      </Link>
+      <Link href="/" className="px-4 py-2 bg-blue-500/35 hover:bg-blue-500/50 border border-blue-400/50 text-blue-100 rounded-xl text-sm font-medium transition">
+        ⏱ Stopwatch
+      </Link>
+    </div>
+  );
 }

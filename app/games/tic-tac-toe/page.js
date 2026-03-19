@@ -1,34 +1,83 @@
-// app/games/tictactoe/page.js
+import TicTacToe from "./tic-tac-toe";
+import NavLinks from "/components/NavLinks";
+
 export const metadata = {
-  title: "Play Tic Tac Toe Online, two players required!",
-  description: "Enjoy a smooth and animated Tic Tac Toe game online. Challenge your friends. Simple and fun! No signup needed. Play and share now! at Stopwatch lol",
-  keywords: ["tic tac toe online", "play tic tac toe", "tic tac toe game", "tic tac toe free", "tic tac toe vs computer"],
+  title: "Tic Tac Toe Online – Play vs Computer or Friend Free",
+  description:
+    "Play Tic Tac Toe online free vs computer (Easy, Medium, Hard AI) or a friend. No signup needed. Instant play with smooth animations.",
+  keywords: [
+    "tic tac toe online",
+    "play tic tac toe",
+    "tic tac toe vs computer",
+    "tic tac toe game",
+    "tic tac toe free",
+    "tic tac toe two players",
+    "noughts and crosses online",
+    "xs and os game",
+  ],
   alternates: {
     canonical: "https://stopwatch.lol/games/tic-tac-toe",
   },
   openGraph: {
-    title: "Play Tic Tac Toe Online – Stopwatch.lol",
-    description: "Enjoy a smooth and animated Tic Tac Toe game online. Challenge friends or test your strategy against the computer.",
+    title: "Tic Tac Toe Online – Play vs Computer or Friend Free",
+    description:
+      "Play Tic Tac Toe online free. Challenge the computer (3 difficulty levels) or a friend. No signup needed.",
     url: "https://stopwatch.lol/games/tic-tac-toe",
     siteName: "Stopwatch.lol",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Play Tic Tac Toe Online – Stopwatch.lol",
-    description: "Enjoy a smooth and animated Tic Tac Toe game online. Challenge friends or test your strategy against the computer.",
+    title: "Tic Tac Toe Online – Play vs Computer or Friend Free",
+    description:
+      "Play Tic Tac Toe online free vs computer or a friend. No signup needed.",
   },
 };
 
 export default function TicTacToePage() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://stopwatch.lol/games/tic-tac-toe#webpage",
+    url: "https://stopwatch.lol/games/tic-tac-toe",
+    name: "Tic Tac Toe Online – Play vs Computer or Friend Free",
+    description:
+      "Play Tic Tac Toe online free vs computer (3 difficulty levels) or a friend.",
+    isPartOf: { "@id": "https://stopwatch.lol/#website" },
+    breadcrumb: {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: "https://stopwatch.lol" },
+        { "@type": "ListItem", position: 2, name: "Games", item: "https://stopwatch.lol/games" },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: "Tic Tac Toe",
+          item: "https://stopwatch.lol/games/tic-tac-toe",
+        },
+      ],
+    },
+  };
+
   return (
-    <main>
-      {<div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-purple-700 to-blue-900 text-white p-6">
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <div className="container mx-auto px-4 py-8">
+        <div className="text-center mb-8">
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-3">
+            🎮 Tic Tac Toe Online
+          </h1>
+          <p className="text-white/70 text-lg max-w-xl mx-auto">
+            Play vs the computer (Easy, Medium, or Hard AI) or challenge a friend. Free, no
+            signup needed.
+          </p>
+        </div>
         <NavLinks />
         <TicTacToe />
-      </div>}
-    </main>
+      </div>
+    </>
   );
 }
-import TicTacToe from "./tic-tac-toe";
-import NavLinks from "/components/NavLinks";

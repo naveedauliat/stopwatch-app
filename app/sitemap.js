@@ -5,9 +5,21 @@ export default function sitemap() {
     // Core
     {
       url: baseUrl,
-      lastModified: new Date('2025-11-10'),
+      lastModified: new Date('2026-03-19'),
       changeFrequency: 'daily',
       priority: 1.0,
+    },
+    {
+      url: `${baseUrl}/countdown`,
+      lastModified: new Date('2026-03-19'),
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/full-screen-stopwatch`,
+      lastModified: new Date('2026-03-19'),
+      changeFrequency: 'monthly',
+      priority: 0.9,
     },
     // Blog index
     {
