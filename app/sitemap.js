@@ -1,34 +1,32 @@
 const baseUrl = 'https://stopwatch.lol';
 
 export default function sitemap() {
+  const now = new Date();
   return [
-    // Core
     {
       url: baseUrl,
-      lastModified: new Date('2026-03-19'),
+      lastModified: now,
       changeFrequency: 'daily',
       priority: 1.0,
     },
     {
       url: `${baseUrl}/countdown`,
-      lastModified: new Date('2026-03-19'),
+      lastModified: now,
       changeFrequency: 'monthly',
       priority: 0.9,
     },
     {
       url: `${baseUrl}/full-screen-stopwatch`,
-      lastModified: new Date('2026-03-19'),
+      lastModified: now,
       changeFrequency: 'monthly',
       priority: 0.9,
     },
-    // Blog index
     {
       url: `${baseUrl}/blog`,
-      lastModified: new Date('2025-11-10'),
+      lastModified: now,
       changeFrequency: 'weekly',
       priority: 0.9,
     },
-    // Stopwatch-focused blog posts (highest relevance)
     {
       url: `${baseUrl}/blog/stopwatch-evolution`,
       lastModified: new Date('2025-11-07'),
@@ -53,7 +51,6 @@ export default function sitemap() {
       changeFrequency: 'monthly',
       priority: 0.8,
     },
-    // Other blog posts
     {
       url: `${baseUrl}/blog/premier-league`,
       lastModified: new Date('2025-11-10'),
@@ -78,10 +75,9 @@ export default function sitemap() {
       changeFrequency: 'yearly',
       priority: 0.6,
     },
-    // Games
     {
       url: `${baseUrl}/games`,
-      lastModified: new Date('2025-11-07'),
+      lastModified: now,
       changeFrequency: 'monthly',
       priority: 0.7,
     },
@@ -103,7 +99,6 @@ export default function sitemap() {
       changeFrequency: 'monthly',
       priority: 0.6,
     },
-    // Info pages
     {
       url: `${baseUrl}/about`,
       lastModified: new Date('2024-11-08'),

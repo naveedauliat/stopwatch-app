@@ -63,8 +63,6 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    site: "@stopwatchlol",
-    creator: "@stopwatchlol",
     title: "Free Online Stopwatch - Lap Counter & Millisecond Precision",
     description:
       "Professional online stopwatch with millisecond precision, lap counter, and split times. Free and works everywhere.",
@@ -155,13 +153,6 @@ export default function RootLayout({ children }) {
         image: {
           "@id": "https://stopwatch.lol/#/schema/logo/image/",
         },
-        sameAs: [
-          "https://twitter.com/stopwatchlol",
-          "https://github.com/stopwatchlol",
-          "https://linkedin.com/company/stopwatchlol",
-          "https://instagram.com/stopwatch.lol",
-          "https://youtube.com/@stopwatchlol",
-        ],
       },
       {
         "@type": "WebApplication",
@@ -204,34 +195,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" itemScope itemType="https://schema.org/WebSite">
       <head>
-        <link rel="canonical" href="https://stopwatch.lol" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
         <link rel="dns-prefetch" href="//www.google-analytics.com" />
         <link rel="dns-prefetch" href="//www.googletagmanager.com" />
-
-        <meta
-          name="robots"
-          content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
-        />
-        <meta
-          name="googlebot"
-          content="index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"
-        />
-        <meta
-          name="bingbot"
-          content="index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"
-        />
-
-        <meta property="og:locale" content="en_US" />
-        <meta name="twitter:dnt" content="on" />
-
-        <link
-          rel="alternate"
-          type="application/rss+xml"
-          title="Stopwatch.lol Blog RSS Feed"
-          href="https://stopwatch.lol/blog/rss.xml"
-        />
 
         <script
           type="application/ld+json"

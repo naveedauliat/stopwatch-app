@@ -1,9 +1,0 @@
-User-agent: *
-Allow: /
-Disallow: /api/
-Disallow: /admin/
-Disallow: /temp/
-Disallow: /private/
-
-Host: https://stopwatch.lol
-Sitemap: https://stopwatch.lol/sitemap.xml
