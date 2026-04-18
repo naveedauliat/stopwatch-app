@@ -1,7 +1,9 @@
 const baseUrl = 'https://stopwatch.lol';
 
+const today = () => new Date().toISOString().split('T')[0];
+
 export default function sitemap() {
-  const now = new Date();
+  const now = today();
   return [
     {
       url: baseUrl,
@@ -29,49 +31,49 @@ export default function sitemap() {
     },
     {
       url: `${baseUrl}/blog/stopwatch-evolution`,
-      lastModified: new Date('2025-11-07'),
+      lastModified: '2025-11-07',
       changeFrequency: 'monthly',
       priority: 0.8,
     },
     {
       url: `${baseUrl}/blog/stopwatch-human-life`,
-      lastModified: new Date('2025-11-07'),
+      lastModified: '2025-11-07',
       changeFrequency: 'monthly',
       priority: 0.8,
     },
     {
       url: `${baseUrl}/blog/productivity-tips`,
-      lastModified: new Date('2025-11-06'),
+      lastModified: '2025-11-06',
       changeFrequency: 'monthly',
       priority: 0.8,
     },
     {
       url: `${baseUrl}/blog/sports-timing`,
-      lastModified: new Date('2025-11-05'),
+      lastModified: '2025-11-05',
       changeFrequency: 'monthly',
       priority: 0.8,
     },
     {
       url: `${baseUrl}/blog/premier-league`,
-      lastModified: new Date('2025-11-10'),
+      lastModified: '2025-11-10',
       changeFrequency: 'monthly',
       priority: 0.7,
     },
     {
       url: `${baseUrl}/blog/government-shutdown`,
-      lastModified: new Date('2025-11-10'),
+      lastModified: '2025-11-10',
       changeFrequency: 'monthly',
       priority: 0.7,
     },
     {
       url: `${baseUrl}/blog/fifa-international-break`,
-      lastModified: new Date('2024-11-08'),
+      lastModified: '2024-11-08',
       changeFrequency: 'yearly',
       priority: 0.6,
     },
     {
       url: `${baseUrl}/blog/lionsvscommanders`,
-      lastModified: new Date('2024-11-10'),
+      lastModified: '2024-11-10',
       changeFrequency: 'yearly',
       priority: 0.6,
     },
@@ -83,43 +85,43 @@ export default function sitemap() {
     },
     {
       url: `${baseUrl}/games/tic-tac-toe`,
-      lastModified: new Date('2025-11-07'),
+      lastModified: '2025-11-07',
       changeFrequency: 'monthly',
       priority: 0.6,
     },
     {
       url: `${baseUrl}/games/rock-paper-scissors`,
-      lastModified: new Date('2025-11-07'),
+      lastModified: '2025-11-07',
       changeFrequency: 'monthly',
       priority: 0.6,
     },
     {
       url: `${baseUrl}/games/random-number-guesser`,
-      lastModified: new Date('2025-11-07'),
+      lastModified: '2025-11-07',
       changeFrequency: 'monthly',
       priority: 0.6,
     },
     {
       url: `${baseUrl}/about`,
-      lastModified: new Date('2024-11-08'),
+      lastModified: '2024-11-08',
       changeFrequency: 'yearly',
       priority: 0.5,
     },
     {
       url: `${baseUrl}/contact`,
-      lastModified: new Date('2024-11-08'),
+      lastModified: '2024-11-08',
       changeFrequency: 'yearly',
       priority: 0.5,
     },
     {
       url: `${baseUrl}/privacy`,
-      lastModified: new Date('2024-11-08'),
+      lastModified: '2024-11-08',
       changeFrequency: 'yearly',
       priority: 0.3,
     },
     {
       url: `${baseUrl}/terms`,
-      lastModified: new Date('2024-11-08'),
+      lastModified: '2024-11-08',
       changeFrequency: 'yearly',
       priority: 0.3,
     },
