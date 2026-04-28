@@ -19,11 +19,14 @@ export const metadata = {
     description: "Set a countdown timer for any duration. Sound alert when done. Free, no signup, works offline.",
     type: "website",
     url: "https://stopwatch.lol/countdown",
+    siteName: "Stopwatch.lol",
+    images: [{ url: "https://stopwatch.lol/og_image.png", width: 1200, height: 630, alt: "Countdown Timer at Stopwatch.lol" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Free Online Countdown Timer",
     description: "Set a countdown timer with sound alert. Free and works everywhere.",
+    images: ["https://stopwatch.lol/og_image.png"],
   },
   alternates: {
     canonical: "https://stopwatch.lol/countdown",

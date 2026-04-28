@@ -25,12 +25,14 @@ export const metadata = {
     type: "website",
     url: "https://stopwatch.lol/games/rock-paper-scissors",
     siteName: "Stopwatch.lol",
+    images: [{ url: "https://stopwatch.lol/og_image.png", width: 1200, height: 630, alt: "Rock Paper Scissors Online at Stopwatch.lol" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Rock Paper Scissors Online – Play Free vs Computer",
     description:
       "Play Rock Paper Scissors online free. Score tracking, win streaks. No signup needed.",
+    images: ["https://stopwatch.lol/og_image.png"],
   },
 };
 

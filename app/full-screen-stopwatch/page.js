@@ -18,6 +18,14 @@ export const metadata = {
     description: "Full screen stopwatch with lap counter and millisecond precision. Perfect for classrooms and presentations.",
     type: "website",
     url: "https://stopwatch.lol/full-screen-stopwatch",
+    siteName: "Stopwatch.lol",
+    images: [{ url: "https://stopwatch.lol/og_image.png", width: 1200, height: 630, alt: "Full Screen Stopwatch at Stopwatch.lol" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Full Screen Stopwatch - Free Online Timer",
+    description: "Full screen stopwatch with lap counter and millisecond precision. Perfect for classrooms and presentations.",
+    images: ["https://stopwatch.lol/og_image.png"],
   },
   alternates: {
     canonical: "https://stopwatch.lol/full-screen-stopwatch",

@@ -25,12 +25,14 @@ export const metadata = {
     url: "https://stopwatch.lol/games/tic-tac-toe",
     siteName: "Stopwatch.lol",
     type: "website",
+    images: [{ url: "https://stopwatch.lol/og_image.png", width: 1200, height: 630, alt: "Tic Tac Toe Online at Stopwatch.lol" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Tic Tac Toe Online – Play vs Computer or Friend Free",
     description:
       "Play Tic Tac Toe online free vs computer or a friend. No signup needed.",
+    images: ["https://stopwatch.lol/og_image.png"],
   },
 };
 

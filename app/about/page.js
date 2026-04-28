@@ -8,12 +8,15 @@ export const metadata = {
     title: "About Us - Stopwatch.lol",
     description: "Learn about our mission to provide the most accurate free online stopwatch with lap counter and millisecond precision.",
     type: "website",
-    url: "https://stopwatch.lol/about"
+    url: "https://stopwatch.lol/about",
+    siteName: "Stopwatch.lol",
+    images: [{ url: "https://stopwatch.lol/og_image.png", width: 1200, height: 630, alt: "Stopwatch.lol" }]
   },
   twitter: {
     card: "summary_large_image",
     title: "About Us - Stopwatch.lol",
-    description: "Learn about the team and technology behind Stopwatch.lol - free online stopwatch."
+    description: "Learn about the team and technology behind Stopwatch.lol - free online stopwatch.",
+    images: ["https://stopwatch.lol/og_image.png"]
   }
 };
 

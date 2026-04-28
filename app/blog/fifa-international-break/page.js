@@ -24,13 +24,13 @@ export function generateMetadata() {
       "AFC qualifiers"
     ],
     alternates: {
-      canonical: "https://www.stopwatch.lol/blog/fifa-international-break"
+      canonical: "https://stopwatch.lol/blog/fifa-international-break"
     },
     openGraph: {
       title: "FIFA International Break 2024: Complete Fixtures Guide",
       description: "Complete guide to the upcoming FIFA International break featuring World Cup qualifiers, UEFA Nations League, and key national team matchups.",
       type: "article",
-      url: "https://www.stopwatch.lol/blog/fifa-international-break",
+      url: "https://stopwatch.lol/blog/fifa-international-break",
       images: [
         { 
           url: "https://stopwatch.lol/images/fifa-international-break.svg",

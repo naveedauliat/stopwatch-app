@@ -24,11 +24,13 @@ export const metadata = {
     type: "website",
     url: "https://stopwatch.lol/games/random-number-guesser",
     siteName: "Stopwatch.lol",
+    images: [{ url: "https://stopwatch.lol/og_image.png", width: 1200, height: 630, alt: "Number Guesser Game at Stopwatch.lol" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Number Guesser Game – Guess the Number Free Online",
     description: "Guess the secret number in 10 attempts. Hot/cold hints. Free online game.",
+    images: ["https://stopwatch.lol/og_image.png"],
   },
 };
 

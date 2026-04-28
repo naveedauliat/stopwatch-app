@@ -7,13 +7,13 @@ export function generateMetadata() {
     description: "A comprehensive history of stopwatches, from mechanical roots to AI-enhanced timing.",
     keywords: "stopwatch history, digital timing, mechanical stopwatch, AI timing",
     alternates: {
-      canonical: "https://www.stopwatch.lol/blog/stopwatch-evolution"
+      canonical: "https://stopwatch.lol/blog/stopwatch-evolution"
     },
     openGraph: {
       title: "Evolution of Stopwatches",
       description: "A comprehensive history of stopwatches, from mechanical roots to AI-enhanced timing.",
       type: "article",
-      url: "https://www.stopwatch.lol/blog/stopwatch-evolution",
+      url: "https://stopwatch.lol/blog/stopwatch-evolution",
       images: [{ url: "https://stopwatch.lol/images/evolution.svg" }]
     },
     twitter: {

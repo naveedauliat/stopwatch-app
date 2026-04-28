@@ -14,12 +14,15 @@ export const metadata = {
       "Expert insights on timing, productivity tips, sports performance, and the science behind precise timekeeping.",
     type: "website",
     url: "https://stopwatch.lol/blog",
+    siteName: "Stopwatch.lol",
+    images: [{ url: "https://stopwatch.lol/og_image.png", width: 1200, height: 630, alt: "Stopwatch.lol Blog" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Stopwatch.lol Blog - Timing Tips & Productivity",
     description:
       "Expert insights on timing, productivity, and sports performance.",
+    images: ["https://stopwatch.lol/og_image.png"],
   },
 };
 

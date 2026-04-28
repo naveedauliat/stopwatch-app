@@ -9,14 +9,14 @@ export function generateMetadata() {
     description: "Complete preview of Premier League matchday fixtures for November 29-30, 2025. Key clashes, predictions, and where to watch.",
     keywords: 'productivity, pomodoro, stopwatch, timeboxing, focus, Premier League, November 2025, Chelsea Arsenal, Liverpool, Manchester City, fixtures, football',
     alternates: {
-      canonical: "https://www.stopwatch.lol/blog/premier-league"
+      canonical: "https://stopwatch.lol/blog/premier-league"
     },
     openGraph: {
       title: 'Premier League: Last Week of November 2025 Fixtures',
       description: 'Your guide to the final Premier League weekend of November 2025 featuring Chelsea vs Arsenal, West Ham vs Liverpool, and more blockbuster matches.',
       type: 'article',
-      url: "https://www.stopwatch.lol/blog/premier-league",
-      images: [{ url: "https://www.stopwatch.lol/images/premier-league.svg" }]
+      url: "https://stopwatch.lol/blog/premier-league",
+      images: [{ url: "https://stopwatch.lol/images/premier-league.svg" }]
     },
     twitter: {
       card: "summary_large_image",
@@ -51,7 +51,7 @@ export default function PremierLeague2025Blog() {
           <Link href="/blog" className="px-4 py-2 bg-white text-purple-600 rounded-lg shadow-md hover:shadow-lg hover:bg-purple-50 transition-all font-semibold">
             Blog
           </Link>
-          <a href="https://www.stopwatch.lol" className="px-4 py-2 bg-white text-pink-600 rounded-lg shadow-md hover:shadow-lg hover:bg-pink-50 transition-all font-semibold">
+          <a href="https://stopwatch.lol" className="px-4 py-2 bg-white text-pink-600 rounded-lg shadow-md hover:shadow-lg hover:bg-pink-50 transition-all font-semibold">
             Stopwatch.lol
           </a>
         </nav>

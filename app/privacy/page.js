@@ -5,12 +5,15 @@ export const metadata = {
     title: "Privacy Policy - Stopwatch.lol",
     description: "Privacy policy for Stopwatch.lol. Learn how we protect your data and privacy.",
     type: "website",
-    url: "https://stopwatch.lol/privacy"
+    url: "https://stopwatch.lol/privacy",
+    siteName: "Stopwatch.lol",
+    images: [{ url: "https://stopwatch.lol/og_image.png", width: 1200, height: 630, alt: "Stopwatch.lol" }]
   },
   twitter: {
     card: "summary_large_image",
     title: "Privacy Policy - Stopwatch.lol",
-    description: "Privacy policy for Stopwatch.lol. Learn how we protect your data and privacy."
+    description: "Privacy policy for Stopwatch.lol. Learn how we protect your data and privacy.",
+    images: ["https://stopwatch.lol/og_image.png"]
   },
   alternates: {
     canonical: "https://stopwatch.lol/privacy"

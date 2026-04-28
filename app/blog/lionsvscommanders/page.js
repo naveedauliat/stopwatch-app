@@ -29,13 +29,13 @@ export function generateMetadata() {
       "NFL predictions 2024"
     ],
     alternates: {
-      canonical: "https://www.stopwatch.lol/blog/lionsvscommanders"
+      canonical: "https://stopwatch.lol/blog/lionsvscommanders"
     },
     openGraph: {
       title: "Lions vs Commanders 2025: Complete Game Preview & Prediction",
       description: "Expert analysis of Lions vs Commanders: team stats, key matchups, injury reports, betting odds, and game prediction. Complete NFL preview.",
       type: "article",
-      url: "https://www.stopwatch.lol/blog/lionsvscommanders",
+      url: "https://stopwatch.lol/blog/lionsvscommanders",
       images: [
         { 
           url: "https://stopwatch.lol/images/lions-vs-commanders.jpg",

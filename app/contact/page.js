@@ -8,12 +8,15 @@ export const metadata = {
     title: "Contact Us - Stopwatch.lol",
     description: "Get in touch with the Stopwatch.lol team for questions and feedback about our free online stopwatch.",
     type: "website",
-    url: "https://stopwatch.lol/contact"
+    url: "https://stopwatch.lol/contact",
+    siteName: "Stopwatch.lol",
+    images: [{ url: "https://stopwatch.lol/og_image.png", width: 1200, height: 630, alt: "Stopwatch.lol" }]
   },
   twitter: {
     card: "summary_large_image",
     title: "Contact Us - Stopwatch.lol",
-    description: "Get in touch with the Stopwatch.lol team."
+    description: "Get in touch with the Stopwatch.lol team.",
+    images: ["https://stopwatch.lol/og_image.png"]
   }
 };
 

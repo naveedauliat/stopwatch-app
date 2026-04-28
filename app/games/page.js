@@ -12,12 +12,15 @@ export const metadata = {
     title: "Free Online Games - Tic Tac Toe, Number Guesser & More",
     description: "Enjoy free online games like Tic Tac Toe, Number Guesser, and Rock Paper Scissors at Stopwatch.lol.",
     type: "website",
-    url: "https://stopwatch.lol/games"
+    url: "https://stopwatch.lol/games",
+    siteName: "Stopwatch.lol",
+    images: [{ url: "https://stopwatch.lol/og_image.png", width: 1200, height: 630, alt: "Stopwatch.lol Games" }]
   },
   twitter: {
     card: "summary_large_image",
     title: "Free Online Games - Tic Tac Toe, Number Guesser & More",
-    description: "Enjoy free online games at Stopwatch.lol. Fun, simple, and free!"
+    description: "Enjoy free online games at Stopwatch.lol. Fun, simple, and free!",
+    images: ["https://stopwatch.lol/og_image.png"]
   }
 };
 

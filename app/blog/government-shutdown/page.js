@@ -23,13 +23,13 @@ export function generateMetadata() {
       "political deadlock"
     ],
     alternates: {
-      canonical: "https://www.stopwatch.lol/blog/government-shutdown"
+      canonical: "https://stopwatch.lol/blog/government-shutdown"
     },
     openGraph: {
       title: "41 Days of Deadlock: The Full Story of the Longest U.S. Government Shutdown",
       description: "A bipartisan Senate coalition cracked the political stalemate after 41 days, but not before inflicting $14 billion in permanent economic damage.",
       type: "article",
-      url: "https://www.stopwatch.lol/blog/government-shutdown",
+      url: "https://stopwatch.lol/blog/government-shutdown",
       images: [
         { 
           url: "https://stopwatch.lol/images/senate-vote.jpg",

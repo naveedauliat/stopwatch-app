@@ -7,13 +7,13 @@ export function generateMetadata() {
     description: "How precise timing affects athletic performance, coaching, and recovery strategies.",
     keywords: "sports timing, stopwatch, coaching, splits, recovery",
     alternates: {
-      canonical: "https://www.stopwatch.lol/blog/sports-timing"
+      canonical: "https://stopwatch.lol/blog/sports-timing"
     },
     openGraph: {
       title: "Sports Timing & Stopwatches",
       description: "How precise timing affects athletic performance, coaching, and recovery strategies.",
       type: "article",
-      url: "https://www.stopwatch.lol/blog/sports-timing",
+      url: "https://stopwatch.lol/blog/sports-timing",
       images: [{ url: "https://stopwatch.lol/images/sports-timing.svg" }]
     },
     twitter: {

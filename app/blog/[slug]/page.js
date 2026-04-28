@@ -1155,11 +1155,14 @@ export function generateMetadata({ params }) {
       publishedTime: new Date(post.date).toISOString(),
       authors: [post.author],
       url: `https://stopwatch.lol/blog/${params.slug}`,
+      siteName: 'Stopwatch.lol',
+      images: [{ url: 'https://stopwatch.lol/og_image.png', width: 1200, height: 630, alt: post.title }],
     },
     twitter: {
       card: 'summary_large_image',
       title: post.title,
       description: post.excerpt || post.title,
+      images: ['https://stopwatch.lol/og_image.png'],
     }
   };
 }
