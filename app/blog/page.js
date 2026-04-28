@@ -25,6 +25,56 @@ export const metadata = {
 
 const blogPosts = [
   {
+    title: "FIFA World Cup 2026 Fixtures & Schedule: Complete Match Calendar",
+    description:
+      "Your complete guide to the FIFA World Cup 2026 schedule across the USA, Canada, and Mexico — every group, knockout round, host city, and key date.",
+    slug: "fifa-world-cup-2026-fixtures-schedule",
+    image: "https://images.unsplash.com/photo-1459865264687-595d652de67e?w=640&auto=format&fit=crop&q=80",
+    readTime: "12 min read",
+    tags: ["Football", "FIFA", "World Cup 2026"],
+    date: "April 28, 2026",
+  },
+  {
+    title: "FIFA World Cup 2026 Tickets & Prices: Complete Buying Guide",
+    description:
+      "Everything you need to know about FIFA World Cup 2026 tickets — official prices, ticket categories, hospitality packages, application portal, and how to avoid scams.",
+    slug: "fifa-world-cup-2026-tickets-prices-guide",
+    image: "https://images.unsplash.com/photo-1518091043644-c1d4457512c6?w=640&auto=format&fit=crop&q=80",
+    readTime: "11 min read",
+    tags: ["FIFA", "World Cup 2026", "Tickets"],
+    date: "April 27, 2026",
+  },
+  {
+    title: "FIFA World Cup 2026 Watch Channels: Region-by-Region Broadcasting Guide",
+    description:
+      "Where to watch every FIFA World Cup 2026 match — official broadcasters in the USA, UK, Europe, Asia, Africa, Latin America, the Middle East, and Australia.",
+    slug: "fifa-world-cup-2026-watch-channels-by-region",
+    image: "https://images.unsplash.com/photo-1543351611-58f69d7c1781?w=640&auto=format&fit=crop&q=80",
+    readTime: "13 min read",
+    tags: ["FIFA", "World Cup 2026", "Broadcasting"],
+    date: "April 26, 2026",
+  },
+  {
+    title: "Watch FIFA World Cup 2026 Online: Free Live Streaming Worldwide",
+    description:
+      "How to watch FIFA World Cup 2026 online for free — legal streaming options country by country, free trials, public broadcaster apps, and what to know about VPNs.",
+    slug: "watch-fifa-world-cup-online-free-streaming",
+    image: "https://images.unsplash.com/photo-1577223625816-7546f13df25d?w=640&auto=format&fit=crop&q=80",
+    readTime: "12 min read",
+    tags: ["FIFA", "World Cup 2026", "Streaming"],
+    date: "April 25, 2026",
+  },
+  {
+    title: "FIFA World Cup 2026 Fan Travel Guide: Host Cities, Visas & Logistics",
+    description:
+      "Complete travel guide for FIFA World Cup 2026 — visa rules, flight planning, host city profiles, fan zones, accommodation tips, and getting around USA, Canada, and Mexico.",
+    slug: "fifa-world-cup-2026-fan-travel-guide",
+    image: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=640&auto=format&fit=crop&q=80",
+    readTime: "13 min read",
+    tags: ["Travel", "FIFA", "World Cup 2026"],
+    date: "April 24, 2026",
+  },
+  {
     title: "Premier League Fixtures November, 2025: Complete Match Preview",
     description:
       "Expert analysis and predictions for all Premier League fixtures on November 23, 2025. Liverpool vs Man City headline fixture, team news, and viewing information.",

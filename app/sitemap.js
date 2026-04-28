@@ -78,6 +78,36 @@ export default function sitemap() {
       priority: 0.6,
     },
     {
+      url: `${baseUrl}/blog/fifa-world-cup-2026-fixtures-schedule`,
+      lastModified: '2026-04-28',
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/blog/fifa-world-cup-2026-tickets-prices-guide`,
+      lastModified: '2026-04-27',
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/blog/fifa-world-cup-2026-watch-channels-by-region`,
+      lastModified: '2026-04-26',
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/blog/watch-fifa-world-cup-online-free-streaming`,
+      lastModified: '2026-04-25',
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/blog/fifa-world-cup-2026-fan-travel-guide`,
+      lastModified: '2026-04-24',
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
       url: `${baseUrl}/games`,
       lastModified: now,
       changeFrequency: 'monthly',
