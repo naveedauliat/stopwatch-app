@@ -30,6 +30,12 @@ export default function sitemap() {
       priority: 0.9,
     },
     {
+      url: `${baseUrl}/blog/rock-paper-scissors-online`,
+      lastModified: '2026-05-04',
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+    {
       url: `${baseUrl}/blog/stopwatch-evolution`,
       lastModified: '2025-11-07',
       changeFrequency: 'monthly',
@@ -76,6 +82,12 @@ export default function sitemap() {
       lastModified: '2024-11-10',
       changeFrequency: 'yearly',
       priority: 0.6,
+    },
+    {
+      url: `${baseUrl}/blog/how-to-watch-fifa-world-cup-guide`,
+      lastModified: '2026-04-29',
+      changeFrequency: 'weekly',
+      priority: 0.9,
     },
     {
       url: `${baseUrl}/blog/fifa-world-cup-2026-fixtures-schedule`,

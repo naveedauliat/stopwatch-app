@@ -76,6 +76,13 @@ export default function Page() {
             Play free online against the computer. Track your score, build win streaks, and see
             match history — no signup needed.
           </p>
+          <a
+            href="#rps-game"
+            className="mt-6 inline-flex items-center gap-2 bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-white font-bold text-lg px-8 py-3 rounded-full shadow-xl shadow-emerald-500/30 hover:shadow-emerald-500/50 hover:scale-105 active:scale-95 transition-all border border-white/20"
+            aria-label="Play Rock Paper Scissors now"
+          >
+            <span className="text-xl">▶</span> Play Now
+          </a>
         </div>
         <NavLinks />
         <RockPaperScissors />

@@ -28,6 +28,26 @@ export const metadata = {
 
 const blogPosts = [
   {
+    title: "Rock Paper Scissors Online: How to Play, Win, and Where to Play Free in 2026",
+    description:
+      "Play Rock Paper Scissors online free against the computer — the complete 2026 guide to rules, win probability, proven strategy, popular variants, and the best free no-signup sites.",
+    slug: "rock-paper-scissors-online",
+    image: "https://images.unsplash.com/photo-1611996575749-79a3a250f948?w=640&auto=format&fit=crop&q=80",
+    readTime: "11 min read",
+    tags: ["Games", "RPS", "Online"],
+    date: "May 4, 2026",
+  },
+  {
+    title: "How to Watch the FIFA World Cup: Online, TV & Free Streaming Guide",
+    description:
+      "Every legitimate way to watch the FIFA World Cup — online, on TV, and for free. Covers the 2026 World Cup, the Club World Cup, USA broadcasters, DAZN, FIFA+, Netflix, and country-by-country options.",
+    slug: "how-to-watch-fifa-world-cup-guide",
+    image: "https://images.unsplash.com/photo-1543351611-58f69d7c1781?w=640&auto=format&fit=crop&q=80",
+    readTime: "14 min read",
+    tags: ["FIFA", "World Cup 2026", "Streaming"],
+    date: "April 29, 2026",
+  },
+  {
     title: "FIFA World Cup 2026 Fixtures & Schedule: Complete Match Calendar",
     description:
       "Your complete guide to the FIFA World Cup 2026 schedule across the USA, Canada, and Mexico — every group, knockout round, host city, and key date.",

@@ -100,7 +100,7 @@ export default function RockPaperScissors() {
       )}
 
       {/* Battle Display */}
-      <div className="bg-black/30 backdrop-blur-xl rounded-3xl p-6 border border-white/25 shadow-2xl">
+      <div id="rps-game" className="bg-black/30 backdrop-blur-xl rounded-3xl p-6 border border-white/25 shadow-2xl scroll-mt-24">
         <div className="flex items-center justify-around mb-6">
 
           {/* Player Side */}
