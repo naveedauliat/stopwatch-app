@@ -6,25 +6,10 @@ export function generateMetadata() {
   return {
     title: "41 Days of Deadlock: The Longest U.S. Government Shutdown | Stopwatch Blog",
     description: "A bipartisan Senate coalition cracked the political stalemate, but not before the crisis inflicted $14 billion in permanent economic damage. Complete analysis of the 2025 government shutdown.",
-    keywords: [
-      "government shutdown 2025",
-      "senate vote",
-      "US politics",
-      "economy impact",
-      "ACA subsidies",
-      "federal workers",
-      "congressional budget",
-      "bipartisan compromise",
-      "Chuck Schumer",
-      "government funding",
-      "shutdown economic impact",
-      "federal employee furlough",
-      "Trump administration",
-      "political deadlock"
-    ],
     alternates: {
       canonical: "https://stopwatch.lol/blog/government-shutdown"
     },
+    robots: { index: false, follow: true },
     openGraph: {
       title: "41 Days of Deadlock: The Full Story of the Longest U.S. Government Shutdown",
       description: "A bipartisan Senate coalition cracked the political stalemate after 41 days, but not before inflicting $14 billion in permanent economic damage.",

@@ -1,9 +1,10 @@
 const baseUrl = 'https://stopwatch.lol';
 
-const today = () => new Date().toISOString().split('T')[0];
+// Stable site-wide update date. Bump when core (non-blog) pages meaningfully change.
+// Avoids emitting a churning daily lastmod that dilutes the freshness signal.
+const now = '2026-07-02';
 
 export default function sitemap() {
-  const now = today();
   return [
     {
       url: baseUrl,
@@ -58,30 +59,6 @@ export default function sitemap() {
       lastModified: '2025-11-05',
       changeFrequency: 'monthly',
       priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/blog/premier-league`,
-      lastModified: '2025-11-10',
-      changeFrequency: 'monthly',
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/blog/government-shutdown`,
-      lastModified: '2025-11-10',
-      changeFrequency: 'monthly',
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/blog/fifa-international-break`,
-      lastModified: '2024-11-08',
-      changeFrequency: 'yearly',
-      priority: 0.6,
-    },
-    {
-      url: `${baseUrl}/blog/lionsvscommanders`,
-      lastModified: '2024-11-10',
-      changeFrequency: 'yearly',
-      priority: 0.6,
     },
     {
       url: `${baseUrl}/blog/how-to-watch-fifa-world-cup-guide`,

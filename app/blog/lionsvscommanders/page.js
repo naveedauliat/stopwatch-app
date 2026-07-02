@@ -6,31 +6,10 @@ export function generateMetadata() {
   return {
     title: "Lions vs Commanders 2024: Complete Game Analysis",
     description: "In-depth analysis of Lions vs Commanders matchup. Expert breakdown of team stats, key players, betting odds, injury reports, and game prediction for Detroit Lions vs Washington Commanders.",
-    keywords: [
-      "Lions vs Commanders",
-      "Detroit Lions vs Washington Commanders",
-      "Lions Commanders prediction",
-      "Lions vs Commanders 2024",
-      "NFL game preview",
-      "Jared Goff vs Sam Howell",
-      "Lions defense",
-      "Commanders offense",
-      "NFL betting odds",
-      "Lions vs Commanders live stream",
-      "NFC playoff race",
-      "Dan Campbell",
-      "Ron Rivera",
-      "Amon-Ra St. Brown",
-      "Terry McLaurin",
-      "Lions offensive line",
-      "Commanders defensive line",
-      "NFL Week preview",
-      "Lions vs Commanders history",
-      "NFL predictions 2024"
-    ],
     alternates: {
       canonical: "https://stopwatch.lol/blog/lionsvscommanders"
     },
+    robots: { index: false, follow: true },
     openGraph: {
       title: "Lions vs Commanders 2025: Complete Game Preview & Prediction",
       description: "Expert analysis of Lions vs Commanders: team stats, key matchups, injury reports, betting odds, and game prediction. Complete NFL preview.",

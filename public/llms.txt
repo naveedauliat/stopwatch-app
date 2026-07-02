@@ -1,0 +1,28 @@
+# Stopwatch.lol
+
+> Free online stopwatch and timer tools with millisecond precision, lap counter,
+> and split times. No signup, works offline, runs accurately in the background.
+> Built as a fast, privacy-friendly web app (browser Performance API timing).
+
+## Core tools
+- [Online Stopwatch](https://stopwatch.lol/): Millisecond-precision stopwatch with unlimited laps and split times.
+- [Countdown Timer](https://stopwatch.lol/countdown): Countdown timer with sound for cooking, workouts, exams, presentations, and Pomodoro.
+- [Full Screen Stopwatch](https://stopwatch.lol/full-screen-stopwatch): Large full-screen timer for classrooms, coaching, and events. Keyboard shortcuts: Space (start/stop), L (lap), R (reset).
+
+## Games
+- [Free Online Games](https://stopwatch.lol/games): Tic Tac Toe, Number Guesser, Rock Paper Scissors — play free in the browser.
+
+## Content
+- [Blog](https://stopwatch.lol/blog): Guides on timing, productivity, sports performance, and the FIFA World Cup 2026.
+
+## Key facts
+- Timing accuracy: uses the browser high-resolution Performance API (performance.now()) for sub-millisecond precision.
+- Cost: completely free, no registration, no downloads.
+- Offline: works without an internet connection once loaded.
+- Devices: responsive on desktop, tablet, and mobile.
+
+## About
+- [About](https://stopwatch.lol/about)
+- [Contact](https://stopwatch.lol/contact)
+- [Privacy Policy](https://stopwatch.lol/privacy)
+- [Terms of Service](https://stopwatch.lol/terms)

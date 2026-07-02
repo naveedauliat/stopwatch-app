@@ -7,10 +7,10 @@ export function generateMetadata() {
   return {
     title: "Last Week of November 2025: Premier League Fixtures Preview",
     description: "Complete preview of Premier League matchday fixtures for November 29-30, 2025. Key clashes, predictions, and where to watch.",
-    keywords: 'productivity, pomodoro, stopwatch, timeboxing, focus, Premier League, November 2025, Chelsea Arsenal, Liverpool, Manchester City, fixtures, football',
     alternates: {
       canonical: "https://stopwatch.lol/blog/premier-league"
     },
+    robots: { index: false, follow: true },
     openGraph: {
       title: 'Premier League: Last Week of November 2025 Fixtures',
       description: 'Your guide to the final Premier League weekend of November 2025 featuring Chelsea vs Arsenal, West Ham vs Liverpool, and more blockbuster matches.',

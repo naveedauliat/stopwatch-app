@@ -13,6 +13,5 @@ export default function robots() {
       },
     ],
     sitemap: 'https://stopwatch.lol/sitemap.xml',
-    host: 'https://stopwatch.lol',
   };
 }

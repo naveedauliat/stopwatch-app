@@ -16,23 +16,6 @@ export const metadata = {
   description:
     "Free online stopwatch with lap counter, split times, and millisecond precision. Perfect for sports, productivity, workouts, and time tracking.",
 
-  keywords: [
-    "online stopwatch",
-    "free stopwatch",
-    "online timer",
-    "lap counter",
-    "split timer",
-    "interval timer",
-    "sports timing",
-    "productivity timer",
-    "workout timer",
-    "digital timer",
-    "millisecond timer",
-    "precision timing",
-    "stopwatch online",
-    "countdown timer",
-    "background timer",
-  ],
   authors: [{ name: "Stopwatch.lol Team", url: "https://stopwatch.lol" }],
   creator: "Stopwatch.lol",
   publisher: "Stopwatch.lol",
@@ -84,8 +67,10 @@ export const metadata = {
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "any" },
-      { url: "/icons/icon-192x192.png", sizes: "192x192", type: "image/png" },
-      { url: "/icons/icon-512x512.png", sizes: "512x512", type: "image/png" },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/android-chrome-192x192.png", sizes: "192x192", type: "image/png" },
+      { url: "/android-chrome-512x512.png", sizes: "512x512", type: "image/png" },
     ],
     shortcut: "/favicon.ico",
     apple: [{ url: "/apple-touch-icon.png", sizes: "180x180" }],
@@ -140,14 +125,24 @@ export default function RootLayout({ children }) {
         "@id": "https://stopwatch.lol/#organization",
         name: "Stopwatch.lol",
         url: "https://stopwatch.lol/",
+        description:
+          "Stopwatch.lol builds free, privacy-friendly online timing tools — a millisecond-precision stopwatch, countdown timer, and full-screen timer — used for sports, workouts, productivity, and education.",
+        foundingDate: "2023",
+        knowsAbout: [
+          "online stopwatch",
+          "countdown timers",
+          "sports timing",
+          "productivity techniques",
+          "interval training",
+        ],
         logo: {
           "@type": "ImageObject",
           inLanguage: "en-US",
           "@id": "https://stopwatch.lol/#/schema/logo/image/",
-          url: "https://stopwatch.lol/images/og-image.svg",
-          contentUrl: "https://stopwatch.lol/images/og-image.svg",
-          width: 1200,
-          height: 630,
+          url: "https://stopwatch.lol/android-chrome-512x512.png",
+          contentUrl: "https://stopwatch.lol/android-chrome-512x512.png",
+          width: 512,
+          height: 512,
           caption: "Stopwatch.lol",
         },
         image: {
@@ -165,7 +160,7 @@ export default function RootLayout({ children }) {
         browserRequirements: "Requires JavaScript. Requires HTML5.",
         softwareVersion: "2.0",
         dateCreated: "2023-01-01",
-        dateModified: "2024-11-07",
+        dateModified: "2026-07-02",
         description:
           "Professional-grade free online stopwatch with millisecond precision, lap counter, split times, and background operation.",
         featureList: [

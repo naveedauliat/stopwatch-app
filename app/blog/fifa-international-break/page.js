@@ -6,26 +6,10 @@ export function generateMetadata() {
   return {
     title: "FIFA International Break 2025: Complete Guide",
     description: "Everything you need to know about the next FIFA International break: World Cup qualifiers, UEFA Nations League matches, key fixtures, player call-ups, and streaming information.",
-    keywords: [
-      "FIFA International break",
-      "World Cup qualifiers 2024",
-      "UEFA Nations League",
-      "international football",
-      "FIFA fixtures",
-      "national team matches",
-      "World Cup 2026 qualifiers",
-      "international break schedule",
-      "football qualifiers",
-      "FIFA calendar",
-      "national team call-ups",
-      "international football matches",
-      "UEFA qualifiers",
-      "CONMEBOL qualifiers",
-      "AFC qualifiers"
-    ],
     alternates: {
       canonical: "https://stopwatch.lol/blog/fifa-international-break"
     },
+    robots: { index: false, follow: true },
     openGraph: {
       title: "FIFA International Break 2024: Complete Fixtures Guide",
       description: "Complete guide to the upcoming FIFA International break featuring World Cup qualifiers, UEFA Nations League, and key national team matchups.",
