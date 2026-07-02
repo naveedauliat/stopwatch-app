@@ -98,46 +98,6 @@ const blogPosts = [
     date: "April 24, 2026",
   },
   {
-    title: "Premier League Fixtures November, 2025: Complete Match Preview",
-    description:
-      "Expert analysis and predictions for all Premier League fixtures on November 23, 2025. Liverpool vs Man City headline fixture, team news, and viewing information.",
-    slug: "premier-league",
-    image: "/images/premier-league.webp",
-    readTime: "15 min read",
-    tags: ["Football", "Premier League", "Sports"],
-    date: "November 10, 2025",
-  },
-  {
-    title: "41 Days of Deadlock: The Longest U.S. Government Shutdown",
-    description:
-      "A bipartisan Senate coalition cracked the political stalemate, but not before the crisis inflicted $14 billion in permanent economic damage.",
-    slug: "government-shutdown",
-    image: "/images/senate-vote.jpg",
-    readTime: "12 min read",
-    tags: ["Politics", "Economy", "US Government"],
-    date: "November 10, 2025",
-  },
-  {
-    title: "FIFA International Break 2024: Complete Fixtures Guide",
-    description:
-      "Your complete guide to the upcoming FIFA International break featuring World Cup qualifiers, UEFA Nations League matches, and key national team fixtures.",
-    slug: "fifa-international-break",
-    image: "/images/fifa-international-break.svg",
-    readTime: "10 min read",
-    tags: ["Football", "International", "FIFA"],
-    date: "November 8, 2024",
-  },
-  {
-    title: "Lions vs Commanders: Game Analysis",
-    description:
-      "An in-depth analysis of the Lions vs Commanders game, highlighting key plays and strategies.",
-    slug: "lionsvscommanders",
-    image: "/images/lions-vs-commanders.jpg",
-    readTime: "5 min read",
-    tags: ["NFL", "Sports", "Analysis"],
-    date: "November 10, 2025",
-  },
-  {
     title: "The Evolution of Stopwatches",
     description:
       "A comprehensive history of stopwatches, from mechanical roots to modern digital timing.",

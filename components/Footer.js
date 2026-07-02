@@ -125,6 +125,11 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/news" className="text-white/70 hover:text-white transition-colors text-sm">
+                  News Archive
+                </Link>
+              </li>
+              <li>
                 <Link href="/games" className="text-white/70 hover:text-white transition-colors text-sm">
                   Timing Games
                 </Link>

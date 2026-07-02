@@ -7,14 +7,13 @@ export function generateMetadata() {
     title: "Lions vs Commanders 2024: Complete Game Analysis",
     description: "In-depth analysis of Lions vs Commanders matchup. Expert breakdown of team stats, key players, betting odds, injury reports, and game prediction for Detroit Lions vs Washington Commanders.",
     alternates: {
-      canonical: "https://stopwatch.lol/blog/lionsvscommanders"
+      canonical: "https://stopwatch.lol/news/lionsvscommanders"
     },
-    robots: { index: false, follow: true },
     openGraph: {
       title: "Lions vs Commanders 2025: Complete Game Preview & Prediction",
       description: "Expert analysis of Lions vs Commanders: team stats, key matchups, injury reports, betting odds, and game prediction. Complete NFL preview.",
       type: "article",
-      url: "https://stopwatch.lol/blog/lionsvscommanders",
+      url: "https://stopwatch.lol/news/lionsvscommanders",
       images: [
         { 
           url: "https://stopwatch.lol/images/lions-vs-commanders.jpg",
@@ -46,7 +45,7 @@ export default function LionsVsCommandersBlog() {
           <nav className="mb-6 text-sm text-gray-400">
             <Link href="/" className="hover:text-blue-400 transition-colors">Home</Link>
             <span className="mx-2">/</span>
-            <Link href="/blog" className="hover:text-blue-400 transition-colors">Blog</Link>
+            <Link href="/news" className="hover:text-blue-400 transition-colors">News</Link>
             <span className="mx-2">/</span>
             <span className="text-gray-300">Lions vs Commanders</span>
           </nav>
@@ -299,7 +298,7 @@ export default function LionsVsCommandersBlog() {
                 The Commanders&apos; offense has struggled with consistency throughout the season. While they possess 
                 talented skill position players, coordination and execution issues have limited their effectiveness. 
                 The offensive line has been a particular weak point, struggling to provide adequate protection and 
-                create running lanes. Learn about <Link href="/blog/fifa-international-break" className="text-blue-400 hover:text-blue-300 underline">international football timing</Link>.
+                create running lanes. Learn about <Link href="/news/fifa-international-break" className="text-blue-400 hover:text-blue-300 underline">international football timing</Link>.
               </p>
 
               <h4 className="text-xl font-semibold text-gray-200 mb-3">Key Offensive Players</h4>
@@ -738,7 +737,7 @@ export default function LionsVsCommandersBlog() {
                   <h3 className="font-semibold text-gray-100 mb-2">Productivity Hacks</h3>
                   <p className="text-sm text-gray-400">Time management for peak performance</p>
                 </Link>
-                <Link href="/blog/fifa-international-break" className="bg-gray-800/60 border border-gray-600/40 rounded-xl p-4 hover:border-blue-500/50 transition-colors">
+                <Link href="/news/fifa-international-break" className="bg-gray-800/60 border border-gray-600/40 rounded-xl p-4 hover:border-blue-500/50 transition-colors">
                   <h3 className="font-semibold text-gray-100 mb-2">FIFA International Break</h3>
                   <p className="text-sm text-gray-400">Complete guide to international football</p>
                 </Link>
@@ -790,16 +789,16 @@ export default function LionsVsCommandersBlog() {
             </div>
           </div>
 
-          {/* Back to Blog */}
+          {/* Back to News */}
           <div className="text-center mt-12">
             <Link 
-              href="/blog"
+              href="/news"
               className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors font-medium"
             >
               <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
               </svg>
-              Back to Blog
+              Back to News
             </Link>
           </div>
 

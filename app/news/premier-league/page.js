@@ -8,14 +8,13 @@ export function generateMetadata() {
     title: "Last Week of November 2025: Premier League Fixtures Preview",
     description: "Complete preview of Premier League matchday fixtures for November 29-30, 2025. Key clashes, predictions, and where to watch.",
     alternates: {
-      canonical: "https://stopwatch.lol/blog/premier-league"
+      canonical: "https://stopwatch.lol/news/premier-league"
     },
-    robots: { index: false, follow: true },
     openGraph: {
       title: 'Premier League: Last Week of November 2025 Fixtures',
       description: 'Your guide to the final Premier League weekend of November 2025 featuring Chelsea vs Arsenal, West Ham vs Liverpool, and more blockbuster matches.',
       type: 'article',
-      url: "https://stopwatch.lol/blog/premier-league",
+      url: "https://stopwatch.lol/news/premier-league",
       images: [{ url: "https://stopwatch.lol/images/premier-league.svg" }]
     },
     twitter: {
@@ -48,8 +47,8 @@ export default function PremierLeague2025Blog() {
           <Link href="/" className="px-4 py-2 bg-white text-indigo-600 rounded-lg shadow-md hover:shadow-lg hover:bg-indigo-50 transition-all font-semibold">
             ← Home
           </Link>
-          <Link href="/blog" className="px-4 py-2 bg-white text-purple-600 rounded-lg shadow-md hover:shadow-lg hover:bg-purple-50 transition-all font-semibold">
-            Blog
+          <Link href="/news" className="px-4 py-2 bg-white text-purple-600 rounded-lg shadow-md hover:shadow-lg hover:bg-purple-50 transition-all font-semibold">
+            News
           </Link>
           <a href="https://stopwatch.lol" className="px-4 py-2 bg-white text-pink-600 rounded-lg shadow-md hover:shadow-lg hover:bg-pink-50 transition-all font-semibold">
             Stopwatch.lol
@@ -261,7 +260,7 @@ export default function PremierLeague2025Blog() {
                   <h3 className="font-semibold text-gray-100 mb-2">Time in Human Life</h3>
                   <p className="text-sm text-gray-400">Understanding time&apos;s impact on decision-making</p>
                 </Link>
-                <Link href="/blog/fifa-international-break" className="bg-gray-800/60 border border-gray-600/40 rounded-xl p-4 hover:border-blue-500/50 transition-colors">
+                <Link href="/news/fifa-international-break" className="bg-gray-800/60 border border-gray-600/40 rounded-xl p-4 hover:border-blue-500/50 transition-colors">
                   <h3 className="font-semibold text-gray-100 mb-2">International News</h3>
                   <p className="text-sm text-gray-400">Stay updated on global events</p>
                 </Link>

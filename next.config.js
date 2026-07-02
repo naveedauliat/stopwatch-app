@@ -73,6 +73,27 @@ const nextConfig = {
         source: '/stopwatch',
         destination: '/',
         permanent: true,
+      },
+      // Relocated dated news posts: /blog/* -> /news/*
+      {
+        source: '/blog/premier-league',
+        destination: '/news/premier-league',
+        permanent: true,
+      },
+      {
+        source: '/blog/government-shutdown',
+        destination: '/news/government-shutdown',
+        permanent: true,
+      },
+      {
+        source: '/blog/lionsvscommanders',
+        destination: '/news/lionsvscommanders',
+        permanent: true,
+      },
+      {
+        source: '/blog/fifa-international-break',
+        destination: '/news/fifa-international-break',
+        permanent: true,
       }
     ]
   },

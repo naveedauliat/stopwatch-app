@@ -29,6 +29,9 @@ export default function Header() {
             <Link href="/blog" className="text-white/90 hover:text-white transition-colors">
               Blog
             </Link>
+            <Link href="/news" className="text-white/90 hover:text-white transition-colors">
+              News
+            </Link>
             <Link href="/games" className="text-white/90 hover:text-white transition-colors">
               Games
             </Link>

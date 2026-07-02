@@ -97,6 +97,36 @@ export default function sitemap() {
       priority: 0.9,
     },
     {
+      url: `${baseUrl}/news`,
+      lastModified: now,
+      changeFrequency: 'monthly',
+      priority: 0.6,
+    },
+    {
+      url: `${baseUrl}/news/premier-league`,
+      lastModified: '2025-11-10',
+      changeFrequency: 'yearly',
+      priority: 0.4,
+    },
+    {
+      url: `${baseUrl}/news/government-shutdown`,
+      lastModified: '2025-11-10',
+      changeFrequency: 'yearly',
+      priority: 0.4,
+    },
+    {
+      url: `${baseUrl}/news/lionsvscommanders`,
+      lastModified: '2024-11-10',
+      changeFrequency: 'yearly',
+      priority: 0.4,
+    },
+    {
+      url: `${baseUrl}/news/fifa-international-break`,
+      lastModified: '2024-11-08',
+      changeFrequency: 'yearly',
+      priority: 0.4,
+    },
+    {
       url: `${baseUrl}/games`,
       lastModified: now,
       changeFrequency: 'monthly',
