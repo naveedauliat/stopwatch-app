@@ -2,10 +2,10 @@
 
 import { useState, useEffect, useRef } from "react";
 
-export default function CountdownTimer() {
-  const [inputH, setInputH] = useState(0);
-  const [inputM, setInputM] = useState(5);
-  const [inputS, setInputS] = useState(0);
+export default function CountdownTimer({ initialH = 0, initialM = 5, initialS = 0 }) {
+  const [inputH, setInputH] = useState(initialH);
+  const [inputM, setInputM] = useState(initialM);
+  const [inputS, setInputS] = useState(initialS);
   const [timeLeft, setTimeLeft] = useState(null); // null = setup phase
   const [totalMs, setTotalMs] = useState(0);
   const [isRunning, setIsRunning] = useState(false);

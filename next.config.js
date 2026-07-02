@@ -65,11 +65,6 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: '/timer',
-        destination: '/',
-        permanent: true,
-      },
-      {
         source: '/stopwatch',
         destination: '/',
         permanent: true,

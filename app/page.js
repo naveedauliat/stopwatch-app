@@ -139,6 +139,42 @@ export default function Home() {
 
         <Stopwatch />
 
+        {/* Popular Timers */}
+        <section className="mt-12 max-w-4xl mx-auto text-center">
+          <h2 className="text-2xl font-bold text-white mb-2">Need a Countdown? Popular Timers</h2>
+          <p className="text-white/80 text-sm mb-5">
+            One-click preset timers with a sound alarm — or set any duration on the{" "}
+            <Link href="/countdown" className="underline hover:text-white">countdown timer</Link>.
+          </p>
+          <div className="flex flex-wrap justify-center gap-3">
+            {[
+              ["/timer/1-minute-timer", "1 Min"],
+              ["/timer/5-minute-timer", "5 Min"],
+              ["/timer/10-minute-timer", "10 Min"],
+              ["/timer/15-minute-timer", "15 Min"],
+              ["/timer/20-minute-timer", "20 Min"],
+              ["/timer/30-minute-timer", "30 Min"],
+              ["/timer/1-hour-timer", "1 Hour"],
+              ["/timer/pomodoro-timer", "Pomodoro"],
+              ["/timer/egg-timer", "Egg Timer"],
+            ].map(([href, label]) => (
+              <Link
+                key={href}
+                href={href}
+                className="bg-white/10 hover:bg-white/20 border border-white/20 rounded-full px-4 py-2 text-sm text-white/90 hover:text-white transition"
+              >
+                {label}
+              </Link>
+            ))}
+            <Link
+              href="/timer"
+              className="bg-white/10 hover:bg-white/20 border border-white/20 rounded-full px-4 py-2 text-sm text-white/90 hover:text-white transition"
+            >
+              All Timers →
+            </Link>
+          </div>
+        </section>
+
         {/* Games Section */}
         <section className="mt-12 max-w-4xl mx-auto">
           <h2 className="text-2xl font-bold text-white text-center mb-6">

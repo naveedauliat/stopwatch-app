@@ -1,3 +1,5 @@
+import { presetSlugs } from './timer/presets';
+
 const baseUrl = 'https://stopwatch.lol';
 
 // Stable site-wide update date. Bump when core (non-blog) pages meaningfully change.
@@ -24,6 +26,18 @@ export default function sitemap() {
       changeFrequency: 'monthly',
       priority: 0.9,
     },
+    {
+      url: `${baseUrl}/timer`,
+      lastModified: now,
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+    ...presetSlugs.map((slug) => ({
+      url: `${baseUrl}/timer/${slug}`,
+      lastModified: now,
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    })),
     {
       url: `${baseUrl}/blog`,
       lastModified: now,

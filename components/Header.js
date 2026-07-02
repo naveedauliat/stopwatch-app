@@ -26,6 +26,9 @@ export default function Header() {
             <Link href="/countdown" className="text-white/90 hover:text-white transition-colors">
               Timer
             </Link>
+            <Link href="/timer" className="text-white/90 hover:text-white transition-colors">
+              Timers
+            </Link>
             <Link href="/blog" className="text-white/90 hover:text-white transition-colors">
               Blog
             </Link>

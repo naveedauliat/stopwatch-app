@@ -115,6 +115,11 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/timer" className="text-white/70 hover:text-white transition-colors text-sm">
+                  Preset Timers
+                </Link>
+              </li>
+              <li>
                 <Link href="/full-screen-stopwatch" className="text-white/70 hover:text-white transition-colors text-sm">
                   Full Screen Stopwatch
                 </Link>
