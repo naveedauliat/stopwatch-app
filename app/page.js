@@ -4,18 +4,6 @@ import Link from "next/link";
 export const metadata = {
   title: "Free Online Stopwatch - Lap Counter & Millisecond Precision",
   description: "Free online stopwatch with millisecond precision, lap counter, and split times. Works offline. Perfect for sports, workouts, and productivity.",
-  keywords: [
-    "online stopwatch",
-    "free stopwatch",
-    "stopwatch online",
-    "lap counter",
-    "split timer",
-    "millisecond timer",
-    "sports timer",
-    "workout stopwatch",
-    "precision stopwatch",
-    "online timer"
-  ],
   openGraph: {
     title: "Free Online Stopwatch - Lap Counter & Millisecond Precision",
     description: "Free online stopwatch with millisecond precision, lap counter, and split times. Works offline. Perfect for sports, workouts, and productivity.",
@@ -54,11 +42,8 @@ export default function Home() {
       "@id": "https://stopwatch.lol/#webapp"
     },
     datePublished: "2023-01-01T00:00:00+00:00",
-    dateModified: "2025-11-10T00:00:00+00:00",
+    dateModified: "2026-07-02T00:00:00+00:00",
     description: "Free online stopwatch with millisecond precision, lap counter, split times, and background operation. Works on all devices, no registration required.",
-    breadcrumb: {
-      "@id": "https://stopwatch.lol/#breadcrumb"
-    },
     inLanguage: "en-US",
     potentialAction: [
       {

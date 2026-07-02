@@ -55,6 +55,15 @@ const nextConfig = {
   },
   async redirects() {
     return [
+      // Canonicalize www -> apex. NOTE: also add "www.stopwatch.lol" as a
+      // redirecting domain in the Vercel dashboard — until the www host is
+      // attached to the project, DNS won't resolve and this rule can't fire.
+      {
+        source: '/:path*',
+        has: [{ type: 'host', value: 'www.stopwatch.lol' }],
+        destination: 'https://stopwatch.lol/:path*',
+        permanent: true,
+      },
       {
         source: '/timer',
         destination: '/',
@@ -63,6 +72,27 @@ const nextConfig = {
       {
         source: '/stopwatch',
         destination: '/',
+        permanent: true,
+      },
+      // Relocated dated news posts: /blog/* -> /news/*
+      {
+        source: '/blog/premier-league',
+        destination: '/news/premier-league',
+        permanent: true,
+      },
+      {
+        source: '/blog/government-shutdown',
+        destination: '/news/government-shutdown',
+        permanent: true,
+      },
+      {
+        source: '/blog/lionsvscommanders',
+        destination: '/news/lionsvscommanders',
+        permanent: true,
+      },
+      {
+        source: '/blog/fifa-international-break',
+        destination: '/news/fifa-international-break',
         permanent: true,
       }
     ]

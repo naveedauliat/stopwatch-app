@@ -6,31 +6,14 @@ export function generateMetadata() {
   return {
     title: "FIFA International Break 2025: Complete Guide",
     description: "Everything you need to know about the next FIFA International break: World Cup qualifiers, UEFA Nations League matches, key fixtures, player call-ups, and streaming information.",
-    keywords: [
-      "FIFA International break",
-      "World Cup qualifiers 2024",
-      "UEFA Nations League",
-      "international football",
-      "FIFA fixtures",
-      "national team matches",
-      "World Cup 2026 qualifiers",
-      "international break schedule",
-      "football qualifiers",
-      "FIFA calendar",
-      "national team call-ups",
-      "international football matches",
-      "UEFA qualifiers",
-      "CONMEBOL qualifiers",
-      "AFC qualifiers"
-    ],
     alternates: {
-      canonical: "https://stopwatch.lol/blog/fifa-international-break"
+      canonical: "https://stopwatch.lol/news/fifa-international-break"
     },
     openGraph: {
       title: "FIFA International Break 2024: Complete Fixtures Guide",
       description: "Complete guide to the upcoming FIFA International break featuring World Cup qualifiers, UEFA Nations League, and key national team matchups.",
       type: "article",
-      url: "https://stopwatch.lol/blog/fifa-international-break",
+      url: "https://stopwatch.lol/news/fifa-international-break",
       images: [
         { 
           url: "https://stopwatch.lol/images/fifa-international-break.svg",
@@ -62,7 +45,7 @@ export default function FIFAInternationalBreakBlog() {
           <nav className="mb-6 text-sm text-gray-400">
             <Link href="/" className="hover:text-blue-400 transition-colors">Home</Link>
             <span className="mx-2">/</span>
-            <Link href="/blog" className="hover:text-blue-400 transition-colors">Blog</Link>
+            <Link href="/news" className="hover:text-blue-400 transition-colors">News</Link>
             <span className="mx-2">/</span>
             <span className="text-gray-300">FIFA International Break</span>
           </nav>
@@ -412,16 +395,16 @@ export default function FIFAInternationalBreakBlog() {
             </div>
           </div>
 
-          {/* Back to Blog */}
+          {/* Back to News */}
           <div className="text-center mt-12">
             <Link 
-              href="/blog"
+              href="/news"
               className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors font-medium"
             >
               <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
               </svg>
-              Back to Blog
+              Back to News
             </Link>
           </div>
 

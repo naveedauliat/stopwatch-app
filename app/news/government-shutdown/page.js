@@ -6,30 +6,14 @@ export function generateMetadata() {
   return {
     title: "41 Days of Deadlock: The Longest U.S. Government Shutdown | Stopwatch Blog",
     description: "A bipartisan Senate coalition cracked the political stalemate, but not before the crisis inflicted $14 billion in permanent economic damage. Complete analysis of the 2025 government shutdown.",
-    keywords: [
-      "government shutdown 2025",
-      "senate vote",
-      "US politics",
-      "economy impact",
-      "ACA subsidies",
-      "federal workers",
-      "congressional budget",
-      "bipartisan compromise",
-      "Chuck Schumer",
-      "government funding",
-      "shutdown economic impact",
-      "federal employee furlough",
-      "Trump administration",
-      "political deadlock"
-    ],
     alternates: {
-      canonical: "https://stopwatch.lol/blog/government-shutdown"
+      canonical: "https://stopwatch.lol/news/government-shutdown"
     },
     openGraph: {
       title: "41 Days of Deadlock: The Full Story of the Longest U.S. Government Shutdown",
       description: "A bipartisan Senate coalition cracked the political stalemate after 41 days, but not before inflicting $14 billion in permanent economic damage.",
       type: "article",
-      url: "https://stopwatch.lol/blog/government-shutdown",
+      url: "https://stopwatch.lol/news/government-shutdown",
       images: [
         { 
           url: "https://stopwatch.lol/images/senate-vote.jpg",
@@ -61,7 +45,7 @@ export default function GovernmentShutdownBlog() {
           <nav className="mb-6 text-sm text-gray-400">
             <Link href="/" className="hover:text-blue-400 transition-colors">Home</Link>
             <span className="mx-2">/</span>
-            <Link href="/blog" className="hover:text-blue-400 transition-colors">Blog</Link>
+            <Link href="/news" className="hover:text-blue-400 transition-colors">News</Link>
             <span className="mx-2">/</span>
             <span className="text-gray-300">Government Shutdown</span>
           </nav>
@@ -465,7 +449,7 @@ export default function GovernmentShutdownBlog() {
                   <h3 className="font-semibold text-gray-100 mb-2">Time in Human Life</h3>
                   <p className="text-sm text-gray-400">Understanding time&apos;s impact on decision-making</p>
                 </Link>
-                <Link href="/blog/fifa-international-break" className="bg-gray-800/60 border border-gray-600/40 rounded-xl p-4 hover:border-blue-500/50 transition-colors">
+                <Link href="/news/fifa-international-break" className="bg-gray-800/60 border border-gray-600/40 rounded-xl p-4 hover:border-blue-500/50 transition-colors">
                   <h3 className="font-semibold text-gray-100 mb-2">International News</h3>
                   <p className="text-sm text-gray-400">Stay updated on global events</p>
                 </Link>
@@ -535,16 +519,16 @@ export default function GovernmentShutdownBlog() {
             </div>
           </div>
 
-          {/* Back to Blog */}
+          {/* Back to News */}
           <div className="text-center mt-12">
             <Link 
-              href="/blog"
+              href="/news"
               className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors font-medium"
             >
               <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
               </svg>
-              Back to Blog
+              Back to News
             </Link>
           </div>
 
