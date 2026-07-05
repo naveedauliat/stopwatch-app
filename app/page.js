@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export const metadata = {
   title: "Free Online Stopwatch - Lap Counter & Millisecond Precision",
-  description: "Free online stopwatch with millisecond precision, lap counter, and split times. Works offline. Perfect for sports, workouts, and productivity.",
+  description: "Free online stopwatch with millisecond precision and smart lap analysis — automatic fastest, slowest, and average splits. Works offline, no signup. Perfect for sports, workouts, and productivity.",
   openGraph: {
     title: "Free Online Stopwatch - Lap Counter & Millisecond Precision",
     description: "Free online stopwatch with millisecond precision, lap counter, and split times. Works offline. Perfect for sports, workouts, and productivity.",
@@ -103,6 +103,22 @@ export default function Home() {
         acceptedAnswer: {
           "@type": "Answer",
           text: "Yes, Stopwatch.lol is completely free with no downloads, registration, or hidden fees required."
+        }
+      },
+      {
+        "@type": "Question",
+        name: "What is an AI stopwatch?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "An AI stopwatch is a smart online stopwatch that goes beyond basic start and stop timing by automatically analyzing your results — calculating fastest, slowest, and average lap times, tracking split times, and turning raw numbers into insight without any manual math. Stopwatch.lol delivers this automatic lap and split analysis today, with AI-powered pacing insights in development."
+        }
+      },
+      {
+        "@type": "Question",
+        name: "Is Stopwatch.lol a smart or AI stopwatch?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Yes — Stopwatch.lol is a smart, high-precision online stopwatch. It automatically analyzes every session, showing your fastest, slowest, and average lap splits, and it lets you export lap data as CSV and auto-saves your session so it survives a refresh. Timing uses the browser's Performance API for millisecond accuracy. Deeper AI-powered features, such as automatic pacing suggestions, are on our roadmap. It is free, needs no signup, and works offline."
         }
       }
     ]
@@ -227,9 +243,10 @@ export default function Home() {
             </div>
 
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
-              <h3 className="text-xl font-semibold text-white mb-3">Lap & Split Times</h3>
+              <h3 className="text-xl font-semibold text-white mb-3">Smart Lap Analysis</h3>
               <p className="text-white/90">
-                Record unlimited lap times and review split time history to track and improve performance.
+                Record unlimited laps and let the stopwatch automatically surface your fastest, slowest,
+                and average splits — then export the data as CSV.
               </p>
             </div>
 
