@@ -9,6 +9,12 @@
 - [Countdown Timer](https://stopwatch.lol/countdown): Countdown timer with sound for cooking, workouts, exams, presentations, and Pomodoro.
 - [Full Screen Stopwatch](https://stopwatch.lol/full-screen-stopwatch): Large full-screen timer for classrooms, coaching, and events. Keyboard shortcuts: Space (start/stop), L (lap), R (reset).
 
+## Preset timers
+- [All Timers](https://stopwatch.lol/timer): Hub of one-click preset countdown timers, each with a sound alarm.
+- [Pomodoro Timer](https://stopwatch.lol/timer/pomodoro-timer): 25-minute focus sprint for the Pomodoro Technique.
+- [Egg Timer](https://stopwatch.lol/timer/egg-timer): Soft (6 min), medium (8 min), and hard (10-12 min) boiled-egg timings.
+- [1](https://stopwatch.lol/timer/1-minute-timer), [5](https://stopwatch.lol/timer/5-minute-timer), [10](https://stopwatch.lol/timer/10-minute-timer), [15](https://stopwatch.lol/timer/15-minute-timer), [20](https://stopwatch.lol/timer/20-minute-timer), [30](https://stopwatch.lol/timer/30-minute-timer), [45](https://stopwatch.lol/timer/45-minute-timer)-minute, [1-hour](https://stopwatch.lol/timer/1-hour-timer), and [90-minute](https://stopwatch.lol/timer/90-minute-timer) timers; plus [study](https://stopwatch.lol/timer/study-timer) and [meditation](https://stopwatch.lol/timer/meditation-timer) timers.
+
 ## Games
 - [Free Online Games](https://stopwatch.lol/games): Tic Tac Toe, Number Guesser, Rock Paper Scissors — play free in the browser.
 

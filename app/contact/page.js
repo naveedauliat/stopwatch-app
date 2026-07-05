@@ -43,8 +43,7 @@ export default function ContactPage() {
                 <div>
                   <h3 className="text-white font-semibold mb-1">Social Media</h3>
                   <div className="flex space-x-4">
-                    <a href="https://twitter.com/stopwatchlol" className="text-blue-300 hover:text-blue-200">Twitter</a>
-                    <a href="https://github.com/stopwatchlol" className="text-blue-300 hover:text-blue-200">GitHub</a>
+                    <a href="https://instagram.com/stopwatch.lol" target="_blank" rel="noopener noreferrer" className="text-blue-300 hover:text-blue-200">Instagram</a>
                   </div>
                 </div>
               </div>

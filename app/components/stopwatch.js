@@ -178,7 +178,7 @@ export default function Stopwatch() {
 
   return (
     <div className="max-w-4xl mx-auto space-y-8">
-      <div className="relative">
+      <div className="relative overflow-hidden">
         {/* Animated Background Ring */}
         <div className="absolute inset-0 rounded-full">
           <svg className="w-full h-full transform -rotate-90" viewBox="0 0 100 100">
@@ -202,7 +202,7 @@ export default function Stopwatch() {
         </div>
 
         {/* Main Display Card */}
-        <div className="relative bg-white/10 backdrop-blur-xl rounded-3xl p-8 md:p-12 border border-white/20 shadow-2xl">
+        <div className="relative bg-white/10 backdrop-blur-xl rounded-3xl p-4 sm:p-8 md:p-12 border border-white/20 shadow-2xl">
           {/* Badge + Sound Toggle Row */}
           <div className="flex justify-center items-center gap-3 mb-6">
             <div className="inline-flex items-center gap-3 bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-400/30 rounded-full px-6 py-3 backdrop-blur-sm">
@@ -246,15 +246,12 @@ export default function Stopwatch() {
           {/* Time Display */}
           <div className="text-center mb-8">
             <div className="relative">
-              <div className="absolute inset-0 text-7xl md:text-8xl font-mono font-bold text-blue-400/20 blur-sm">
-                {timeDisplay.minutes}:{timeDisplay.seconds}.{timeDisplay.centiseconds}
-              </div>
-              <div className="relative flex items-center justify-center gap-2 text-6xl md:text-7xl font-mono font-bold text-white">
+              <div className="flex items-center justify-center gap-1 sm:gap-2 text-5xl sm:text-6xl md:text-7xl font-mono font-bold text-white">
                 <span className="tabular-nums">{timeDisplay.minutes}</span>
                 <span className={`transition-opacity duration-500 ${isRunning ? 'animate-pulse' : ''}`}>:</span>
                 <span className="tabular-nums">{timeDisplay.seconds}</span>
-                <span className={`text-4xl md:text-5xl transition-opacity duration-500 ${isRunning ? 'animate-pulse' : ''}`}>.</span>
-                <span className="text-4xl md:text-5xl tabular-nums text-blue-300">{timeDisplay.centiseconds}</span>
+                <span className={`text-3xl sm:text-4xl md:text-5xl transition-opacity duration-500 ${isRunning ? 'animate-pulse' : ''}`}>.</span>
+                <span className="text-3xl sm:text-4xl md:text-5xl tabular-nums text-blue-300">{timeDisplay.centiseconds}</span>
               </div>
             </div>
             <div className="text-white/50 text-sm uppercase tracking-[0.3em] mt-4 font-medium">

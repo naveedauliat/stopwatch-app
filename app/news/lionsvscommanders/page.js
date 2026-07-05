@@ -6,6 +6,8 @@ export function generateMetadata() {
   return {
     title: "Lions vs Commanders 2024: Complete Game Analysis",
     description: "In-depth analysis of Lions vs Commanders matchup. Expert breakdown of team stats, key players, betting odds, injury reports, and game prediction for Detroit Lions vs Washington Commanders.",
+    // Past-event NFL game preview (Nov 2024) — stale; removed from the index.
+    robots: { index: false, follow: true },
     alternates: {
       canonical: "https://stopwatch.lol/news/lionsvscommanders"
     },

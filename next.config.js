@@ -39,6 +39,29 @@ const nextConfig = {
           {
             key: 'Permissions-Policy',
             value: 'camera=(), microphone=(), geolocation=()'
+          },
+          {
+            // Content-Security-Policy. 'unsafe-inline' is required for the
+            // inline JSON-LD and Next.js bootstrap scripts (the site is
+            // statically generated, so nonces aren't practical); the allow-lists
+            // below scope external scripts/connections to the analytics vendors
+            // actually in use (GTM, GA, Ahrefs, Vercel Speed Insights).
+            key: 'Content-Security-Policy',
+            value: [
+              "default-src 'self'",
+              "base-uri 'self'",
+              "object-src 'none'",
+              "frame-ancestors 'none'",
+              "form-action 'self'",
+              "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://ssl.google-analytics.com https://analytics.ahrefs.com https://va.vercel-scripts.com",
+              "style-src 'self' 'unsafe-inline'",
+              "img-src 'self' data: https:",
+              "font-src 'self' data:",
+              "connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://analytics.ahrefs.com https://vitals.vercel-insights.com https://va.vercel-scripts.com",
+              "frame-src 'self' https://www.googletagmanager.com",
+              "manifest-src 'self'",
+              "upgrade-insecure-requests",
+            ].join('; ')
           }
         ]
       },
@@ -67,6 +90,24 @@ const nextConfig = {
       {
         source: '/stopwatch',
         destination: '/',
+        permanent: true,
+      },
+      // Relocated games: legacy top-level URLs -> /games/*. These ranked on
+      // page 1 (GSC: /rock-paper-scissors pos ~5, /tic-tac-toe pos ~5.7) but
+      // began 404ing after the move under /games/, dropping the traffic.
+      {
+        source: '/rock-paper-scissors',
+        destination: '/games/rock-paper-scissors',
+        permanent: true,
+      },
+      {
+        source: '/tic-tac-toe',
+        destination: '/games/tic-tac-toe',
+        permanent: true,
+      },
+      {
+        source: '/random-number-guesser',
+        destination: '/games/random-number-guesser',
         permanent: true,
       },
       // Relocated dated news posts: /blog/* -> /news/*

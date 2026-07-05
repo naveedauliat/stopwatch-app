@@ -262,6 +262,24 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        {/* FAQ — rendered from the same data as the FAQPage JSON-LD above */}
+        <section className="mt-16 max-w-2xl mx-auto">
+          <h2 className="text-3xl font-bold text-white text-center mb-8">
+            Frequently Asked Questions
+          </h2>
+          <div className="space-y-4">
+            {faqJsonLd.mainEntity.map((item, i) => (
+              <details key={i} className="group bg-white/10 backdrop-blur-lg rounded-xl border border-white/20 p-5">
+                <summary className="cursor-pointer list-none font-semibold text-white flex justify-between items-center gap-4">
+                  {item.name}
+                  <span className="text-white/50 group-open:rotate-180 transition-transform">▾</span>
+                </summary>
+                <p className="mt-3 text-white/90 leading-relaxed">{item.acceptedAnswer.text}</p>
+              </details>
+            ))}
+          </div>
+        </section>
       </div>
     </>
   );

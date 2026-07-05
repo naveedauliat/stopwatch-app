@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import { ArticleJsonLd } from '../../lib/articleSchema';
 
 export function generateMetadata() {
   return {
@@ -28,6 +29,12 @@ export function generateMetadata() {
 export default function StopwatchEvolution() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-600 to-purple-700 p-4 md:p-8">
+      <ArticleJsonLd
+        path="/blog/stopwatch-evolution"
+        headline="The Evolution of Stopwatches"
+        description="From mechanical chronographs to millisecond-precise digital timing — the history of the stopwatch."
+        datePublished="2025-11-07"
+      />
       <div className="max-w-4xl mx-auto blog-container">
         <article className="blog-card">
           <header className="mb-6">

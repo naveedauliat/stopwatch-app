@@ -6,6 +6,10 @@ export function generateMetadata() {
   return {
     title: "41 Days of Deadlock: The Longest U.S. Government Shutdown | Stopwatch Blog",
     description: "A bipartisan Senate coalition cracked the political stalemate, but not before the crisis inflicted $14 billion in permanent economic damage. Complete analysis of the 2025 government shutdown.",
+    // Off-topic (US politics/economy) YMYL content on a stopwatch domain —
+    // kept live for existing links but removed from the index to stop it
+    // diluting the site's timing-tool topical authority.
+    robots: { index: false, follow: true },
     alternates: {
       canonical: "https://stopwatch.lol/news/government-shutdown"
     },
@@ -24,7 +28,7 @@ export function generateMetadata() {
       ],
       publishedTime: "2025-11-10T00:00:00Z",
       modifiedTime: "2025-11-10T00:00:00Z",
-      authors: ["AI News Editor"]
+      authors: ["Stopwatch.lol Editorial Team"]
     },
     twitter: {
       card: "summary_large_image",

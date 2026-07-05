@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import { ArticleJsonLd } from '../../lib/articleSchema';
 
 export function generateMetadata() {
   return {
@@ -28,6 +29,12 @@ export function generateMetadata() {
 export default function StopwatchHumanLife() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-700 to-blue-900 p-4 md:p-8">
+      <ArticleJsonLd
+        path="/blog/stopwatch-human-life"
+        headline="The Impact of Stopwatches on Human Life"
+        description="How precise timing reshaped work, sport, science, and daily life."
+        datePublished="2025-11-07"
+      />
       <div className="max-w-4xl mx-auto blog-container">
         <article className="blog-card">
           <header className="mb-6">

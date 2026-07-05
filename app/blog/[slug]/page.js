@@ -1,4 +1,5 @@
 import { notFound } from 'next/navigation';
+import { buildArticleJsonLd } from '../../lib/articleSchema';
 
 const blogPosts = {
   'rock-paper-scissors-online': {
@@ -572,6 +573,9 @@ const blogPosts = {
   },
 
   'fifa-world-cup-2026-watch-channels-by-region': {
+    // Consolidated into how-to-watch-fifa-world-cup-guide (near-duplicate, same
+    // intent, verbatim-shared FAQ). Kept live for direct links; deindexed.
+    noindex: true,
     title: "FIFA World Cup 2026 Watch Channels: Complete Region-by-Region Broadcasting Guide",
     date: "April 26, 2026",
     author: "Football Insights Team",
@@ -710,6 +714,9 @@ const blogPosts = {
   },
 
   'watch-fifa-world-cup-online-free-streaming': {
+    // Consolidated into how-to-watch-fifa-world-cup-guide (near-duplicate, same
+    // intent, verbatim-shared FAQ). Kept live for direct links; deindexed.
+    noindex: true,
     title: "Watch FIFA World Cup 2026 Online: Free Live Streaming Options Worldwide",
     date: "April 25, 2026",
     author: "Football Insights Team",
@@ -1532,6 +1539,10 @@ export function generateMetadata({ params }) {
   return {
     title: `${post.title} | Stopwatch.lol Blog`,
     description: post.excerpt || post.title,
+    // Near-duplicate posts in the same query cluster (e.g. the World Cup
+    // "how to watch" variants) set noindex to consolidate ranking signal onto
+    // the single canonical guide and avoid self-cannibalization/duplication.
+    ...(post.noindex ? { robots: { index: false, follow: true } } : {}),
     alternates: {
       canonical: `https://stopwatch.lol/blog/${params.slug}`,
     },
@@ -1575,8 +1586,22 @@ export default function BlogPost({ params }) {
     })),
   } : null;
 
+  const articleJsonLd = buildArticleJsonLd({
+    type: 'BlogPosting',
+    path: `/blog/${params.slug}`,
+    headline: post.title,
+    description: post.excerpt || post.title,
+    datePublished: post.date,
+    dateModified: post.dateModified || post.date,
+    author: post.author,
+  });
+
   return (
     <div className={`min-h-screen bg-gradient-to-br ${styles.gradient} p-8`}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
+      />
       {faqJsonLd && (
         <script
           type="application/ld+json"

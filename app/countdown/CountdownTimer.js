@@ -130,7 +130,7 @@ export default function CountdownTimer({ initialH = 0, initialM = 5, initialS = 
 
   return (
     <div className="max-w-2xl mx-auto space-y-8">
-      <div className="relative">
+      <div className="relative overflow-hidden">
         {/* Progress Ring */}
         <div className="absolute inset-0 rounded-full pointer-events-none">
           <svg className="w-full h-full transform -rotate-90" viewBox="0 0 100 100">
@@ -155,7 +155,7 @@ export default function CountdownTimer({ initialH = 0, initialM = 5, initialS = 
         </div>
 
         {/* Main Card */}
-        <div className={`relative bg-white/10 backdrop-blur-xl rounded-3xl p-8 md:p-12 border shadow-2xl transition-all duration-500 ${
+        <div className={`relative bg-white/10 backdrop-blur-xl rounded-3xl p-4 sm:p-8 md:p-12 border shadow-2xl transition-all duration-500 ${
           isFinished ? 'border-orange-400/40 bg-orange-500/5' : 'border-white/20'
         }`}>
           {/* Badge Row */}
@@ -198,7 +198,7 @@ export default function CountdownTimer({ initialH = 0, initialM = 5, initialS = 
 
           {/* Time Display / Input */}
           {isSetup ? (
-            <div className="flex items-center justify-center gap-4 mb-8">
+            <div className="flex items-center justify-center gap-2 sm:gap-4 mb-8">
               {[
                 { label: 'Hours', value: inputH, field: 'h', max: 99 },
                 { label: 'Minutes', value: inputM, field: 'm', max: 59 },
@@ -206,7 +206,7 @@ export default function CountdownTimer({ initialH = 0, initialM = 5, initialS = 
               ].map(({ label, value, field, max }, i) => (
                 <div key={field} className="flex items-center gap-2">
                   <div className="flex flex-col items-center gap-2">
-                    <button onClick={() => adjust(field, 1)} className="text-white/60 hover:text-white p-1 rounded-lg hover:bg-white/10 transition">
+                    <button onClick={() => adjust(field, 1)} aria-label={`Increase ${label}`} className="text-white/60 hover:text-white p-2 rounded-lg hover:bg-white/10 transition">
                       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" />
                       </svg>
@@ -222,28 +222,23 @@ export default function CountdownTimer({ initialH = 0, initialM = 5, initialS = 
                         if (field === 'm') setInputM(v);
                         if (field === 's') setInputS(v);
                       }}
-                      className="w-20 text-center text-5xl md:text-6xl font-mono font-bold text-white bg-white/10 border border-white/20 rounded-2xl py-3 focus:outline-none focus:border-purple-400/60 focus:bg-white/15 transition"
+                      className="w-16 sm:w-20 text-center text-4xl sm:text-5xl md:text-6xl font-mono font-bold text-white bg-white/10 border border-white/20 rounded-2xl py-3 focus:outline-none focus:border-purple-400/60 focus:bg-white/15 transition"
                     />
-                    <button onClick={() => adjust(field, -1)} className="text-white/60 hover:text-white p-1 rounded-lg hover:bg-white/10 transition">
+                    <button onClick={() => adjust(field, -1)} aria-label={`Decrease ${label}`} className="text-white/60 hover:text-white p-2 rounded-lg hover:bg-white/10 transition">
                       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                       </svg>
                     </button>
                     <span className="text-white/40 text-xs uppercase tracking-widest">{label}</span>
                   </div>
-                  {i < 2 && <span className="text-4xl font-bold text-white/30 mb-6">:</span>}
+                  {i < 2 && <span className="text-3xl sm:text-4xl font-bold text-white/30 mb-6">:</span>}
                 </div>
               ))}
             </div>
           ) : (
             <div className="text-center mb-8">
               <div className="relative">
-                <div className={`absolute inset-0 text-7xl md:text-8xl font-mono font-bold blur-sm ${
-                  isFinished ? 'text-orange-400/20' : 'text-purple-400/20'
-                }`}>
-                  {display.h}:{display.m}:{display.s}
-                </div>
-                <div className={`relative flex items-center justify-center gap-2 text-6xl md:text-7xl font-mono font-bold ${
+                <div className={`flex items-center justify-center gap-1 sm:gap-2 text-5xl sm:text-6xl md:text-7xl font-mono font-bold ${
                   isFinished ? 'text-orange-200 animate-pulse' : 'text-white'
                 }`}>
                   {parseInt(display.h) > 0 && (

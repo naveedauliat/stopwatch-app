@@ -92,18 +92,8 @@ export default function sitemap() {
       changeFrequency: 'weekly',
       priority: 0.9,
     },
-    {
-      url: `${baseUrl}/blog/fifa-world-cup-2026-watch-channels-by-region`,
-      lastModified: '2026-04-26',
-      changeFrequency: 'weekly',
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/blog/watch-fifa-world-cup-online-free-streaming`,
-      lastModified: '2026-04-25',
-      changeFrequency: 'weekly',
-      priority: 0.9,
-    },
+    // watch-channels-by-region and watch-fifa-world-cup-online-free-streaming
+    // consolidated into how-to-watch-fifa-world-cup-guide (noindex) — omitted here.
     {
       url: `${baseUrl}/blog/fifa-world-cup-2026-fan-travel-guide`,
       lastModified: '2026-04-24',
@@ -116,30 +106,9 @@ export default function sitemap() {
       changeFrequency: 'monthly',
       priority: 0.6,
     },
-    {
-      url: `${baseUrl}/news/premier-league`,
-      lastModified: '2025-11-10',
-      changeFrequency: 'yearly',
-      priority: 0.4,
-    },
-    {
-      url: `${baseUrl}/news/government-shutdown`,
-      lastModified: '2025-11-10',
-      changeFrequency: 'yearly',
-      priority: 0.4,
-    },
-    {
-      url: `${baseUrl}/news/lionsvscommanders`,
-      lastModified: '2024-11-10',
-      changeFrequency: 'yearly',
-      priority: 0.4,
-    },
-    {
-      url: `${baseUrl}/news/fifa-international-break`,
-      lastModified: '2024-11-08',
-      changeFrequency: 'yearly',
-      priority: 0.4,
-    },
+    // Individual /news/* posts (premier-league, government-shutdown,
+    // lionsvscommanders, fifa-international-break) are noindexed as stale /
+    // off-topic — omitted from the sitemap.
     {
       url: `${baseUrl}/games`,
       lastModified: now,

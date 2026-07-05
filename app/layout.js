@@ -128,6 +128,7 @@ export default function RootLayout({ children }) {
         description:
           "Stopwatch.lol builds free, privacy-friendly online timing tools — a millisecond-precision stopwatch, countdown timer, and full-screen timer — used for sports, workouts, productivity, and education.",
         foundingDate: "2023",
+        sameAs: ["https://instagram.com/stopwatch.lol"],
         knowsAbout: [
           "online stopwatch",
           "countdown timers",
@@ -190,8 +191,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" itemScope itemType="https://schema.org/WebSite">
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
+        {/* next/font self-hosts Inter, so no Google Fonts preconnect is needed. */}
         <link rel="dns-prefetch" href="//www.google-analytics.com" />
         <link rel="dns-prefetch" href="//www.googletagmanager.com" />
 

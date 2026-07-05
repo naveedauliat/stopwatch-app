@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import { ArticleJsonLd } from '../../lib/articleSchema';
 
 export function generateMetadata() {
   return {
@@ -28,6 +29,12 @@ export function generateMetadata() {
 export default function SportsTiming() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-orange-600 to-red-700 p-4 md:p-8">
+      <ArticleJsonLd
+        path="/blog/sports-timing"
+        headline="Sports Timing: The Role of Stopwatches"
+        description="How stopwatches shaped sports timing, from hand-timed races to electronic precision."
+        datePublished="2025-11-05"
+      />
       <div className="max-w-4xl mx-auto blog-container">
         <article className="blog-card">
           <header className="mb-6">

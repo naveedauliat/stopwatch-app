@@ -46,8 +46,40 @@ export default function GamesPage() {
     },
   ];
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "@id": "https://stopwatch.lol/games#webpage",
+    url: "https://stopwatch.lol/games",
+    name: "Free Online Games - Tic Tac Toe, Number Guesser & More",
+    description:
+      "Free online games at Stopwatch.lol: Tic Tac Toe, Number Guesser, and Rock Paper Scissors.",
+    isPartOf: { "@id": "https://stopwatch.lol/#website" },
+    inLanguage: "en-US",
+    breadcrumb: {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: "https://stopwatch.lol" },
+        { "@type": "ListItem", position: 2, name: "Games", item: "https://stopwatch.lol/games" },
+      ],
+    },
+    mainEntity: {
+      "@type": "ItemList",
+      itemListElement: games.map((game, i) => ({
+        "@type": "ListItem",
+        position: i + 1,
+        name: game.name,
+        url: `https://stopwatch.lol${game.path}`,
+      })),
+    },
+  };
+
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-blue-900 to-gray-900 text-white p-8">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <h1 className="text-4xl font-bold mb-10">🎮 Free Online Games</h1>
       <div className="grid gap-6 md:grid-cols-3 w-full max-w-5xl">
         {games.map((game) => (

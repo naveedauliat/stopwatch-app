@@ -1,4 +1,3 @@
-import Head from 'next/head';
 import Link from 'next/link';
 
 
@@ -7,6 +6,8 @@ export function generateMetadata() {
   return {
     title: "Last Week of November 2025: Premier League Fixtures Preview",
     description: "Complete preview of Premier League matchday fixtures for November 29-30, 2025. Key clashes, predictions, and where to watch.",
+    // Past-event fixtures preview (Nov 2025) — stale; removed from the index.
+    robots: { index: false, follow: true },
     alternates: {
       canonical: "https://stopwatch.lol/news/premier-league"
     },
@@ -33,14 +34,6 @@ export function generateMetadata() {
 export default function PremierLeague2025Blog() {
   return (
     <>
-      <Head>
-        <title>Last Week of November 2025: Premier League Fixtures Preview</title>
-        <meta name="description" content="Complete preview of Premier League matchday fixtures for November 29-30, 2025. Key clashes, predictions, and where to watch." />
-        <meta property="og:title" content="Premier League: Last Week of November 2025 Fixtures" />
-        <meta property="og:description" content="Your guide to the final Premier League weekend of November 2025 featuring Chelsea vs Arsenal, West Ham vs Liverpool, and more blockbuster matches." />
-        <meta property="og:type" content="article" />
-      </Head>
-
       <main className="max-w-5xl mx-auto px-6 py-12 bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50 min-h-screen">
         {/* Navigation Links */}
         <nav className="mb-8 flex gap-4 flex-wrap">
