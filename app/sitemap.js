@@ -45,6 +45,12 @@ export default function sitemap() {
       priority: 0.9,
     },
     {
+      url: `${baseUrl}/blog/ai-stopwatch`,
+      lastModified: '2026-07-17',
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+    {
       url: `${baseUrl}/blog/rock-paper-scissors-online`,
       lastModified: '2026-05-04',
       changeFrequency: 'monthly',

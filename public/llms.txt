@@ -20,6 +20,7 @@
 
 ## Content
 - [Blog](https://stopwatch.lol/blog): Guides on timing, productivity, sports performance, and the FIFA World Cup 2026.
+- [AI Stopwatch Explained](https://stopwatch.lol/blog/ai-stopwatch): What an AI / smart stopwatch is — automatic lap analysis (fastest, slowest, average splits), CSV export, session auto-save, and where AI pacing prediction is heading.
 
 ## Key facts
 - Timing accuracy: uses the browser high-resolution Performance API (performance.now()) for sub-millisecond precision.

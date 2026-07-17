@@ -28,6 +28,16 @@ export const metadata = {
 
 const blogPosts = [
   {
+    title: "AI Stopwatch Explained: What Smart Timing Actually Does (and How to Use One Free)",
+    description:
+      "What is an AI stopwatch? A plain-English guide to smart timing — automatic lap analysis, split insights, and pacing prediction — plus a free AI-ready online stopwatch you can use right now.",
+    slug: "ai-stopwatch",
+    image: "https://images.unsplash.com/photo-1508962914676-134849a727f0?w=640&auto=format&fit=crop&q=80",
+    readTime: "9 min read",
+    tags: ["AI", "Stopwatch", "Smart Timing"],
+    date: "July 17, 2026",
+  },
+  {
     title: "Rock Paper Scissors Online: How to Play, Win, and Where to Play Free in 2026",
     description:
       "Play Rock Paper Scissors online free against the computer — the complete 2026 guide to rules, win probability, proven strategy, popular variants, and the best free no-signup sites.",
@@ -158,7 +168,7 @@ export default function BlogPage() {
       headline: post.title,
       description: post.description,
       url: `https://stopwatch.lol/blog/${post.slug}`,
-      image: `https://stopwatch.lol${post.image}`,
+      image: post.image.startsWith("http") ? post.image : `https://stopwatch.lol${post.image}`,
       datePublished: new Date(post.date).toISOString(),
       author: {
         "@type": "Organization",

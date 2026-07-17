@@ -296,6 +296,12 @@ export default function Home() {
               </details>
             ))}
           </div>
+          <p className="mt-6 text-center text-white/80">
+            Curious what smart timing can do?{" "}
+            <Link href="/blog/ai-stopwatch" className="text-blue-300 hover:text-blue-200 underline underline-offset-2">
+              Read our AI stopwatch guide
+            </Link>
+          </p>
         </section>
       </div>
     </>
